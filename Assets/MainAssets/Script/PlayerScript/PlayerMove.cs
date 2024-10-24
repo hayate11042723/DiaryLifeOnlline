@@ -4,47 +4,51 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public Rigidbody rb;
-    public Vector3 moving, latestPos;
-    private float speed;
-
     private bool isRun = false;
     private bool isIdle = true;
+
+    // 移動速度
+    public float Speed;
+    // ダッシュ速度
+    public float DashSpeed;
+
+    float x, z;
+    Rigidbody rb;
+    Vector3 moving;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        speed = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Wキー（前方移動）
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.velocity = transform.forward * speed;
-        }
+        // WASDでの移動処理
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
-        // Sキー（後方移動）
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.velocity = -transform.forward * speed;
-        }
+        moving = new Vector3(x, 0, z);
 
-        // Dキー（右移動）
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = transform.right * speed;
-        }
+        // 速度の計算
+        moving = moving.normalized * Speed;
 
-        // Aキー（左移動）
-        if (Input.GetKey(KeyCode.A))
+        // Shiftダッシュの処理
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            rb.velocity = -transform.right * speed;
+            x = Input.GetAxis("Horizontal");
+            z = Input.GetAxis("Vertical");
+
+            moving = new Vector3(x, 0, z);
+            
+            // ダッシュ時の速度計算
+            moving = moving.normalized * Speed * DashSpeed;
         }
     }
 
-
+    void FixedUpdate()
+    {
+        rb.velocity = moving;
+    }
 }
