@@ -8,10 +8,10 @@ public class PlayerAnimation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        OnMove();
+        MoveAction();
     }
 
-    public void OnMove()
+    public void MoveAction()
     {
         if (Input.GetKey(KeyCode.W))
         {
@@ -29,11 +29,7 @@ public class PlayerAnimation : MonoBehaviour
         {
             PlayerAnimator.SetBool("run", true);
         }
-        else
-        {
-            PlayerAnimator.SetBool("run", false);
-        }
-
+  
     }
 
 }

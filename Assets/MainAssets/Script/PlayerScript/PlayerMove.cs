@@ -1,54 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
     private bool isRun = false;
     private bool isIdle = true;
 
-    // 移動速度
-    public float Speed;
-    // ダッシュ速度
-    public float DashSpeed;
+    private Rigidbody rb;
+    public float movementSpeed = 5f;
+    private bool moving;
+    private float horizontal;
+    private float vertical;
 
-    float x, z;
-    Rigidbody rb;
-    Vector3 moving;
-
-    // Start is called before the first frame update
-    void Start()
+    public Animator PlayerAnimator;
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        // WASDでの移動処理
-        x = Input.GetAxis("Horizontal");
-        z = Input.GetAxis("Vertical");
-
-        moving = new Vector3(x, 0, z);
-
-        // 速度の計算
-        moving = moving.normalized * Speed;
-
-        // Shiftダッシュの処理
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (moving)
         {
-            x = Input.GetAxis("Horizontal");
-            z = Input.GetAxis("Vertical");
+            Vector3 movement = new Vector3(horizontal, 0f, vertical).normalized * movementSpeed;
+            rb.AddForce(movement, ForceMode.VelocityChange);
 
-            moving = new Vector3(x, 0, z);
-            
-            // ダッシュ時の速度計算
-            moving = moving.normalized * Speed * DashSpeed;
+            // 移動速度をアニメーターの "Speed" パラメーターに渡す
+            float currentSpeed = Mathf.Clamp01(movement.magnitude / movementSpeed); // 0から1の範囲にクランプ
+
+            // プレイヤーの向きを移動方向に合わせる
+            if (movement.magnitude > 0)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(movement, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 1000f);
+            }
         }
     }
 
-    void FixedUpdate()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        rb.velocity = moving;
+        Vector2 movementInput = context.ReadValue<Vector2>();
+        horizontal = movementInput.x;
+        vertical = movementInput.y;
+
+        if (context.performed)
+        {
+            moving = true;
+            PlayerAnimator.SetBool("run", true);
+        }
+        else if (context.canceled)
+        {
+            moving = false;
+        }
     }
 }

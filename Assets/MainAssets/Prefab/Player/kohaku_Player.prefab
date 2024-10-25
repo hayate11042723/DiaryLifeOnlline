@@ -27552,8 +27552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75f430a0d8fe943ba5b48b5a5a8703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  DashSpeed: 0
+  movementSpeed: 5
 --- !u!114 &332357083825812267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27581,13 +27580,13 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1962382155877706}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: -8697622649571369594}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
