@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     private bool moving;
     private float horizontal;
     private float vertical;
+    public Vector3 worldPoint;
 
     public Animator PlayerAnimator;
     private void Start()
@@ -21,9 +23,10 @@ public class PlayerMove : MonoBehaviour
     }
 
     public void Update()
-    {
+    { 
         if (moving)
         {
+            var localPonint = transform.InverseTransformPoint(worldPoint);
             Vector3 movement = new Vector3(horizontal, 0f, vertical).normalized * movementSpeed;
             rb.AddForce(movement, ForceMode.VelocityChange);
 
@@ -53,6 +56,7 @@ public class PlayerMove : MonoBehaviour
         else if (context.canceled)
         {
             moving = false;
+            PlayerAnimator.SetBool("run", false);
         }
     }
 }
