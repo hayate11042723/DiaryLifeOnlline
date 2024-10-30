@@ -6,15 +6,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    private bool isRun = false;
-    private bool isIdle = true;
-
     private Rigidbody rb;
     public float movementSpeed = 5f;
     private bool moving;
     private float horizontal;
     private float vertical;
-    public Vector3 worldPoint;
 
     public Animator PlayerAnimator;
     private void Start()
@@ -23,10 +19,11 @@ public class PlayerMove : MonoBehaviour
     }
 
     public void Update()
-    { 
+    {
+        PlayerAnimator.SetBool("idle", true);
+
         if (moving)
         {
-            var localPonint = transform.InverseTransformPoint(worldPoint);
             Vector3 movement = new Vector3(horizontal, 0f, vertical).normalized * movementSpeed;
             rb.AddForce(movement, ForceMode.VelocityChange);
 
