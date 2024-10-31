@@ -209,8 +209,8 @@
                     "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse;Touch",
+                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=0.3,y=0.2)",
+                    "groups": "Keyboard&Mouse",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -228,6 +228,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7042a477-f8c3-4ce6-af46-f7ef0512832d",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack_K",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0c3a435e-c343-4dc4-a68c-f94ae40b75a3",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -239,11 +250,33 @@
                 },
                 {
                     "name": "",
+                    "id": "d7298e83-175b-4b9a-b162-16175eeb46cd",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack_R",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "42b629b4-e6af-485a-b161-a68f1fb96808",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Attack_I",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48dfd97b-e68d-4ac7-a670-42e8b0bac4da",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Attack_I",
                     "isComposite": false,
                     "isPartOfComposite": false
