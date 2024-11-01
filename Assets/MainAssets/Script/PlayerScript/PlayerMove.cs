@@ -6,9 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    private bool isRun = false;
-    private bool isIdle = true;
-
     private Rigidbody rb;
     public float movementSpeed = 5f;
     private bool moving;
@@ -26,7 +23,7 @@ public class PlayerMove : MonoBehaviour
     { 
         if (moving)
         {
-            var localPonint = transform.InverseTransformPoint(worldPoint);
+            _ = transform.InverseTransformPoint(worldPoint);
             Vector3 movement = new Vector3(horizontal, 0f, vertical).normalized * movementSpeed;
             rb.AddForce(movement, ForceMode.VelocityChange);
 
