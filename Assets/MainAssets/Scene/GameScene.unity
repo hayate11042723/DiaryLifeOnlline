@@ -61334,7 +61334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d75f430a0d8fe943ba5b48b5a5a8703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 5
+  d_movementSpeed: 7
   PlayerAnimator: {fileID: 1362769488}
 --- !u!4 &1023223842089673456
 Transform:
@@ -67609,7 +67610,19 @@ MonoBehaviour:
     m_ActionId: 84514d74-a247-4b00-ba30-d7c25162e280
     m_ActionName: Player/LookZoom[/Mouse/scroll/y]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1022345649225860552}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+        m_MethodName: OnD_Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4cd58647-bc05-4177-b8b8-58b82a5817b9
     m_ActionName: Player/Run[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0

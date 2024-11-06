@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,7 +26,6 @@ public class PlayerAttack : MonoBehaviour
         if (context.started)
         {
             PlayerAnimator.SetBool("attack_I",true);
-            Debug.Log("true");
         }
     }
 
@@ -36,7 +34,6 @@ public class PlayerAttack : MonoBehaviour
         if (context.started)
         {
             PlayerAnimator.SetBool("attack_K", true);
-            Debug.Log("true");
         }
     }
 
@@ -45,7 +42,6 @@ public class PlayerAttack : MonoBehaviour
         if (context.started)
         {
             PlayerAnimator.SetBool("attack_R", true);
-            Debug.Log("true");
         }
     }
 
