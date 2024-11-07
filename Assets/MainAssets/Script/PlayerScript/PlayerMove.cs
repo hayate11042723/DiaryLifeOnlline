@@ -87,21 +87,21 @@ public class PlayerMove : MonoBehaviour
         }
     }
     
-    public void OnD_Move(InputAction.CallbackContext context)
-    {
-        Vector3 movementInput = context.ReadValue<Vector3>();
-        horizontal = movementInput.x;
-        vertical = movementInput.y;
+    //public void OnD_Move(InputAction.CallbackContext context)
+    //{
+    //    Vector3 movementInput = context.ReadValue<Vector3>();
+    //    horizontal = movementInput.x;
+    //    vertical = movementInput.y;
 
-        if (context.performed)
-        {
-            d_moving = true;
-            PlayerAnimator.SetBool("run", true);
-        }
-        else if (context.canceled)
-        {
-            d_moving = false;
-            PlayerAnimator.SetBool("run", false);
-        }
-    }
+    //    if (context.performed)
+    //    {
+    //        d_moving = true;
+    //        PlayerAnimator.SetBool("run", true);
+    //    }
+    //    else if (context.canceled)
+    //    {
+    //        d_moving = false;
+    //        PlayerAnimator.SetBool("run", false);
+    //    }
+    //}
 }
