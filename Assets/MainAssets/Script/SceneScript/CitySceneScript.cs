@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StoreSceneScript : MonoBehaviour
+public class CitySceneScript : MonoBehaviour
 {
     public Vector3 pos,rot;
     public GameObject cameraObject;
@@ -19,12 +19,17 @@ public class StoreSceneScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // シーン遷移の条件
         if (other.CompareTag(tagname))
         {
+            // シーンの読み込み
             SceneManager.LoadSceneAsync(sceneName);
+            // Playerの遷移後の座標
             this.transform.position = new Vector3(pos.x, pos.y, pos.z);
-            this.transform.position = new Vector3(pos.x, pos.y, pos.z);
-            cameraObject.transform.position = new Vector3(pos.x, pos.y + 1f, pos.z - 2f);
+            this.transform.Rotate (new Vector3(rot.x, rot.y, rot.z));
+            // カメラの遷移後の座標
+            cameraObject.transform.position = new Vector3(pos.x, pos.y + 1f, pos.z - 3f);
+            cameraObject.transform.Rotate(new Vector3(rot.x, rot.y + 1f, rot.z - 3f));
         }
     }
 }

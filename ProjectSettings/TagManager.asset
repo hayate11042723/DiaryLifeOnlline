@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - GeneralStore
   - Filed
+  - City
   layers:
   - Default
   - TransparentFX
