@@ -13,13 +13,13 @@ public class CinemachineDollyInputProvider : MonoBehaviour
     private CinemachineInputProvider _cinemachineInputProvider = null;
 
     [SerializeField]
-    private float _sensitivity = 1f;
+    private float _sensitivity;
 
     [SerializeField]
-    private float _minDistance = 1f;
+    private float _minDistance;
 
     [SerializeField]
-    private float _maxDistance = 5f;
+    private float _maxDistance;
 
     public float Sensitivity
     {
@@ -30,12 +30,14 @@ public class CinemachineDollyInputProvider : MonoBehaviour
     private void OnEnable()
     {
         _cinemachineInputProvider.ZAxis.action.Enable();
+        Debug.Log("Ebable");
     }
 
-    private void OnDisable()
-    {
-        _cinemachineInputProvider.ZAxis.action.Disable();
-    }
+    //private void OnDisable()
+    //{
+    //    _cinemachineInputProvider.ZAxis.action.Disable();
+    //    Debug.Log("Disable");
+    //}
 
     private void Awake()
     {

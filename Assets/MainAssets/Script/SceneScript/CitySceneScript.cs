@@ -8,13 +8,25 @@ public class CitySceneScript : MonoBehaviour
 {
     public Vector3 pos,rot;
     public GameObject cameraObject;
+    GameObject[] tagObjects;
     public string tagname;
     public string sceneName;
 
-    void Start()
+    private void Awake()
     {
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(cameraObject);
+        tagObjects = GameObject.FindGameObjectsWithTag("Player");
+
+        if (tagObjects.Length >= 2)
+        {
+            Destroy(gameObject);
+            Destroy(cameraObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(cameraObject);
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -29,7 +41,7 @@ public class CitySceneScript : MonoBehaviour
             this.transform.Rotate (new Vector3(rot.x, rot.y, rot.z));
             // ÉJÉÅÉâÇÃëJà⁄å„ÇÃç¿ïW
             cameraObject.transform.position = new Vector3(pos.x, pos.y + 1f, pos.z - 3f);
-            cameraObject.transform.Rotate(new Vector3(rot.x, rot.y + 1f, rot.z - 3f));
+            cameraObject.transform.Rotate(new Vector3(rot.x, rot.y, rot.z));
         }
     }
 }

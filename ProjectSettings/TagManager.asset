@@ -10,6 +10,7 @@ TagManager:
   - GeneralStore
   - Filed
   - City
+  - Weapon
   layers:
   - Default
   - TransparentFX
