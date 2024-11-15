@@ -8,9 +8,11 @@ TagManager:
   - floor
   - Enemy
   - GeneralStore
-  - Filed
   - City
   - Weapon
+  - Field
+  - Field_City
+  - Store_City
   layers:
   - Default
   - TransparentFX

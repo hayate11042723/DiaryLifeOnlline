@@ -1100,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622856754820565634, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
       propertyPath: m_TagString
-      value: City
+      value: Store_City
       objectReference: {fileID: 0}
     - target: {fileID: 2124361215602852397, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
       propertyPath: x
