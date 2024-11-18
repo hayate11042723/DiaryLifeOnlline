@@ -8,11 +8,13 @@ TagManager:
   - floor
   - Enemy
   - GeneralStore
-  - City
   - Weapon
   - Field
   - Field_City
   - Store_City
+  - Slime
+  - TurtleShell
+  - Golem
   layers:
   - Default
   - TransparentFX
