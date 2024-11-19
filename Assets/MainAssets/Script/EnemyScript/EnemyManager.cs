@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour
 
     float TimeCount;
     float ResetTime;
-    public float _countTime;
+    public float CountTime;
 
     public int Count;
     public int MaxCount;
@@ -25,15 +25,19 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MaxCount <= Count)
-        {
-            return;
-        }
-
         TimeCount += Time.deltaTime;
         ResetTime += Time.deltaTime;
-
-        Count = GameObject.FindGameObjectsWithTag(TagName).Length;
+       
+        if (MaxCount <= Count)
+        {
+            if (ResetTime > CountTime)
+            {
+                Count = 0;
+                ResetTime = 0f;
+                Count += GameObject.FindGameObjectsWithTag(TagName).Length;
+            }
+            return;
+        }
 
         // 約1秒置きにランダムに生成されるようにする。
         if (TimeCount > 1.0f)
@@ -52,10 +56,6 @@ public class EnemyManager : MonoBehaviour
             // 経過時間リセット
             TimeCount = 0f;
         }
-        if(ResetTime > _countTime)
-        {
-            Count = 0;
-            ResetTime = 0f;
-        }
+     
     }
 }
