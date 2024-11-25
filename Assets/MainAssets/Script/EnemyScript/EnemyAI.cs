@@ -11,17 +11,9 @@ public class EnemyAI : MonoBehaviour
     GameObject Target;
 
     public bool ran = false;
-    public bool walk = true;
-
+    public bool idle = true;
 
     public Animator EnemyAnimator;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Destroy(this.gameObject, time);
-    }
 
     // Update is called once per frame
     void Update()
@@ -45,7 +37,6 @@ public class EnemyAI : MonoBehaviour
                 Timer = 0;
             }
         }
-
         rot.x = 0;
         rot.z = 0;
         transform.eulerAngles = rot;
@@ -53,6 +44,7 @@ public class EnemyAI : MonoBehaviour
         this.transform.Translate(speed);
     }
 
+    // Collider‚ÉPlayer‚ª“ü‚é‚Ærun‚ğtrue‚É
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -62,6 +54,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    // Collider‚©‚çPlayer‚ªo‚é‚Ærun‚ğfalse‚É
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
