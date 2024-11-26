@@ -35,13 +35,11 @@ public class SceneScript : MonoBehaviour
         if (other.CompareTag(tagname))
         {
             // シーンの読み込み
-            SceneManager.LoadSceneAsync(sceneName);
+            SceneManager.LoadScene(sceneName);
             // Playerの遷移後の座標
             this.transform.position = new Vector3(pos.x, pos.y, pos.z);
-            this.transform.Rotate (new Vector3(rot.x, rot.y, rot.z));
             // カメラの遷移後の座標
             cameraObject.transform.position = new Vector3(pos.x, pos.y + 1f, pos.z - 3f);
-            cameraObject.transform.Rotate(new Vector3(rot.x, rot.y, rot.z));
         }
     }
 }

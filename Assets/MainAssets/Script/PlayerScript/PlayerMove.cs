@@ -86,7 +86,7 @@ public class PlayerMove : MonoBehaviour
             PlayerAnimator.SetBool("run", false);
         }
     }
-    
+
     //public void OnD_Move(InputAction.CallbackContext context)
     //{
     //    Vector3 movementInput = context.ReadValue<Vector3>();

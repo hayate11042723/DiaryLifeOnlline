@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CloseWindow : MonoBehaviour
 {
-    void Update()
+    public void OnCloseWindow(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        Application.Quit();
     }
 }

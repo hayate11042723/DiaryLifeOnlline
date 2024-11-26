@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
         if (charadata != null)
         {
             // valueのHPゲージのスライダーの最大の1に
-            Slider.value = ;
+            Slider.value = 10;
 
             //charadataの最大HPを代入。
             HP = charadata.MAXHP;
