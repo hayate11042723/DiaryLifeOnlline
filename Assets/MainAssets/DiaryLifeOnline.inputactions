@@ -1020,7 +1020,7 @@
             "id": "7063befe-08d4-4cf5-b6a1-c46c6cc7fcea",
             "actions": [
                 {
-                    "name": "PlayerBack",
+                    "name": "ResetPlayer",
                     "type": "Button",
                     "id": "276c3524-fb54-4b36-9ab9-d92ec51b68ec",
                     "expectedControlType": "Button",
@@ -1040,50 +1040,6 @@
             ],
             "bindings": [
                 {
-                    "name": "PlayerBack",
-                    "id": "b616caa2-eee4-42d3-83f7-bfadab99dd3d",
-                    "path": "TwoModifiers",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerBack",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "modifier1",
-                    "id": "c22bea9f-97b9-4df1-affc-bb99abe49c58",
-                    "path": "<Keyboard>/leftAlt",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "PlayerBack",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "modifier2",
-                    "id": "17705b1e-1b05-4e51-95c8-c92f552c3f3c",
-                    "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "PlayerBack",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "binding",
-                    "id": "d02762f8-876b-4a5d-942a-627ecc9cd3d0",
-                    "path": "<Keyboard>/backspace",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "PlayerBack",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "a4f26ce7-8fc8-419e-aefd-3e0f4f3e683f",
                     "path": "<Keyboard>/escape",
@@ -1091,6 +1047,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "CloseWindow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9387bb0-6384-4dbe-9947-18f479fc498f",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetPlayer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

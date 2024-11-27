@@ -6,28 +6,38 @@ using UnityEngine.InputSystem;
 
 public class PlayerBack : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject Camera;
-    public Vector3 pos, rot;
+    private Vector3 initialPosition;  // 初期位置
+    private Quaternion initialRotation; // 初期回転
 
-    public void OnBack(InputAction.CallbackContext context)
+    // Input Systemのアクション
+    private PlayerInput playerInput;
+
+    private void Awake()
     {
-        if(context.performed)
-        {
-            if (SceneManager.GetActiveScene().name == "CityScene")
-            {
-                Player.transform.position = new Vector3(pos.x, pos.y, pos.z);
-                Player.transform.eulerAngles = new Vector3(rot.x, rot.y, rot.z);
-            }
-            else
-            {
-                SceneManager.LoadScene("CityScene");
+        // 初期位置と回転を保存
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
 
-                Player.transform.position = new Vector3(pos.x, pos.y, pos.z);
-                Player.transform.eulerAngles = new Vector3(rot.x, rot.y, rot.z);
-                Camera.transform.position = new Vector3(pos.x, pos.y, pos.z);
-                Camera.transform.eulerAngles = new Vector3(rot.x, rot.y, rot.z);
-            }
-        }
+        // PlayerInputを取得
+        playerInput = GetComponent<PlayerInput>();
+    }
+
+    private void OnEnable()
+    {
+        // ResetPlayerアクションを有効化
+        playerInput.actions["ResetPlayer"].performed += OnResetPlayer;
+    }
+
+    private void OnDisable()
+    {
+        // ResetPlayerアクションを無効化
+        playerInput.actions["ResetPlayer"].performed -= OnResetPlayer;
+    }
+
+    public void OnResetPlayer(InputAction.CallbackContext context)
+    {
+        // 初期位置に戻す
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
     }
 }

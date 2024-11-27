@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
-    public Vector3 pos,rot;
+    public Vector3 pos;
     public GameObject cameraObject;
     GameObject[] tagObjects;
     public string tagname;
