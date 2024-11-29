@@ -15,7 +15,7 @@ MonoBehaviour:
   NAME: Player
   MAXHP: 50
   MAXMP: 20
-  ATK: 10
+  ATK: 1000
   DEF: 10
   INT: 10
   RES: 10

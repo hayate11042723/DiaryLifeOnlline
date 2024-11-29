@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
         if (charadata != null)
         {
             // valueのHPゲージのスライダーの最大の1に
-            Slider.value = 10;
+            Slider.value = 1;
 
             //charadataの最大HPを代入。
             HP = charadata.MAXHP;
@@ -43,16 +43,32 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             }
             // HPから算出されたダメージを引く
             HP -= enemyDamage;
+            // HPゲージに反映
+            Slider.value = (float)HP / (float)charadata.MAXHP;
         }
 
 
-        // HPが0以下ならDeath()メソッドを呼び出す。
+        // HPが0以下ならDeathアニメーションを再生
         if (HP <= 0)
         {
+            // Deathフラグをセットしてアニメーションを再生
             EnemyAnimator.SetBool("death", true);
-            Death();
+
+            // コルーチンを開始してアニメーション終了後にDeath()を実行
+            StartCoroutine(WaitForDeathAnimation());
         }
     }
+
+    // アニメーション終了後に死亡処理を行うコルーチン
+    private IEnumerator WaitForDeathAnimation()
+    {
+        // アニメーションが終了するまで待つ
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+        // 死亡処理
+        Death();
+    }
+
     // 死亡処理のメソッド
     public void Death()
     {

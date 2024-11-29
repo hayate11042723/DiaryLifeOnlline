@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "LockOn",
+                    "type": "Button",
+                    "id": "dbf8ecdd-27f7-497c-8eb5-fdb92334ff13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -496,6 +505,17 @@
                     "action": "Dush",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b2def940-aa65-42ac-9b82-ef2ab8ff05fa",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1020,15 +1040,6 @@
             "id": "7063befe-08d4-4cf5-b6a1-c46c6cc7fcea",
             "actions": [
                 {
-                    "name": "ResetPlayer",
-                    "type": "Button",
-                    "id": "276c3524-fb54-4b36-9ab9-d92ec51b68ec",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "CloseWindow",
                     "type": "Button",
                     "id": "a38c9a03-a86b-4fd2-8264-96030f32209b",
@@ -1049,14 +1060,31 @@
                     "action": "CloseWindow",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "ResetPlayer",
+            "id": "fe3729b8-249f-4c1f-8b01-ec28ee7f80a5",
+            "actions": [
+                {
+                    "name": "ResetPlayer",
+                    "type": "Button",
+                    "id": "23e66c9c-6c98-45a3-947c-d0b223c8ba82",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "a9387bb0-6384-4dbe-9947-18f479fc498f",
+                    "id": "38b5d8ca-fdae-4d8b-8185-c043206788da",
                     "path": "<Keyboard>/backspace",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "ResetPlayer",
                     "isComposite": false,
                     "isPartOfComposite": false

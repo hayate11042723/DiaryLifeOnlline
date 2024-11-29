@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointerScript : MonoBehaviour
+public class ScenePointerScript : MonoBehaviour
 {
     [SerializeField]private float x,y,z;
 
