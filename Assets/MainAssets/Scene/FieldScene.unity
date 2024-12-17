@@ -1440,7 +1440,7 @@ MonoBehaviour:
   Enemy1: {fileID: 6378162535679133017, guid: 242651d39d0dfba4283d7aace55d2605, type: 3}
   EnemyPlace1: {fileID: 1654607347}
   EnemyPlace2: {fileID: 138024519}
-  CountTime: 20
+  CountTime: 240
   Count: 0
   MaxCount: 10
   TagName: TurtleShell
@@ -2373,7 +2373,7 @@ MonoBehaviour:
   Enemy1: {fileID: 5878039515347663510, guid: 50d134e627d47ee43917934b00c9a9b2, type: 3}
   EnemyPlace1: {fileID: 1352186552}
   EnemyPlace2: {fileID: 1189465505}
-  CountTime: 180
+  CountTime: 600
   Count: 0
   MaxCount: 1
   TagName: Golem
@@ -3099,7 +3099,7 @@ MonoBehaviour:
   Enemy1: {fileID: 182800290479742326, guid: 0aeae7ce4daa2b6469c6d9d1c74d5ab8, type: 3}
   EnemyPlace1: {fileID: 381486399}
   EnemyPlace2: {fileID: 802982690}
-  CountTime: 20
+  CountTime: 240
   Count: 0
   MaxCount: 20
   TagName: Slime
@@ -3243,7 +3243,7 @@ MonoBehaviour:
   Enemy1: {fileID: 6378162535679133017, guid: 242651d39d0dfba4283d7aace55d2605, type: 3}
   EnemyPlace1: {fileID: 219201032}
   EnemyPlace2: {fileID: 407429820}
-  CountTime: 20
+  CountTime: 240
   Count: 0
   MaxCount: 10
   TagName: TurtleShell

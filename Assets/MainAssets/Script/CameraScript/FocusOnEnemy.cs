@@ -114,6 +114,18 @@ public class FocusOnEnemy : MonoBehaviour
     {
         if (_cinemachineVirtualCamera != null && enemyTransform != null)
         {
+            // 現在のCinemachineComponentBaseを取得
+            var composer = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
+
+            // Aimモードを変更する例 (POVを削除してDoNothingに変更)
+            if (composer != null)
+            {
+                _cinemachineVirtualCamera.DestroyCinemachineComponent<CinemachinePOV>();
+            }
+
+            // 新たにAimを指定 (例えば、GroupComposerを設定)
+            _cinemachineVirtualCamera.AddCinemachineComponent<CinemachineGroupComposer>();
+
             // LookAtをクリックしたEnemyに設定
             _cinemachineVirtualCamera.LookAt = enemyTransform;
             _currentLookTarget = enemyTransform;
@@ -130,6 +142,18 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void ResetCamera()
     {
+        // 現在のCinemachineComponentBaseを取得
+        var composer = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineGroupComposer>();
+
+        // Aimモードを変更する例 (POVを削除してDoNothingに変更)
+        if (composer != null)
+        {
+            _cinemachineVirtualCamera.DestroyCinemachineComponent<CinemachineGroupComposer>();
+        }
+
+        // 新たにAimを指定 (例えば、GroupComposerを設定)
+        _cinemachineVirtualCamera.AddCinemachineComponent<CinemachinePOV>();
+
         // カメラをプレイヤーにリセット
         if (_cinemachineVirtualCamera != null)
         {
