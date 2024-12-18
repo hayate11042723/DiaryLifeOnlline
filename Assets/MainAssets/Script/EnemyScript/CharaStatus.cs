@@ -16,4 +16,6 @@ public class CharaStatus : ScriptableObject
     public int LV;          //ƒŒƒxƒ‹
     public int GETEXP;      //æ“¾ŒoŒ±’l
     public int GETGOLD;     //æ“¾‚Å‚«‚é‚¨‹à
+    public float ShortAttackRange;    //“G‚ÌUŒ‚”ÍˆÍ
+    public float EnemyTime;   //“G‚ÌUŒ‚ŠÔŠu
 }

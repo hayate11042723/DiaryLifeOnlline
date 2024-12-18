@@ -10,7 +10,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     [SerializeField] private CharaStatus charadata;
     //シリアル化。SliderのHPゲージ指定
     [SerializeField] Slider Slider;
-    int HP;
+    public int HP;
     int enemyDamage;
     public Animator EnemyAnimator;
 

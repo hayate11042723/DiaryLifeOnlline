@@ -23,3 +23,5 @@ MonoBehaviour:
   LV: 1
   GETEXP: 10
   GETGOLD: 50
+  ShortAttackRange: 2
+  EnemyTime: 1
