@@ -15,7 +15,7 @@ MonoBehaviour:
   NAME: Player
   MAXHP: 50
   MAXMP: 20
-  ATK: 1000
+  ATK: 7
   DEF: 10
   INT: 10
   RES: 10
@@ -23,3 +23,5 @@ MonoBehaviour:
   LV: 1
   GETEXP: 1000
   GETGOLD: 0
+  ShortAttackRange: 0
+  EnemyTime: 0

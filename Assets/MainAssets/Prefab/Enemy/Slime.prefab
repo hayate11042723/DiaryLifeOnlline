@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 432570936638979737}
   - component: {fileID: -8237854741258181642}
   - component: {fileID: 7121020273153148969}
+  - component: {fileID: 2473892520203316462}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -75,10 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7b6fd2346f286428f16abcae147e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charadata: {fileID: 11400000, guid: 157d95c8a42e1a947801416a0f1d2d1f, type: 2}
   ChangeTime: 3
-  EnemySpeed: 0.01
-  ran: 0
-  idle: 1
+  EnemySpeed: 1.5
+  StopDistance: 2
   EnemyAnimator: {fileID: 278257233040781674}
 --- !u!54 &-4160441516724518903
 Rigidbody:
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 157d95c8a42e1a947801416a0f1d2d1f, type: 2}
   Slider: {fileID: 4607854103242517397}
+  HP: 0
   EnemyAnimator: {fileID: 278257233040781674}
 --- !u!114 &7121020273153148969
 MonoBehaviour:
@@ -137,6 +139,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 853403112847638270}
+--- !u!135 &2473892520203316462
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182800290479742326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &182934301353740378
 GameObject:
   m_ObjectHideFlags: 0
