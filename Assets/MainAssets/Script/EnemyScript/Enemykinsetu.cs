@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Enemykinsetu : MonoBehaviour, ICharaAttack
 {
-    Animator EnemyController;
-    [SerializeField] GameObject TrailObject;
+    [SerializeField] Animator EnemyController;
     int Hcount;   //攻撃ヒット回数
     bool Attacktime;   //攻撃中
 
     public int HitCount()
     {
-
         //現在の残りヒット数を返す。
         return Hcount;
     }
@@ -20,24 +18,17 @@ public class Enemykinsetu : MonoBehaviour, ICharaAttack
     {
         //ダメージが入ることが確定した際に残りヒット数を減らす。
         --Hcount;
-
     }
     public bool Attacktimekanshi()
     {
         //攻撃中か攻撃中でないかを返す。
         return Attacktime;
-
     }
-
-
-
-
 
     void Start()
     {
         EnemyController = GetComponent<Animator>();
     }
-
 
     void AttackStart()
     {
@@ -55,6 +46,5 @@ public class Enemykinsetu : MonoBehaviour, ICharaAttack
     {
         //アニメーション終了 Attackパラメータを0にする。
         EnemyController.SetInteger("attack", 0);
-
     }
 }
