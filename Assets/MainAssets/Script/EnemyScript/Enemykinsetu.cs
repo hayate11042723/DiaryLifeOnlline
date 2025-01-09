@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemykinsetu : MonoBehaviour, ICharaAttack
 {
     [SerializeField] Animator EnemyController;
+    public Collider AttackCollider;
     int Hcount;   //攻撃ヒット回数
     bool Attacktime;   //攻撃中
 
@@ -32,6 +33,7 @@ public class Enemykinsetu : MonoBehaviour, ICharaAttack
 
     void AttackStart()
     {
+        AttackCollider.enabled = true;
         Hcount = 1;
         Attacktime = true;
     }
@@ -44,6 +46,7 @@ public class Enemykinsetu : MonoBehaviour, ICharaAttack
 
     void AttackEnd()
     {
+        AttackCollider.enabled = false;
         //アニメーション終了 Attackパラメータを0にする。
         EnemyController.SetInteger("attack", 0);
     }

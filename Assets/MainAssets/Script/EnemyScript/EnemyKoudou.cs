@@ -51,22 +51,28 @@ public class EnemyKoudou : MonoBehaviour, IEnemy
         float distanceX = Mathf.Abs(distance.x);
         float distanceZ = Mathf.Abs(distance.z);
 
-        // Debug.Log(Player.transform.position);
-        // Debug.Log(distanceX);
-        // Debug.Log(distanceZ);
-        // Debug.Log(charadata.ShortAttackRange);
+        // Debug.Log(Player.transform.position);    ok
+        // Debug.Log(distanceX);    ok
+        // Debug.Log(distanceZ);    ok
+        // Debug.Log(charadata.ShortAttackRange);   ok
 
         //X座標とZ座標の距離のどちらが大きいか調べ、大きいほうの距離が敵のShortAttackRange以下であればStateを1として返す。攻撃を行う。
         if (charadata.MAXHP > enemyDamage.HP)
         {
-        //    Debug.Log("減少");
+        //    Debug.Log("減少");  ok
             if (distanceX > distanceZ)
             {
-                Debug.Log("通");
+        //        Debug.Log("通");   ok
                 if (charadata.ShortAttackRange >= distanceX)
                 {
-                    Debug.Log("通");
+        //            Debug.Log("通");   ok
                     State = 1;
+                    Debug.Log(State);
+                    return State;
+                }
+                else if (charadata.ShortAttackRange < distanceX)
+                {
+                    State = 0;
                     Debug.Log(State);
                     return State;
                 }
@@ -78,11 +84,12 @@ public class EnemyKoudou : MonoBehaviour, IEnemy
                     State = 1;
                     return State;
                 }
-            }
-            else
-            {
-                State = 0;
-                return State;
+                else if (charadata.ShortAttackRange < distanceZ)
+                {
+                    Debug.Log(State);
+                    State = 0;
+                    return State;
+                }
             }
         }
 

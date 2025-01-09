@@ -17,7 +17,7 @@ MonoBehaviour:
   MAXMP: 5
   ATK: 15
   DEF: 20
-  INT: 0
+  INT: 10
   RES: 5
   AGI: 3
   LV: 3

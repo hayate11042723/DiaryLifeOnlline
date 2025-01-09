@@ -33,12 +33,6 @@ public class CinemachineDollyInputProvider : MonoBehaviour
         Debug.Log("Ebable");
     }
 
-    //private void OnDisable()
-    //{
-    //    _cinemachineInputProvider.ZAxis.action.Disable();
-    //    Debug.Log("Disable");
-    //}
-
     private void Awake()
     {
         var cinemachineComponent = _cinemachineVirtualCamera.GetCinemachineComponent(CinemachineCore.Stage.Body);
