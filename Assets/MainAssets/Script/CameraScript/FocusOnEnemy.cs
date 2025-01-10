@@ -23,6 +23,19 @@ public class FocusOnEnemy : MonoBehaviour
     private bool _isFocusedOnEnemy = false; // カメラがEnemyを注視しているか
     private bool _isDragging = false; // 右ドラッグ中かどうか
 
+    private void Start()
+    {
+        if (_cinemachineVirtualCamera == null)
+        {
+            _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        }
+
+        if (_inputProvider == null)
+        {
+            _inputProvider = GetComponent<CinemachineInputProvider>();
+        }
+    }
+
     private void OnEnable()
     {
         // アクションを有効化

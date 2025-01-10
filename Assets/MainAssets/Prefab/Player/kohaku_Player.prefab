@@ -7371,7 +7371,6 @@ GameObject:
   - component: {fileID: 8567857975844309325}
   - component: {fileID: 653866683552037288}
   - component: {fileID: 3873788191336135542}
-  - component: {fileID: -2879103560420219390}
   m_Layer: 0
   m_Name: kohaku_Player
   m_TagString: Player
@@ -7388,7 +7387,7 @@ Transform:
   m_GameObject: {fileID: 2534893575186269733}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8}
+  m_LocalPosition: {x: -54, y: 3, z: -54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7718,7 +7717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 1, y: 1, z: -10.3}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
   tagname: Store_City
   sceneName: CityScene
 --- !u!114 &8388924857144194801
@@ -7734,7 +7733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: -54, y: 1, z: -54}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
   tagname: Field
   sceneName: FieldScene
 --- !u!114 &5380436675588657022
@@ -7750,7 +7749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 4, y: 1, z: 26.5}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
   tagname: GeneralStore
   sceneName: GeneralStoreScene
 --- !u!114 &9161228826190985663
@@ -7766,7 +7765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {x: 0, y: 0, z: 45}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
   tagname: Field_City
   sceneName: CityScene
 --- !u!114 &5774522274923828719
@@ -7807,7 +7806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: FieldScene
   pos: {x: -54, y: 3, z: -54}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
 --- !u!114 &3873788191336135542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7823,21 +7822,6 @@ MonoBehaviour:
   charadata: {fileID: 11400000, guid: 7cc9a691749a62c479e44495c2f42c4b, type: 2}
   Slider: {fileID: 22734491030686289}
   PlayerAnimator: {fileID: 7094791766015698176}
---- !u!114 &-2879103560420219390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2534893575186269733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535b1a0171d869746a37f6fa64fcc4fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: 
-  pos: {x: 0, y: 0, z: 0}
-  cameraObject: {fileID: 0}
 --- !u!1 &2539589657969282009
 GameObject:
   m_ObjectHideFlags: 0
