@@ -91,6 +91,7 @@ public class FocusOnEnemy : MonoBehaviour
             if (_inputProvider != null)
             {
                 _inputProvider.enabled = true; // CinemachineInputProviderを有効化
+                Debug.Log("右クリック"); // シーン切り替え前は『正』、シーン切り替え後は『負』
             }
         }
     }
