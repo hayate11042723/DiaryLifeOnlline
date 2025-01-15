@@ -71609,10 +71609,22 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1475899753}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300409600037640273, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: _playerTransform
       value: 
       objectReference: {fileID: 1475899753}
+    - target: {fileID: 2936743686045395733, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_CameraDistance
+      value: 4.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7023056171470978991, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
