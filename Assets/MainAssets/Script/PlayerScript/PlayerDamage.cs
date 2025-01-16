@@ -2,78 +2,93 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-// IDamagebleのインターフェースの継承を行う
 public class PlayerDamage : MonoBehaviour, IDamageable
 {
-    //シリアル化している。charadataのMazokusoldierを指定。
-    [SerializeField] private CharaStatus charadata;
-    //シリアル化。SliderのHPゲージ指定
-    [SerializeField] Slider Slider;
-    int HP;
-    int playerDamage;
-    public Animator PlayerAnimator;
+    [SerializeField] private CharaStatus charadata; // プレイヤーのステータスデータ
+    [SerializeField] Slider Slider; // HPを表示するスライダー
+    [SerializeField] GameObject deathEffectPrefab; // 死亡時に表示するエフェクトのPrefab
+    public int HP; // 現在のHP
+    private int playerDamage; // 算出されたダメージ量
+    public Animator PlayerAnimator; // プレイヤーのアニメーター
 
     void Start()
     {
-        //charadataがnullでないことを確認
+        // プレイヤーのステータスが設定されている場合、HPを初期化
         if (charadata != null)
         {
-            // valueのHPゲージのスライダーの最大の1に
-            Slider.value = 1;
-
-            //charadataの最大HPを代入。
-            HP = charadata.MAXHP;
+            Slider.value = 1; // HPスライダーの初期値
+            HP = charadata.MAXHP; // 最大HPを現在のHPに設定
         }
     }
 
-    // ダメージ処理のメソッド　valueにはPlayer1のATKの値が入ってる
     public void Damage(int value)
     {
-
-        // charadataがnullでないかをチェック
         if (charadata != null)
         {
-            // PlayerのATKからEnemyのDEFを引いた値からダメージを算出
+            // ダメージを計算（敵の攻撃値 - プレイヤーの防御値）
             playerDamage = value - charadata.DEF;
-            // ダメージ量が0以下になったら1ダメージにする
             if (playerDamage <= 0)
             {
-                playerDamage = 1;
+                playerDamage = 1; // ダメージが0以下の場合は1に設定
             }
-            // HPから算出されたダメージを引く
-            HP -= playerDamage;
-            // HPゲージに反映
-            Slider.value = (float)HP / (float)charadata.MAXHP;
+            HP -= playerDamage; // 現在のHPからダメージを引く
+            Slider.value = (float)HP / (float)charadata.MAXHP; // HPスライダーを更新
         }
 
-
-        // HPが0以下ならDeathアニメーションを再生
-        if (HP <= 0)
+        if (HP <= 0) // HPが0以下になった場合
         {
-            Debug.Log("死");
-            // Deathフラグをセットしてアニメーションを再生
-            PlayerAnimator.SetBool("death", true);
-
-            // コルーチンを開始してアニメーション終了後にDeath()を実行
-            StartCoroutine(WaitForDeathAnimation());
+            Debug.Log("死"); // デバッグログを出力
+            PlayerAnimator.SetBool("death", true); // Deathアニメーションを再生
+            StartCoroutine(WaitForDeathAnimation()); // アニメーション終了後の処理をコルーチンで実行
         }
     }
 
-    // アニメーション終了後に死亡処理を行うコルーチン
     private IEnumerator WaitForDeathAnimation()
     {
-        // アニメーションが終了するまで待つ
+        // Deathアニメーションが終了するまで待機
         yield return new WaitForSeconds(PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-        // 死亡処理
-        Death();
+        Instantiate(deathEffectPrefab, transform.position, Quaternion.identity); // 死亡エフェクトを生成
+        yield return new WaitForSeconds(2.0f); // エフェクト生成後に1秒待機
+        HandleRespawn(); // リスポーン処理を実行
     }
 
-    // 死亡処理のメソッド
+    private void HandleRespawn()
+    {
+        // 現在のシーン名を取得
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName != "CityScene") // 現在のシーンがCitySceneでない場合
+        {
+            SceneManager.LoadScene("CityScene", LoadSceneMode.Single); // CitySceneに遷移
+            StartCoroutine(RespawnInCity()); // CitySceneに遷移後、リスポーン処理を実行
+        }
+        else
+        {
+            RespawnAtPosition(new Vector3(0, 0.2f, -8)); // CitySceneの場合、指定位置にリスポーン
+        }
+    }
+
+    private IEnumerator RespawnInCity()
+    {
+        // CitySceneが読み込まれるまで待機
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "CityScene");
+        RespawnAtPosition(new Vector3(0, 0.2f, -8)); // 指定位置にリスポーン
+    }
+
+    private void RespawnAtPosition(Vector3 position)
+    {
+        // プレイヤーを指定位置に移動
+        transform.position = position;
+        HP = charadata.MAXHP; // HPを最大値にリセット
+        Slider.value = 1; // HPスライダーを最大値にリセット
+        PlayerAnimator.SetBool("death", false); // Deathアニメーションのフラグを解除
+        Debug.Log("プレイヤーが蘇生しました。"); // デバッグログを出力
+    }
+
     public void Death()
     {
-        // ゲームオブジェクトを破壊
-        Destroy(gameObject);
+        Debug.Log("Player has died."); // デバッグログを出力
+        Destroy(gameObject); // ゲームオブジェクトを破壊
     }
 }

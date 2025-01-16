@@ -7821,6 +7821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 7cc9a691749a62c479e44495c2f42c4b, type: 2}
   Slider: {fileID: 22734491030686289}
+  deathEffectPrefab: {fileID: 7133517941893716131, guid: c0651258badabd947bc4850090f29da7, type: 3}
   PlayerAnimator: {fileID: 7094791766015698176}
 --- !u!1 &2539589657969282009
 GameObject:

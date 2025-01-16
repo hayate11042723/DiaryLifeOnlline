@@ -71504,6 +71504,22 @@ PrefabInstance:
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 738602350}
+    - target: {fileID: 951364496153140447, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 951364496153140447, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425053537221541381, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425053537221541381, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2534893575186269733, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_Name
       value: kohaku_Player
@@ -71514,7 +71530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2639692361962555857, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2639692361962555857, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71547,6 +71563,18 @@ PrefabInstance:
     - target: {fileID: 2639692361962555857, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188276567989312134, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188276567989312134, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810840398375669921, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: PlayerAnimator
@@ -71610,12 +71638,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1475899753}
     - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.1
+      value: -9.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.1
+      value: -9.9
       objectReference: {fileID: 0}
     - target: {fileID: 2300409600037640273, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: _playerTransform
@@ -71623,7 +71659,7 @@ PrefabInstance:
       objectReference: {fileID: 1475899753}
     - target: {fileID: 2936743686045395733, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_CameraDistance
-      value: 4.1
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 7023056171470978991, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71671,7 +71707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8721154718453237774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: AutoEnableInputs
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

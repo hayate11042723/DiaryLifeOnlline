@@ -13,6 +13,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     public int HP;
     int enemyDamage;
     public Animator EnemyAnimator;
+    public GameObject Effect;
 
     void Start()
     {
@@ -64,7 +65,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     {
         // アニメーションが終了するまで待つ
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-
+        
         // 死亡処理
         Death();
     }
@@ -72,7 +73,11 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     // 死亡処理のメソッド
     public void Death()
     {
+        // 消滅エフェクト
+        var effect = Instantiate(Effect);
+        effect.transform.position = gameObject.transform.position;
         // ゲームオブジェクトを破壊
         Destroy(gameObject);
+        Destroy(effect,5);
     }
 }

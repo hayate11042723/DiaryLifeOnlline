@@ -169,6 +169,7 @@ MonoBehaviour:
   Slider: {fileID: 4607854103242517397}
   HP: 0
   EnemyAnimator: {fileID: 278257233040781674}
+  Effect: {fileID: 7133517941893716131, guid: 7e733a5eed3737949994258d03d30e53, type: 3}
 --- !u!114 &7121020273153148969
 MonoBehaviour:
   m_ObjectHideFlags: 0
