@@ -24,4 +24,4 @@ MonoBehaviour:
   GETEXP: 50
   GETGOLD: 250
   ShortAttackRange: 2
-  EnemyTime: 0.5
+  EnemyTime: 1
