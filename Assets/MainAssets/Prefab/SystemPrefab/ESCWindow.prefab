@@ -33,6 +33,7 @@ Transform:
   - {fileID: 4417157900007701936}
   - {fileID: 996726161732540736}
   - {fileID: 4133856074249565818}
+  - {fileID: 6366241545075381162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &831689985957375531
@@ -535,6 +536,52 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u30D5\u30A3\u30FC\u30EB\u30C9\u3078"
+--- !u!1 &3324502346768939965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6366241545075381162}
+  - component: {fileID: 3146092163317914523}
+  m_Layer: 0
+  m_Name: ButtonScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6366241545075381162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324502346768939965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -453, y: -207.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1243582326376983000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3146092163317914523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324502346768939965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8105ac082c9ae50418d49219c12ed3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: FieldScene
+  pos: {x: -54, y: 3, z: -54}
 --- !u!1 &4737007202157569367
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +824,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 653866683552037288, guid: df48da25f8187c541844865f1175782a, type: 3}
+      - m_Target: {fileID: 3146092163317914523}
         m_TargetAssemblyTypeName: ButtonScene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1

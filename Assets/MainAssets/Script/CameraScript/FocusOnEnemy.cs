@@ -34,11 +34,19 @@ public class FocusOnEnemy : MonoBehaviour
         {
             _inputProvider = GetComponent<CinemachineInputProvider>();
         }
+
+        DontDestroyOnLoad(this.gameObject); // オブジェクトをシーン遷移後も破棄しない
     }
 
     private void OnEnable()
     {
-        // アクションを有効化
+        if (_cinemachineVirtualCamera == null)
+        {
+            // シーン切り替え後に再設定
+            _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        }
+
+        // イベントリスナーを再登録
         _clickAction.action.Enable();
         _clickAction.action.performed += OnLeftClickPerformed;
 
@@ -52,7 +60,7 @@ public class FocusOnEnemy : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public　void OnDisable()
     {
         // アクションを無効化
         _clickAction.action.performed -= OnLeftClickPerformed;

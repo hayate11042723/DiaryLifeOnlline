@@ -7369,7 +7369,6 @@ GameObject:
   - component: {fileID: 9161228826190985663}
   - component: {fileID: 5774522274923828719}
   - component: {fileID: 8567857975844309325}
-  - component: {fileID: 653866683552037288}
   - component: {fileID: 3873788191336135542}
   m_Layer: 0
   m_Name: kohaku_Player
@@ -7792,21 +7791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ad3165a24729143b9b381e81a8f04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &653866683552037288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2534893575186269733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8105ac082c9ae50418d49219c12ed3e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: FieldScene
-  pos: {x: -54, y: 3, z: -54}
-  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
 --- !u!114 &3873788191336135542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7822,6 +7806,7 @@ MonoBehaviour:
   charadata: {fileID: 11400000, guid: 7cc9a691749a62c479e44495c2f42c4b, type: 2}
   Slider: {fileID: 22734491030686289}
   deathEffectPrefab: {fileID: 7133517941893716131, guid: c0651258badabd947bc4850090f29da7, type: 3}
+  HP: 0
   PlayerAnimator: {fileID: 7094791766015698176}
 --- !u!1 &2539589657969282009
 GameObject:

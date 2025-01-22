@@ -4,11 +4,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class TitleUIButtonSelector : MonoBehaviour
+public class UIButtonSelector1 : MonoBehaviour
 {
     public Button[] buttons; // ボタンの配列
-    public RawImage cursor; // カーソルオブジェクト
-    public Vector3 cursorOffset; // カーソルのオフセット
     private int currentIndex = 0; // 現在選択中のボタンのインデックス
     private Coroutine blinkingCoroutine; // 点滅コルーチン
 
@@ -58,12 +56,6 @@ public class TitleUIButtonSelector : MonoBehaviour
     {
         // EventSystemでボタンを選択
         EventSystem.current.SetSelectedGameObject(buttons[index].gameObject);
-
-        // カーソルを選択中のボタンの横に移動
-        if (cursor != null)
-        {
-            cursor.rectTransform.position = buttons[index].transform.position + cursorOffset;
-        }
 
         // 点滅を開始
         StartBlinkingEffect(buttons[index]);

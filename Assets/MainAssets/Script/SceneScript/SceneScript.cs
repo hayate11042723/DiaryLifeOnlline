@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,15 +17,22 @@ public class SceneScript : MonoBehaviour
 
         if (tagObjects.Length >= 2)
         {
-            Destroy(gameObject);
-            Destroy(cameraObject);
+            // 削除前にリスナーを解除
+            var existingScript = tagObjects[1].GetComponent<FocusOnEnemy>();
+            if (existingScript != null)
+            {
+                existingScript.enabled = false;
+                existingScript.OnDisable();
+            }
+
+            Destroy(tagObjects[1].gameObject); // オブジェクトを削除
+            Destroy(cameraObject);            // カメラを削除
         }
         else
         {
             DontDestroyOnLoad(this);
             DontDestroyOnLoad(cameraObject);
         }
-
     }
 
     private void OnTriggerStay(Collider other)
