@@ -34,8 +34,6 @@ public class FocusOnEnemy : MonoBehaviour
         {
             _inputProvider = GetComponent<CinemachineInputProvider>();
         }
-
-        DontDestroyOnLoad(this.gameObject); // オブジェクトをシーン遷移後も破棄しない
     }
 
     private void OnEnable()

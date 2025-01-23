@@ -9,7 +9,7 @@ public class Enemystate1 : MonoBehaviour
     [SerializeField] MonoBehaviour Enemykinsetu;
 
     int State;
-    bool koudou;
+    private bool koudou;
     IEnemy Enemykoudou;
 
     void Start()

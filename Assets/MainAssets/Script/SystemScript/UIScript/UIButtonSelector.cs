@@ -7,8 +7,14 @@ using System.Collections;
 public class UIButtonSelector : MonoBehaviour
 {
     public Button[] buttons; // ボタンの配列
+    public RawImage cursor; // カーソルオブジェクト
+    public Vector3 cursorOffset; // カーソルのオフセット
+    public Canvas canvas; // Canvasオブジェクト
     private int currentIndex = 0; // 現在選択中のボタンのインデックス
     private Coroutine blinkingCoroutine; // 点滅コルーチン
+
+    private float enterKeyCooldown = 0.5f; // Enterキーのクールダウン時間（秒）
+    private float lastEnterKeyPressTime = -1f; // 最後にEnterキーが押された時間
 
     private void Start()
     {
@@ -20,6 +26,14 @@ public class UIButtonSelector : MonoBehaviour
 
     private void Update()
     {
+        // Canvasが非表示になった場合、選択を最初のボタンに戻す
+        if (canvas != null && !canvas.gameObject.activeInHierarchy)
+        {
+            currentIndex = 0;
+            SelectButton(currentIndex);
+            return; // Canvasが非表示の場合、他の入力処理を行わない
+        }
+
         // 上方向キー
         if (Keyboard.current.upArrowKey.wasPressedThisFrame || Gamepad.current?.dpad.up.wasPressedThisFrame == true)
         {
@@ -33,9 +47,10 @@ public class UIButtonSelector : MonoBehaviour
         }
 
         // EnterキーまたはAボタン
-        if (Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.current?.aButton.wasPressedThisFrame == true)
+        if ((Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.current?.aButton.wasPressedThisFrame == true) && Time.time - lastEnterKeyPressTime > enterKeyCooldown)
         {
             buttons[currentIndex].onClick.Invoke();
+            lastEnterKeyPressTime = Time.time; // 最後にEnterキーが押された時間を更新
         }
     }
 
@@ -57,6 +72,12 @@ public class UIButtonSelector : MonoBehaviour
         // EventSystemでボタンを選択
         EventSystem.current.SetSelectedGameObject(buttons[index].gameObject);
 
+        // カーソルを選択中のボタンの横に移動
+        if (cursor != null)
+        {
+            cursor.rectTransform.position = buttons[index].transform.position + cursorOffset;
+        }
+
         // 点滅を開始
         StartBlinkingEffect(buttons[index]);
     }
@@ -74,23 +95,23 @@ public class UIButtonSelector : MonoBehaviour
             blinkingCoroutine = null;
         }
 
-        // 全ボタンの明度をリセット
+        // 全ボタンのテキストの明度をリセット
         foreach (var btn in buttons)
         {
-            var image = btn.GetComponent<Image>();
-            if (image != null)
+            var text = btn.GetComponentInChildren<Text>();
+            if (text != null)
             {
-                var color = image.color;
+                var color = text.color;
                 color.a = 1f; // 明度をリセット（完全に明るい状態）
-                image.color = color;
+                text.color = color;
             }
         }
     }
 
     private IEnumerator BlinkEffect(Button button)
     {
-        var image = button.GetComponent<Image>();
-        if (image == null) yield break;
+        var text = button.GetComponentInChildren<Text>();
+        if (text == null) yield break;
 
         // 点滅ループ
         while (true)
@@ -98,23 +119,23 @@ public class UIButtonSelector : MonoBehaviour
             // 明るくする
             for (float i = 0.3f; i <= 1f; i += 0.05f)
             {
-                SetImageBrightness(image, i);
+                SetTextBrightness(text, i);
                 yield return new WaitForSeconds(0.05f);
             }
 
             // 暗くする
             for (float i = 1f; i >= 0.3f; i -= 0.05f)
             {
-                SetImageBrightness(image, i);
+                SetTextBrightness(text, i);
                 yield return new WaitForSeconds(0.05f);
             }
         }
     }
 
-    private void SetImageBrightness(Image image, float brightness)
+    private void SetTextBrightness(Text text, float brightness)
     {
-        var color = image.color;
+        var color = text.color;
         color.a = brightness; // アルファ値で明度を調整
-        image.color = color;
+        text.color = color;
     }
 }

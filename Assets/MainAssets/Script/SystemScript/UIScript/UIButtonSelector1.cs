@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TitleUIButtonSelector1 : MonoBehaviour
+public class UIButtonSelector1 : MonoBehaviour
 {
     public Button[] buttons; // ボタンの配列
     public RawImage cursor; // カーソルオブジェクト
