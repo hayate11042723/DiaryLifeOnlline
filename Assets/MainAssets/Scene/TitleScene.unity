@@ -2044,6 +2044,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916483959}
   m_Mesh: {fileID: -7395140314636064541, guid: 43092f7fafc4a5043ad813b0ddb8966a, type: 3}
+--- !u!1 &2029631556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9193055313391813498, guid: b00277caceddad641860f7e940eb7da5, type: 3}
+  m_PrefabInstance: {fileID: 4445977264946658797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069913271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,6 +5856,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7236729012763208452, guid: b00277caceddad641860f7e940eb7da5, type: 3}
   m_PrefabInstance: {fileID: 4445977264946658797}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &996726162590637792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029631556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39578a46f1300984db7a502393a68ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 110469390514269899}
+  - {fileID: 4791676282977194850}
+  - {fileID: 40136906041737064}
+  cursor: {fileID: 1567745268}
+  cursorOffset: {x: 300, y: 0, z: 0}
 --- !u!114 &997331158298639242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18004,10 +18027,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonSelector
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2347214530927561493, guid: b00277caceddad641860f7e940eb7da5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9193055313391813498, guid: b00277caceddad641860f7e940eb7da5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 996726162590637792}
   m_SourcePrefab: {fileID: 100100000, guid: b00277caceddad641860f7e940eb7da5, type: 3}
 --- !u!4 &4451742709194168838
 Transform:
@@ -26679,7 +26706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6913450775663226759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 055089e864f60cb4dab5fdb4b0adba28, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b9255fb8d4746c439db9a5e1caded8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:

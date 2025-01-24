@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 public class FocusOnEnemy : MonoBehaviour
 {
     [SerializeField]
-    private CinemachineVirtualCamera _cinemachineVirtualCamera;
+    private CinemachineVirtualCamera _cinemachineVirtualCamera; // 仮想カメラ
 
     [SerializeField]
-    private Transform _playerTransform;
+    private Transform _playerTransform; // プレイヤーのTransform
 
     [SerializeField]
     private InputActionReference _clickAction; // 左クリックアクション
@@ -25,11 +25,13 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void Start()
     {
+        // 仮想カメラが設定されていない場合、シーン内から探す
         if (_cinemachineVirtualCamera == null)
         {
             _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
 
+        // InputProviderが設定されていない場合、コンポーネントから取得
         if (_inputProvider == null)
         {
             _inputProvider = GetComponent<CinemachineInputProvider>();
@@ -38,9 +40,9 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void OnEnable()
     {
+        // シーン切り替え後に仮想カメラを再設定
         if (_cinemachineVirtualCamera == null)
         {
-            // シーン切り替え後に再設定
             _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
 
@@ -52,13 +54,14 @@ public class FocusOnEnemy : MonoBehaviour
         _rightClickDragAction.action.started += OnRightClickDragStart;
         _rightClickDragAction.action.canceled += OnRightClickDragEnd;
 
+        // InputProviderを有効化
         if (_inputProvider != null)
         {
             _inputProvider.enabled = true;
         }
     }
 
-    public　void OnDisable()
+    public void OnDisable()
     {
         // アクションを無効化
         _clickAction.action.performed -= OnLeftClickPerformed;
@@ -68,6 +71,7 @@ public class FocusOnEnemy : MonoBehaviour
         _rightClickDragAction.action.canceled -= OnRightClickDragEnd;
         _rightClickDragAction.action.Disable();
 
+        // InputProviderを無効化
         if (_inputProvider != null)
         {
             _inputProvider.enabled = false;
@@ -76,14 +80,17 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void OnLeftClickPerformed(InputAction.CallbackContext context)
     {
+        // 左クリックが行われた場合の処理
         if (context.control.name == "leftButton")
         {
             if (_isFocusedOnEnemy)
             {
+                // 既に敵にフォーカスしている場合、カメラをリセット
                 ResetCamera();
             }
             else
             {
+                // クリックした敵にフォーカスを試みる
                 TryFocusOnClickedEnemy();
             }
         }
@@ -91,19 +98,23 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void OnRightClickDragStart(InputAction.CallbackContext context)
     {
+        // 右クリックドラッグが開始された場合の処理
         if (context.control.name == "rightButton")
         {
             _isDragging = true;
             if (_inputProvider != null)
             {
                 _inputProvider.enabled = true; // CinemachineInputProviderを有効化
-                Debug.Log("右クリック"); // シーン切り替え前は『正』、シーン切り替え後は『負』
+                Debug.Log("右クリック");       // シーン切り替え前は『正』、シーン切り替え後は『負』
+                                          // CitySceneから遷移すると大丈夫だが,
+                                          // 他シーンからCityScene戻ると、右クリックが効かなくなる
             }
         }
     }
 
     private void OnRightClickDragEnd(InputAction.CallbackContext context)
     {
+        // 右クリックドラッグが終了した場合の処理
         if (context.control.name == "rightButton")
         {
             _isDragging = false;
@@ -116,7 +127,8 @@ public class FocusOnEnemy : MonoBehaviour
 
     private void TryFocusOnClickedEnemy()
     {
-        if (_isDragging) return; // 右ドラッグ中はクリック無効
+        // 右ドラッグ中はクリック無効
+        if (_isDragging) return;
 
         // Raycastでクリックしたオブジェクトを検出
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -125,6 +137,7 @@ public class FocusOnEnemy : MonoBehaviour
             // Enemyタグが付いているオブジェクトを判定
             if (hit.transform.CompareTag("Enemy"))
             {
+                // 敵にフォーカス
                 FocusCameraOnEnemy(hit.transform);
             }
         }
