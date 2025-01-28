@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8924289423773462461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3837205411761943551}
+  - component: {fileID: 7683246124654715466}
+  - component: {fileID: 4317203393268227093}
+  - component: {fileID: 4532912700581241648}
+  - component: {fileID: 4742564211783329950}
+  m_Layer: 0
+  m_Name: SceneScriptEvacuation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3837205411761943551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924289423773462461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.37928772, y: 0.85065055, z: 0.07003784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7683246124654715466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924289423773462461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a261f3cbb66d80943b8e35407aa028a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: 1, y: 1, z: -10.3}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+  tagname: Store_City
+  sceneName: CityScene
+--- !u!114 &4317203393268227093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924289423773462461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a261f3cbb66d80943b8e35407aa028a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: -54, y: 1, z: -54}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+  tagname: Field
+  sceneName: FieldScene
+--- !u!114 &4532912700581241648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924289423773462461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a261f3cbb66d80943b8e35407aa028a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: 0, y: 0, z: 45}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+  tagname: Field_City
+  sceneName: CityScene
+--- !u!114 &4742564211783329950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924289423773462461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a261f3cbb66d80943b8e35407aa028a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: 4, y: 1, z: 26.5}
+  cameraObject: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+  tagname: GeneralStore
+  sceneName: GeneralStoreScene

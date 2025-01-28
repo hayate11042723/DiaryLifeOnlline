@@ -2556,7 +2556,7 @@ MonoBehaviour:
       m_Action: Toggle
       m_Flags: 0
     m_Flags: 0
-  closeButton: {fileID: 0}
+  closeButton: {fileID: 8652036646229614623}
 --- !u!1 &6654028201656302396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,9 +2689,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4642348149926098159}
-  - component: {fileID: 6208030543481133528}
   - component: {fileID: 7297082891802102897}
   - component: {fileID: 1363870639821706114}
+  - component: {fileID: 2378981310653880798}
   m_Layer: 0
   m_Name: ESCWindowButton
   m_TagString: Untagged
@@ -2714,20 +2714,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7929877474049313851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6208030543481133528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7353274906104683954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8105ac082c9ae50418d49219c12ed3e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: FieldScene
-  pos: {x: -54, y: 3, z: -54}
 --- !u!114 &7297082891802102897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,6 +2742,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCanvas: {fileID: 8685909543784034445}
   targetCanvas: {fileID: 7626751966452176104}
+--- !u!114 &2378981310653880798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353274906104683954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ca4b4f8602b564fa2afd2b6ffe1092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: FieldScene
+  targetObjectName: PlayerSet
+  newPosition: {x: -54, y: 0, z: -55}
 --- !u!1 &7536459881518093357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +3048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6208030543481133528}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonScene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1

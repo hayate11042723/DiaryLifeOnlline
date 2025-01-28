@@ -9,7 +9,7 @@ public class UIButtonSelector : MonoBehaviour
     public Button[] buttons; // ボタンの配列
     public RawImage cursor; // カーソルオブジェクト
     public Vector3 cursorOffset; // カーソルのオフセット
-    public Canvas canvas; // Canvasオブジェクト
+    public GameObject canvas; // Canvasオブジェクト
     private int currentIndex = 0; // 現在選択中のボタンのインデックス
     private Coroutine blinkingCoroutine; // 点滅コルーチン
 
