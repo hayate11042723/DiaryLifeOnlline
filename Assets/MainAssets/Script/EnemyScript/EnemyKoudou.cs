@@ -60,13 +60,11 @@ public class EnemyKoudou : MonoBehaviour, IEnemy
                 if (charadata.ShortAttackRange >= distanceX)
                 {
                     State = 1;
-                    Debug.Log(State);
                     return State;
                 }
                 else if (charadata.ShortAttackRange < distanceX)
                 {
                     State = 0;
-                    Debug.Log(State);
                     return State;
                 }
             }
@@ -79,7 +77,6 @@ public class EnemyKoudou : MonoBehaviour, IEnemy
                 }
                 else if (charadata.ShortAttackRange < distanceZ)
                 {
-                    Debug.Log(State);
                     State = 0;
                     return State;
                 }

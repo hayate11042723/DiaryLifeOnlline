@@ -9,7 +9,6 @@ public class Enemystate1 : MonoBehaviour
     [SerializeField] MonoBehaviour Enemykinsetu;
 
     int State;
-    private bool koudou;
     IEnemy Enemykoudou;
 
     void Start()
@@ -37,7 +36,6 @@ public class Enemystate1 : MonoBehaviour
             //スクリプトのEnemyAIkoudou()を呼び出し、返ってきた値をStateに代入する。
             State = Enemykoudou.EnemyAIkoudou();
 
-            koudou = true;
             //Switch文でStateの値に応じて条件分岐。
             switch (State)
             {
@@ -59,6 +57,5 @@ public class Enemystate1 : MonoBehaviour
     IEnumerator Enemytime()
     {
         yield return new WaitForSeconds(charadata.EnemyTime);
-        koudou = false;
     }
 }

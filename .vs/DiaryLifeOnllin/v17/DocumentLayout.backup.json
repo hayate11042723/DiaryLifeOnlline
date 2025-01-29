@@ -3,7 +3,67 @@
   "WorkspaceRootPath": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\scenescript\\buttonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(basic).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(basic).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\systemscript\\uiscript\\windowchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\windowchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(not cursor).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(not cursor).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(meimetu).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(meimetu).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\enemyscript\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\playerscript\\playerdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\playerscript\\playerdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemystate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemystate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\otherassets\\unitychantpk\\script\\springbone\\colliders\\springspherecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\otherassets\\unitychantpk\\script\\springbone\\colliders\\springspherecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemygaugemuki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemygaugemuki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\enemybossai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemybossai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\diarylifeonllin\\assets\\mainassets\\script\\enemyscript\\charaattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\charaattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\scenescript\\buttonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\scenescript\\buttonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -13,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\camerascript\\focusonenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\camerascript\\focusonenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\playerscript\\playerdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\playerscript\\playerdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\camerascript\\cinemachinedollyinputprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\objectscript\\scenepointerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\objectscript\\scenepointerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\enemyscript\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2AA6FBC-FAA8-3D52-F881-2C3F53BB5F4E}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\assets\\mainassets\\script\\systemscript\\datascript\\itemsyoki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,11 +126,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 84,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WindowChange.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:34:46.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIButtonSelector(not cursor).cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:34:45.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UIButtonSelector(meimetu).cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:34:44.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UIButtonSelector(basic).cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:34:43.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SpringSphereCollider.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\OtherAssets\\UnityChanTPK\\Script\\SpringBone\\Colliders\\SpringSphereCollider.cs",
+              "RelativeDocumentMoniker": "Assets\\OtherAssets\\UnityChanTPK\\Script\\SpringBone\\Colliders\\SpringSphereCollider.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\OtherAssets\\UnityChanTPK\\Script\\SpringBone\\Colliders\\SpringSphereCollider.cs",
+              "RelativeToolTip": "Assets\\OtherAssets\\UnityChanTPK\\Script\\SpringBone\\Colliders\\SpringSphereCollider.cs",
+              "ViewState": "AgIAADwBAAAAAAAAAAAiwFgBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T01:28:52.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyAI.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyAI.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyAI.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyAI.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:35:38.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyKoudou.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwE4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T04:58:07.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Enemystate1.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\Enemystate1.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Enemystate1.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\Enemystate1.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Enemystate1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:34:39.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerDamage.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T06:49:30.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Enemykinsetu.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\Enemykinsetu.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Enemykinsetu.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\Enemykinsetu.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Enemykinsetu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:33:24.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnemyGaugemuki.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyGaugemuki.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyGaugemuki.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyGaugemuki.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyGaugemuki.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:34:10.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyDamage.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:39:02.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EnemyBossAI.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyBossAI.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyBossAI.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyBossAI.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyBossAI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:36:06.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CharaAttack.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\CharaAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\CharaAttack.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\CharaAttack.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\CharaAttack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T00:33:53.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ButtonScene.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\ButtonScene.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\ButtonScene.cs",
@@ -86,12 +320,22 @@
               "RelativeToolTip": "Assets\\MainAssets\\Script\\SceneScript\\ButtonScene.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T02:23:54.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T02:23:54.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
+              "Title": "ButtonScene - Copy.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SceneScript\\ButtonScene - Copy.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T02:28:50.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "TemporaryScene.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\TemporaryScene.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\TemporaryScene.cs",
@@ -103,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "SceneScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SceneScript\\SceneScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\SceneScript.cs",
@@ -115,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 17,
               "Title": "FocusOnEnemy.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\CameraScript\\FocusOnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\CameraScript\\FocusOnEnemy.cs",
@@ -127,19 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerDamage.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
-              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
-              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T06:49:30.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "CinemachineDollyInputProvider.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\CameraScript\\CinemachineDollyInputProvider.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\CameraScript\\CinemachineDollyInputProvider.cs",
@@ -151,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "CinemachineInputProvider.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Library\\PackageCache\\com.unity.cinemachine@2.9.5\\Runtime\\Helpers\\CinemachineInputProvider.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.cinemachine@2.9.5\\Runtime\\Helpers\\CinemachineInputProvider.cs",
@@ -163,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "ScenePointerScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\ObjectScript\\ScenePointerScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ObjectScript\\ScenePointerScript.cs",
@@ -175,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
               "Title": "NextSceneColliderScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\ObjectScript\\NextSceneColliderScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ObjectScript\\NextSceneColliderScript.cs",
@@ -187,19 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EnemyKoudou.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
-              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
-              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T04:58:07.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "ItemDataBase.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemDataBase.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemDataBase.cs",
@@ -211,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "ItemSyoki.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemSyoki.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemSyoki.cs",
@@ -223,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "DebugUpdater.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.9\\Runtime\\Debugging\\DebugUpdater.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@14.0.9\\Runtime\\Debugging\\DebugUpdater.cs",
@@ -235,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "NavMeshAssetManager.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Library\\PackageCache\\com.unity.ai.navigation@1.1.5\\Editor\\NavMeshAssetManager.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ai.navigation@1.1.5\\Editor\\NavMeshAssetManager.cs",
@@ -247,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "ItemData.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\SystemScript\\ItemData.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\ItemData.cs",
@@ -259,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "TitlePlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DiaryLifeOnllin\\Assets\\MainAssets\\Script\\PlayerScript\\TitlePlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\TitlePlayerMove.cs",

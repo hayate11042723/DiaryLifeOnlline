@@ -3186,7 +3186,7 @@ MonoBehaviour:
   - {fileID: 8652036646229614623}
   cursor: {fileID: 4873229218530395227}
   cursorOffset: {x: 300, y: 0, z: 0}
-  canvas: {fileID: 0}
+  canvas: {fileID: 7626751966452176104}
 --- !u!1 &8685909543784034445
 GameObject:
   m_ObjectHideFlags: 0
