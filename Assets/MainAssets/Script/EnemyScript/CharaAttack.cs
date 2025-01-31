@@ -9,6 +9,9 @@ public class CharaAttack : MonoBehaviour
     [SerializeField] private CharaStatus charadata;
     //胴体を持っているゲームオブジェクト(親)を指定。
     [SerializeField] GameObject AttackChara;
+    [SerializeField] private GameObject hitEffectPrefab; // ヒット時に表示するエフェクトのPrefab
+    [SerializeField] private Vector3 hitEffectOffset; // ヒットエフェクトの発生位置のオフセット
+    [SerializeField] private Vector3 hitEffectScale = Vector3.one; // ヒットエフェクトのスケール
 
     int HHcount;
     int ATK;
@@ -49,6 +52,11 @@ public class CharaAttack : MonoBehaviour
                 Hcount.HitCountdown();
                 //damageableのダメージ処理メソッドを呼び出す。引数としてcharadataのATKを指定
                 damageable.Damage(ATK);
+
+                // ヒットエフェクトを生成
+                Vector3 hitPoint = other.ClosestPoint(transform.position) + hitEffectOffset;
+                GameObject hitEffect = Instantiate(hitEffectPrefab, hitPoint, Quaternion.identity);
+                hitEffect.transform.localScale = hitEffectScale; // エフェクトのスケールを設定
             }
         }
     }

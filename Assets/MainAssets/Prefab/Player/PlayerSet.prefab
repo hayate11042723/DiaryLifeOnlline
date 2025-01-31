@@ -63,15 +63,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5632849
+      value: -50.436714
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.2327633
+      value: 7.0327635
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.09
+      value: -81.09
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -193,6 +193,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
+    - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1425053537221541381, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_Type
       value: 0
@@ -261,6 +277,26 @@ PrefabInstance:
       propertyPath: PlayerAnimator
       value: 
       objectReference: {fileID: 8036420010461883110}
+    - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+    - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: hitEffectOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3998392815770769665, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: newPosition.x
       value: 1.2
@@ -361,6 +397,14 @@ PrefabInstance:
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 7927934818775810114}
+    - target: {fileID: 9178818914928750154, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178818914928750154, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9178818914928750154, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

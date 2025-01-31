@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
+  m_Name: IronArmor
+  m_EditorClassIdentifier: 
+  Itemname: "\u9244\u306E\u93A7"
+  Itemtype: 2
+  Itemicon: {fileID: 0}
+  Itemexplanation: "\u9244\u3067\u3067\u304D\u305F\u93A7\u3002\u5C11\u3057\u9632\u5FA1\u304C\u4E0A\u304C\u308B"
+  Itemlimit: 99
