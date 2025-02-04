@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     // PlayerのCharaStatusを読み込む
-    [SerializeField] private CharaStatus playerdata;
+    [SerializeField] private PlayerStatus playerdata;
     [SerializeField] private GameObject hitEffectPrefab; // ヒット時に表示するエフェクトのPrefab
     [SerializeField] private Vector3 hitEffectScale = Vector3.one; // ヒットエフェクトのスケール
 

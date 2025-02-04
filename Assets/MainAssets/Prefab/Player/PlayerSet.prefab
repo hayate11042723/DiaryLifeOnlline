@@ -51,35 +51,59 @@ PrefabInstance:
       objectReference: {fileID: 2977100189682599479}
     - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5632849
+      value: 3.4518213
       objectReference: {fileID: 0}
     - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0327635
+      value: 6.8181458
       objectReference: {fileID: 0}
     - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.09
+      value: -26.084148
+      objectReference: {fileID: 0}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99970734
+      objectReference: {fileID: 0}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.021465367
+      objectReference: {fileID: 0}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.011154759
+      objectReference: {fileID: 0}
+    - target: {fileID: 478865520156047774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00023951108
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.436714
+      value: 3.4518213
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0327635
+      value: 6.8181458
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -81.09
+      value: -26.084148
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99970734
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.021465367
       objectReference: {fileID: 0}
     - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.011154759
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060402016349557117, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00023951108
       objectReference: {fileID: 0}
     - target: {fileID: 2300409600037640273, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: _playerTransform
@@ -132,6 +156,14 @@ PrefabInstance:
     - target: {fileID: 7219444629149046552, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: m_Name
       value: CameraPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654245124077577605, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_VerticalAxis.Value
+      value: -2.4600918
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654245124077577605, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
+      propertyPath: m_HorizontalAxis.Value
+      value: 1.2785624
       objectReference: {fileID: 0}
     - target: {fileID: 8721154718453237774, guid: 35fd8b2bc2034db47aa57b384731ffef, type: 3}
       propertyPath: AutoEnableInputs
@@ -193,6 +225,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
+      propertyPath: playerdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
     - target: {fileID: 1068054202717571386, guid: df48da25f8187c541844865f1175782a, type: 3}
       propertyPath: hitEffectPrefab
       value: 

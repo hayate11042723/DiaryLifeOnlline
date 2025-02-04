@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
+  m_Name: ShellWithSpikes
+  m_EditorClassIdentifier: 
+  Itemname: "\u68D8\u4ED8\u304D\u306E\u7532\u7F85"
+  Itemtype: 5
+  Itemicon: {fileID: 0}
+  Itemexplanation: "\u68D8\u4E80\u3092\u5012\u3057\u305F\u3068\u304D\u306B\u624B\u306B\u5165\u308B\u68D8\u306E\u3064\u3044\u305F\u7532\u7F85\u3002"
+  Itemlimit: 999

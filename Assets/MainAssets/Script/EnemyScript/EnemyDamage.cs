@@ -6,8 +6,12 @@ using UnityEngine.UI;
 // IDamagebleのインターフェースの継承を行う
 public class EnemyDamage : MonoBehaviour, IDamageable
 {
-    //シリアル化している。charadataのMazokusoldierを指定。
+    //シリアル化している。charadataの各エネミーのStatusを指定。
     [SerializeField] private CharaStatus charadata;
+    //シリアル化している。playerdataの各エネミーのStatusを指定。
+    [SerializeField] private PlayerStatus playerdata;
+    // シリアル化している。Lvdataの参照を指定。
+    [SerializeField] private Lvdata lvdata;
     //シリアル化。SliderのHPゲージ指定
     [SerializeField] Slider Slider;
     public int HP;
@@ -25,20 +29,22 @@ public class EnemyDamage : MonoBehaviour, IDamageable
 
             //charadataの最大HPを代入。
             HP = charadata.MAXHP;
+
+            // スライダーを非表示にする
+            Slider.gameObject.SetActive(false);
         }
     }
 
     // ダメージ処理のメソッド　valueにはPlayer1のATKの値が入ってる
     public void Damage(int value)
     {
-
         // charadataがnullでないかをチェック
         if (charadata != null)
         {
             // PlayerのATKからEnemyのDEFを引いた値からダメージを算出
             enemyDamage = value - charadata.DEF;
             // ダメージ量が0以下になったら1ダメージにする
-            if(enemyDamage <= 0)
+            if (enemyDamage <= 0)
             {
                 enemyDamage = 1;
             }
@@ -46,8 +52,13 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             HP -= enemyDamage;
             // HPゲージに反映
             Slider.value = (float)HP / (float)charadata.MAXHP;
-        }
 
+            // HPが減ったらスライダーを表示する
+            if (!Slider.gameObject.activeSelf)
+            {
+                Slider.gameObject.SetActive(true);
+            }
+        }
 
         // HPが0以下ならDeathアニメーションを再生
         if (HP <= 0)
@@ -65,7 +76,7 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     {
         // アニメーションが終了するまで待つ
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-        
+
         // 死亡処理
         Death();
     }
@@ -76,8 +87,23 @@ public class EnemyDamage : MonoBehaviour, IDamageable
         // 消滅エフェクト
         var effect = Instantiate(Effect);
         effect.transform.position = gameObject.transform.position;
+
+        //獲得経験値があるなら経験値処理
+        if (charadata.GETEXP > 0)
+        {
+
+            playerdata.EXP = playerdata.EXP + charadata.GETEXP;
+
+            var a = lvdata.playerExpTable[playerdata.LV];
+
+            if (playerdata.EXP >= a.exp)
+            {
+                playerdata.LV += 1;
+            }
+        }
+
         // ゲームオブジェクトを破壊
         Destroy(gameObject);
-        Destroy(effect,5);
+        Destroy(effect, 5);
     }
 }

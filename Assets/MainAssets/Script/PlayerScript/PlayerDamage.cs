@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour, IDamageable
 {
-    [SerializeField] private CharaStatus charadata; // プレイヤーのステータスデータ
+    [SerializeField] private PlayerStatus charadata; // プレイヤーのステータスデータ
     [SerializeField] Slider Slider; // HPを表示するスライダー
     [SerializeField] GameObject deathEffectPrefab; // 死亡時に表示するエフェクトのPrefab
     public int HP; // 現在のHP
