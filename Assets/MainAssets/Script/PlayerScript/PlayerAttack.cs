@@ -9,7 +9,17 @@ public class PlayerAttack : MonoBehaviour
     public Collider WeaponCollider;
 
     // 攻撃中かどうかのフラグ
-    private bool isAttacking = false;
+    public bool isAttacking = false; // フラグをpublicに変更
+
+    // アニメーションが変わらない時間を計測するタイマー
+    private float animationTimer = 0f;
+    private float animationThreshold = 3f; // 4秒の閾値
+    private string currentAnimation = "idle";
+
+    private void Update()
+    {
+        CheckAnimationState();
+    }
 
     // 武器の当たり判定をオンにする
     void AttackFlagON()
@@ -31,6 +41,9 @@ public class PlayerAttack : MonoBehaviour
         PlayerAnimator.SetBool("attack_I", false);
         PlayerAnimator.SetBool("attack_K", false);
         PlayerAnimator.SetBool("attack_R", false);
+
+        // アニメーションをidleに戻す
+        SetAnimation("idle");
     }
 
     // 攻撃（一撃）の入力処理
@@ -39,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
-            PlayerAnimator.SetBool("attack_I", true);
+            SetAnimation("attack_I");
         }
     }
 
@@ -49,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
-            PlayerAnimator.SetBool("attack_K", true);
+            SetAnimation("attack_K");
         }
     }
 
@@ -59,7 +72,36 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
-            PlayerAnimator.SetBool("attack_R", true);
+            SetAnimation("attack_R");
         }
+    }
+
+    private void SetAnimation(string animationName)
+    {
+        if (currentAnimation != animationName)
+        {
+            PlayerAnimator.SetBool(currentAnimation, false);
+            PlayerAnimator.SetBool(animationName, true);
+            currentAnimation = animationName;
+            animationTimer = 0f; // タイマーをリセット
+        }
+    }
+
+    private void CheckAnimationState()
+    {
+        animationTimer += Time.deltaTime;
+        if (animationTimer >= animationThreshold)
+        {
+            // 一瞬だけアニメーションフラグをfalseにして元に戻す
+            PlayerAnimator.SetBool(currentAnimation, false);
+            StartCoroutine(ResetAnimationFlag());
+            animationTimer = 0f; // タイマーをリセット
+        }
+    }
+
+    private IEnumerator ResetAnimationFlag()
+    {
+        yield return null; // 1フレーム待つ
+        PlayerAnimator.SetBool(currentAnimation, true);
     }
 }

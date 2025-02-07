@@ -58,6 +58,12 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             {
                 Slider.gameObject.SetActive(true);
             }
+
+            // HPが減った時にアニメーションフラグをTRUEにする
+            EnemyAnimator.SetBool("hit", true);
+
+            // アニメーションが再生し終わったらフラグをFALSEに戻す
+            StartCoroutine(ResetHitFlag());
         }
 
         // HPが0以下ならDeathアニメーションを再生
@@ -79,6 +85,16 @@ public class EnemyDamage : MonoBehaviour, IDamageable
 
         // 死亡処理
         Death();
+    }
+
+    // アニメーション終了後にhitフラグをFALSEに戻すコルーチン
+    private IEnumerator ResetHitFlag()
+    {
+        // アニメーションが終了するまで待つ
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+        // hitフラグをFALSEに戻す
+        EnemyAnimator.SetBool("hit", false);
     }
 
     // 死亡処理のメソッド
@@ -107,3 +123,4 @@ public class EnemyDamage : MonoBehaviour, IDamageable
         Destroy(effect, 5);
     }
 }
+
