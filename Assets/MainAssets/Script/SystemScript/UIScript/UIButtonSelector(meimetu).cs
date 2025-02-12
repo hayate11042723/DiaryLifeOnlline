@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class UIButtonSelector : MonoBehaviour
+public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
 {
     public Button[] buttons; // ボタンの配列
     public RawImage cursor; // カーソルオブジェクト
@@ -137,5 +137,18 @@ public class UIButtonSelector : MonoBehaviour
         var color = text.color;
         color.a = brightness; // アルファ値で明度を調整
         text.color = color;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (eventData.pointerEnter == buttons[i].gameObject)
+            {
+                currentIndex = i;
+                SelectButton(currentIndex);
+                break;
+            }
+        }
     }
 }

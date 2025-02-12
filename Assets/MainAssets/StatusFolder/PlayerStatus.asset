@@ -20,7 +20,8 @@ MonoBehaviour:
   INT: 7
   MDEF: 0
   AGI: 10
-  LV: 2
-  EXP: 10
-  MAXEXP: 10
+  LV: 1
+  EXP: 0
+  MAXEXP: 250
   HAVEGOLD: 0
+  StatusPoint: 20

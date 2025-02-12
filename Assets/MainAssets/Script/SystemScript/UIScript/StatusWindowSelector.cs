@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class StatusWindowSelector : MonoBehaviour
+public class StatusWindowSelector : MonoBehaviour, IPointerClickHandler
 {
     // ボタンのリスト
     public List<Button> buttons;
@@ -140,5 +141,19 @@ public class StatusWindowSelector : MonoBehaviour
     {
         // 現在選択中のボタンのクリックイベントを呼び出す
         buttons[currentIndex].onClick.Invoke();
+    }
+
+    // ボタンがクリックされたときの処理
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            if (eventData.pointerPress == buttons[i].gameObject)
+            {
+                currentIndex = i;
+                SelectButton();
+                break;
+            }
+        }
     }
 }

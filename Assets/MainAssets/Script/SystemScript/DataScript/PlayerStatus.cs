@@ -17,4 +17,34 @@ public class PlayerStatus : ScriptableObject
     public int EXP;         //経験値
     public int MAXEXP;      //次のレベルまでの経験値
     public int HAVEGOLD;    //所持金
+    public int StatusPoint; //ステータスポイント
+
+    // レベルアップ時に呼び出すメソッド
+    public void LevelUp()
+    {
+        LV++;
+        StatusPoint += 20; // レベルアップ時にステータスポイントを20増加させる
+        EXP = 0; // 経験値をリセット
+        MAXEXP *= 2; // 次のレベルまでの経験値を増加させる
+    }
+
+    // ステータスポイントを割り振るメソッド
+    public void AllocateStatusPoints(int hp, int mp, int atk, int def, int intel, int mdef)
+    {
+        int totalPoints = hp + mp + atk + def + intel + mdef;
+        if (totalPoints <= StatusPoint)
+        {
+            MAXHP += hp;
+            MAXMP += mp;
+            ATK += atk;
+            DEF += def;
+            INT += intel;
+            MDEF += mdef;
+            StatusPoint -= totalPoints;
+        }
+        else
+        {
+            Debug.LogWarning("割り振るステータスポイントが不足しています。");
+        }
+    }
 }

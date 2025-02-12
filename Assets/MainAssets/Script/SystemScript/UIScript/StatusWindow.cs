@@ -21,12 +21,41 @@ public class StatusWindow : MonoBehaviour
     public Text expText;
     public Text maxExpText;
     public Text haveGoldText;
+    public Text statusPointText;
+
+    // ステータス変更ボタン
+    public Button increaseHpButton;
+    public Button decreaseHpButton;
+    public Button increaseMpButton;
+    public Button decreaseMpButton;
+    public Button increaseAtkButton;
+    public Button decreaseAtkButton;
+    public Button increaseDefButton;
+    public Button decreaseDefButton;
+    public Button increaseIntButton;
+    public Button decreaseIntButton;
+    public Button increaseMdefButton;
+    public Button decreaseMdefButton;
 
     // Start is called before the first frame update
     void Start()
     {
         // UIを初期化
         UpdateUI();
+
+        // ボタンにメソッドを登録
+        increaseHpButton.onClick.AddListener(() => ChangeStatus("HP", 1));
+        decreaseHpButton.onClick.AddListener(() => ChangeStatus("HP", -1));
+        increaseMpButton.onClick.AddListener(() => ChangeStatus("MP", 1));
+        decreaseMpButton.onClick.AddListener(() => ChangeStatus("MP", -1));
+        increaseAtkButton.onClick.AddListener(() => ChangeStatus("ATK", 1));
+        decreaseAtkButton.onClick.AddListener(() => ChangeStatus("ATK", -1));
+        increaseDefButton.onClick.AddListener(() => ChangeStatus("DEF", 1));
+        decreaseDefButton.onClick.AddListener(() => ChangeStatus("DEF", -1));
+        increaseIntButton.onClick.AddListener(() => ChangeStatus("INT", 1));
+        decreaseIntButton.onClick.AddListener(() => ChangeStatus("INT", -1));
+        increaseMdefButton.onClick.AddListener(() => ChangeStatus("MDEF", 1));
+        decreaseMdefButton.onClick.AddListener(() => ChangeStatus("MDEF", -1));
     }
 
     // UIを更新するメソッド
@@ -45,26 +74,65 @@ public class StatusWindow : MonoBehaviour
         expText.text = "EXP: " + playerStatus.EXP.ToString();
         maxExpText.text = "次のレベルまでの必要EXP: " + playerStatus.MAXEXP.ToString();
         haveGoldText.text = "所持金: " + playerStatus.HAVEGOLD.ToString();
+        statusPointText.text = "SP: " + playerStatus.StatusPoint.ToString();
     }
 
-    // プレイヤーのステータスを更新するメソッド
-    public void UpdatePlayerStatus(string name, int maxHp, int maxMp, int atk, int def, int intStat, int res, int agi, int lv, int exp, int maxExp, int haveGold)
+    // ステータスを変更するメソッド
+    void ChangeStatus(string stat, int amount)
     {
-        // ステータスを更新
-        playerStatus.NAME = name;
-        playerStatus.MAXHP = maxHp;
-        playerStatus.MAXMP = maxMp;
-        playerStatus.ATK = atk;
-        playerStatus.DEF = def;
-        playerStatus.INT = intStat;
-        playerStatus.MDEF = res;
-        playerStatus.AGI = agi;
-        playerStatus.LV = lv;
-        playerStatus.EXP = exp;
-        playerStatus.MAXEXP = maxExp;
-        playerStatus.HAVEGOLD = haveGold;
+        if (amount > 0 && playerStatus.StatusPoint < amount)
+        {
+            Debug.LogWarning("ステータスポイントが不足しています。");
+            return;
+        }
 
-        // UIを更新
+        switch (stat)
+        {
+            case "HP":
+                playerStatus.MAXHP += amount;
+                break;
+            case "MP":
+                playerStatus.MAXMP += amount;
+                break;
+            case "ATK":
+                playerStatus.ATK += amount;
+                break;
+            case "DEF":
+                playerStatus.DEF += amount;
+                break;
+            case "INT":
+                playerStatus.INT += amount;
+                break;
+            case "MDEF":
+                playerStatus.MDEF += amount;
+                break;
+        }
+
+        if (amount > 0)
+        {
+            playerStatus.StatusPoint -= amount;
+        }
+        else
+        {
+            playerStatus.StatusPoint += -amount;
+        }
+
         UpdateUI();
+    }
+    public void UpdatePlayerStatus(string name, int maxHp, int maxMp, int atk, int def, int intel, int mdef, int agi, int lv, int exp, int maxExp, int haveGold, int statusPoint)
+    {
+        nameText.text = name;
+        maxHpText.text = maxHp.ToString();
+        maxMpText.text = maxMp.ToString();
+        atkText.text = atk.ToString();
+        defText.text = def.ToString();
+        intText.text = intel.ToString();
+        resText.text = mdef.ToString();
+        agiText.text = agi.ToString();
+        lvText.text = lv.ToString();
+        expText.text = exp.ToString();
+        maxExpText.text = maxExp.ToString();
+        haveGoldText.text = haveGold.ToString();
+        statusPointText.text = statusPoint.ToString();
     }
 }

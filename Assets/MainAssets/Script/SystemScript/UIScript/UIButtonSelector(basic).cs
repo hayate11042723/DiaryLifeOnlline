@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIButtonSelector0 : MonoBehaviour
+public class UIButtonSelector0 : MonoBehaviour, IPointerEnterHandler
 {
     public Button[] buttons; // ボタンの配列
     public RawImage cursor; // カーソルオブジェクト
@@ -58,6 +58,19 @@ public class UIButtonSelector0 : MonoBehaviour
         if (cursor != null)
         {
             cursor.rectTransform.position = buttons[index].transform.position + cursorOffset;
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (eventData.pointerEnter == buttons[i].gameObject)
+            {
+                currentIndex = i;
+                SelectButton(currentIndex);
+                break;
+            }
         }
     }
 }
