@@ -89,22 +89,28 @@ public class StatusWindow : MonoBehaviour
         switch (stat)
         {
             case "HP":
-                playerStatus.MAXHP += amount;
+                if (amount < 0 && playerStatus.MAXHP <= 0) return;
+                playerStatus.MAXHP = Mathf.Max(0, playerStatus.MAXHP + amount);
                 break;
             case "MP":
-                playerStatus.MAXMP += amount;
+                if (amount < 0 && playerStatus.MAXMP <= 0) return;
+                playerStatus.MAXMP = Mathf.Max(0, playerStatus.MAXMP + amount);
                 break;
             case "ATK":
-                playerStatus.ATK += amount;
+                if (amount < 0 && playerStatus.ATK <= 0) return;
+                playerStatus.ATK = Mathf.Max(0, playerStatus.ATK + amount);
                 break;
             case "DEF":
-                playerStatus.DEF += amount;
+                if (amount < 0 && playerStatus.DEF <= 0) return;
+                playerStatus.DEF = Mathf.Max(0, playerStatus.DEF + amount);
                 break;
             case "INT":
-                playerStatus.INT += amount;
+                if (amount < 0 && playerStatus.INT <= 0) return;
+                playerStatus.INT = Mathf.Max(0, playerStatus.INT + amount);
                 break;
             case "MDEF":
-                playerStatus.MDEF += amount;
+                if (amount < 0 && playerStatus.MDEF <= 0) return;
+                playerStatus.MDEF = Mathf.Max(0, playerStatus.MDEF + amount);
                 break;
         }
 
@@ -119,6 +125,8 @@ public class StatusWindow : MonoBehaviour
 
         UpdateUI();
     }
+
+
     public void UpdatePlayerStatus(string name, int maxHp, int maxMp, int atk, int def, int intel, int mdef, int agi, int lv, int exp, int maxExp, int haveGold, int statusPoint)
     {
         nameText.text = name;

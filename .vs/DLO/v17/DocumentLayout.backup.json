@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\statsupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\statsupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\documents\\github\\dlo\\assets\\mainassets\\script\\systemscript\\uiscript\\statuswindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\statuswindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\documents\\github\\dlo\\assets\\mainassets\\script\\systemscript\\datascript\\playerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\documents\\github\\dlo\\assets\\mainassets\\script\\systemscript\\uiscript\\updatebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\updatebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\playerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\playerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\charastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\charastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\documents\\github\\dlo\\assets\\mainassets\\script\\playerscript\\statsupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\playerscript\\statsupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\lvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\lvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\documents\\github\\dlo\\assets\\mainassets\\script\\systemscript\\uiscript\\lvui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\lvui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\charastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\charastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\uiscript\\uibuttonselector(not cursor).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,49 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StatsUpdate.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\StatsUpdate.cs",
-              "RelativeDocumentMoniker": "Assets\\StatsUpdate.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\StatsUpdate.cs",
-              "RelativeToolTip": "Assets\\StatsUpdate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "LvUI.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T03:30:28.354Z",
+              "WhenOpened": "2025-02-12T08:17:00.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateButton.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T08:15:56.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatusWindow.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAD4v4oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T08:13:02.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "StatsUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\StatsUpdate.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\StatsUpdate.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\StatsUpdate.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\StatsUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:56:28.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Lvdata.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T03:28:18.202Z"
+              "WhenOpened": "2025-02-12T03:28:18.202Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerStatus.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T03:24:34.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CharaStatus.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\CharaStatus.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\CharaStatus.cs",
@@ -88,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "UIButtonSelector(not cursor).cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
@@ -100,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "UIButtonSelector(basic).cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Documents\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
