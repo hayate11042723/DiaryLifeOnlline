@@ -53308,7 +53308,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5
+  - time: 0.93333334
     functionName: AttackFlagOFF
     data: 
     objectReferenceParameter: {fileID: 0}

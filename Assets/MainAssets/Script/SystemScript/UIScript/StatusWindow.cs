@@ -7,6 +7,7 @@ public class StatusWindow : MonoBehaviour
 {
     // プレイヤーのステータス情報
     public PlayerStatus playerStatus;
+    public EnemyDamage LvUp;
 
     // UIテキスト要素
     public Text nameText;
@@ -69,7 +70,7 @@ public class StatusWindow : MonoBehaviour
         defText.text = "DEF: " + playerStatus.DEF.ToString();
         intText.text = "INT: " + playerStatus.INT.ToString();
         resText.text = "MDEF: " + playerStatus.MDEF.ToString();
-        // agiText.text = "AGI: " + playerStatus.AGI.ToString(); // コメントアウトされている
+        agiText.text = "AGI: " + playerStatus.AGI.ToString();
         lvText.text = "LV: " + playerStatus.LV.ToString();
         expText.text = "EXP: " + playerStatus.EXP.ToString();
         maxExpText.text = "次のレベルまでの必要EXP: " + playerStatus.MAXEXP.ToString();
@@ -80,12 +81,14 @@ public class StatusWindow : MonoBehaviour
     // ステータスを変更するメソッド
     void ChangeStatus(string stat, int amount)
     {
+        // ステータスポイントが不足している場合は警告を表示して処理を中断
         if (amount > 0 && playerStatus.StatusPoint < amount)
         {
             Debug.LogWarning("ステータスポイントが不足しています。");
             return;
         }
 
+        // 指定されたステータスを変更
         switch (stat)
         {
             case "HP":
@@ -114,6 +117,7 @@ public class StatusWindow : MonoBehaviour
                 break;
         }
 
+        // ステータスポイントを更新
         if (amount > 0)
         {
             playerStatus.StatusPoint -= amount;
@@ -123,12 +127,14 @@ public class StatusWindow : MonoBehaviour
             playerStatus.StatusPoint += -amount;
         }
 
+        // UIを更新
         UpdateUI();
     }
 
-
+    // プレイヤーのステータスを更新するメソッド
     public void UpdatePlayerStatus(string name, int maxHp, int maxMp, int atk, int def, int intel, int mdef, int agi, int lv, int exp, int maxExp, int haveGold, int statusPoint)
     {
+        // 各ステータスをUIに反映
         nameText.text = name;
         maxHpText.text = maxHp.ToString();
         maxMpText.text = maxMp.ToString();
@@ -142,5 +148,21 @@ public class StatusWindow : MonoBehaviour
         maxExpText.text = maxExp.ToString();
         haveGoldText.text = haveGold.ToString();
         statusPointText.text = statusPoint.ToString();
+    }
+
+    // 経験値を追加するメソッド
+    public void AddExperience(int amount)
+    {
+        playerStatus.EXP += amount;
+
+        // レベルアップの判定
+        while (playerStatus.EXP >= playerStatus.MAXEXP)
+        {
+            playerStatus.EXP -= playerStatus.MAXEXP;
+            playerStatus.LevelUp();
+        }
+
+        // UIを更新
+        UpdateUI();
     }
 }

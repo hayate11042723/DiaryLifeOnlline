@@ -115,7 +115,16 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             if (playerdata.EXP >= a.exp)
             {
                 playerdata.LV += 1;
+                playerdata.StatusPoint += 20;
+                playerdata.EXP = 0;
+                playerdata.MAXEXP *= 2;
             }
+        }
+        
+        //獲得ゴールドがあるならゴールド処理
+        if (charadata.GETGOLD > 0)
+        {
+            playerdata.HAVEGOLD = playerdata.HAVEGOLD + charadata.GETGOLD;
         }
 
         // ゲームオブジェクトを破壊

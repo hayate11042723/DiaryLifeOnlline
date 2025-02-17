@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Animator PlayerAnimator;
     public Collider WeaponCollider;
+    public SowrdEffect swordEffect; // SowrdEffectの参照を追加
 
     // 攻撃中かどうかのフラグ
     public bool isAttacking = false; // フラグをpublicに変更
@@ -26,6 +27,12 @@ public class PlayerAttack : MonoBehaviour
     {
         WeaponCollider.enabled = true;
         Debug.Log("WeaponON");
+
+        // SowrdEffectのAttackFlagONメソッドを呼び出す
+        if (swordEffect != null)
+        {
+            swordEffect.AttackFlagON();
+        }
     }
 
     // 武器の当たり判定をオフにする
@@ -33,6 +40,12 @@ public class PlayerAttack : MonoBehaviour
     {
         WeaponCollider.enabled = false;
         Debug.Log("WeaponOFF");
+
+        // SowrdEffectのAttackFlagOFFメソッドを呼び出す
+        if (swordEffect != null)
+        {
+            swordEffect.AttackFlagOFF();
+        }
 
         // 攻撃アニメーション終了後にフラグをリセット
         isAttacking = false;
