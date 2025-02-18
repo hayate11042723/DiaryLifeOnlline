@@ -37,6 +37,12 @@ public class UIButtonSelector0 : MonoBehaviour, IPointerEnterHandler
         {
             buttons[currentIndex].onClick.Invoke();
         }
+
+        // マウス左クリック
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            buttons[currentIndex].onClick.Invoke();
+        }
     }
 
     private void MoveSelection(int direction)

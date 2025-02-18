@@ -20,7 +20,7 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
     {
         if (buttons.Length > 0)
         {
-            SelectButton(currentIndex);
+            SelectButton(currentIndex); // 最初のボタンを選択
         }
     }
 
@@ -37,19 +37,19 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
         // 上方向キー
         if (Keyboard.current.upArrowKey.wasPressedThisFrame || Gamepad.current?.dpad.up.wasPressedThisFrame == true)
         {
-            MoveSelection(-1);
+            MoveSelection(-1); // 選択を上に移動
         }
 
         // 下方向キー
         if (Keyboard.current.downArrowKey.wasPressedThisFrame || Gamepad.current?.dpad.down.wasPressedThisFrame == true)
         {
-            MoveSelection(1);
+            MoveSelection(1); // 選択を下に移動
         }
 
         // EnterキーまたはAボタン
         if ((Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.current?.aButton.wasPressedThisFrame == true) && Time.time - lastEnterKeyPressTime > enterKeyCooldown)
         {
-            buttons[currentIndex].onClick.Invoke();
+            buttons[currentIndex].onClick.Invoke(); // 現在選択中のボタンをクリック
             lastEnterKeyPressTime = Time.time; // 最後にEnterキーが押された時間を更新
         }
     }
@@ -64,7 +64,7 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
         if (currentIndex < 0) currentIndex = buttons.Length - 1;
         if (currentIndex >= buttons.Length) currentIndex = 0;
 
-        SelectButton(currentIndex);
+        SelectButton(currentIndex); // 新しいボタンを選択
     }
 
     private void SelectButton(int index)
@@ -84,14 +84,14 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
 
     private void StartBlinkingEffect(Button button)
     {
-        blinkingCoroutine = StartCoroutine(BlinkEffect(button));
+        blinkingCoroutine = StartCoroutine(BlinkEffect(button)); // 点滅コルーチンを開始
     }
 
     private void StopBlinkingEffect()
     {
         if (blinkingCoroutine != null)
         {
-            StopCoroutine(blinkingCoroutine);
+            StopCoroutine(blinkingCoroutine); // 点滅コルーチンを停止
             blinkingCoroutine = null;
         }
 
@@ -146,7 +146,7 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
             if (eventData.pointerEnter == buttons[i].gameObject)
             {
                 currentIndex = i;
-                SelectButton(currentIndex);
+                SelectButton(currentIndex); // マウスがホバーしたボタンを選択
                 break;
             }
         }

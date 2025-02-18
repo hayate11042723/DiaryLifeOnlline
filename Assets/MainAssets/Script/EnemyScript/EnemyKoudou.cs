@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class EnemyKoudou : MonoBehaviour, IEnemy
+public class EnemyKoudou : MonoBehaviour, IEnemyAction
 {
     //シリアル化している。CharaStatusの敵を指定。
     [SerializeField] CharaStatus charadata;  

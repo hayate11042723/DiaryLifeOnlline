@@ -17,8 +17,6 @@ public class ItemSyoki : MonoBehaviour
         {
             //　アイテム数を全て0に
             itemkazu.Add(ItemDataBase.GetItemList()[i], 0);
-
-
         }
 
         //ポーションのみ数を2にする。

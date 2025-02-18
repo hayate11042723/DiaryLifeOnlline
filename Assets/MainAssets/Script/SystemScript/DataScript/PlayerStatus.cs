@@ -18,12 +18,4 @@ public class PlayerStatus : ScriptableObject
     public int MAXEXP;      //次のレベルまでの経験値
     public int HAVEGOLD;    //所持金
     public int StatusPoint; //ステータスポイント
-
-    // レベルアップ時に呼び出すメソッド
-    public void LevelUp()
-    {
-        StatusPoint += 20; // レベルアップ時にステータスポイントを20増加させる
-        EXP = 0; // 経験値をリセット
-        MAXEXP *= 2; // 次のレベルまでの経験値を増加させる
-    }
 }

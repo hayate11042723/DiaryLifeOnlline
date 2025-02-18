@@ -1288,6 +1288,18 @@ PrefabInstance:
       propertyPath: x
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7444562818848402750, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
+      propertyPath: x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444562818848402750, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
+      propertyPath: y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444562818848402750, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
+      propertyPath: z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7746163077823699440, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
       propertyPath: m_Radius
       value: 2
@@ -5238,23 +5250,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.558957
+      value: 3.5409842
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0330486
+      value: 6.9898396
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.389032
+      value: -22.088829
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99970734
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.01115477
+      objectReference: {fileID: 0}
+    - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00023951099
       objectReference: {fileID: 0}
     - target: {fileID: 497884150437360262, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5298,19 +5314,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5632777
+      value: 3.5409842
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0327635
+      value: 6.9898396
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.29
+      value: -22.088829
+      objectReference: {fileID: 0}
+    - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.01115477
+      objectReference: {fileID: 0}
+    - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00023951099
       objectReference: {fileID: 0}
     - target: {fileID: 2518735706760281167, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_CameraDistance
-      value: 3.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4048928733923505296, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: Slider
@@ -5323,6 +5347,14 @@ PrefabInstance:
     - target: {fileID: 6078744404623637093, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+      propertyPath: m_VerticalAxis.m_MaxSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+      propertyPath: m_HorizontalAxis.m_MaxSpeed
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7159513276274996722, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_Name

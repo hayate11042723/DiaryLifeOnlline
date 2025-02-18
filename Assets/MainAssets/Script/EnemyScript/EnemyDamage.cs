@@ -19,6 +19,11 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     public Animator EnemyAnimator;
     public GameObject Effect;
 
+    //シリアル化。ステータスポイントの指定
+    [SerializeField] private int statusPoint;
+    //シリアル化。経験値の増量値の指定
+    [SerializeField] private int maxexp;
+
     void Start()
     {
         //charadataがnullでないことを確認
@@ -115,9 +120,9 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             if (playerdata.EXP >= a.exp)
             {
                 playerdata.LV += 1;
-                playerdata.StatusPoint += 20;
+                playerdata.StatusPoint += statusPoint;
                 playerdata.EXP = 0;
-                playerdata.MAXEXP *= 2;
+                playerdata.MAXEXP *= maxexp;
             }
         }
         

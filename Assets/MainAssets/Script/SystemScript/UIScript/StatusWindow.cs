@@ -149,20 +149,4 @@ public class StatusWindow : MonoBehaviour
         haveGoldText.text = haveGold.ToString();
         statusPointText.text = statusPoint.ToString();
     }
-
-    // 経験値を追加するメソッド
-    public void AddExperience(int amount)
-    {
-        playerStatus.EXP += amount;
-
-        // レベルアップの判定
-        while (playerStatus.EXP >= playerStatus.MAXEXP)
-        {
-            playerStatus.EXP -= playerStatus.MAXEXP;
-            playerStatus.LevelUp();
-        }
-
-        // UIを更新
-        UpdateUI();
-    }
 }

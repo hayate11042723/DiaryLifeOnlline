@@ -37,7 +37,14 @@ public class UIButtonSelector2 : MonoBehaviour
         {
             buttons[currentIndex].onClick.Invoke();
         }
+
+        // マウス左クリック
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            buttons[currentIndex].onClick.Invoke();
+        }
     }
+
 
     private void MoveSelection(int direction)
     {

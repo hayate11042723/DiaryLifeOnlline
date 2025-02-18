@@ -9,13 +9,13 @@ public class Enemystate1 : MonoBehaviour
     [SerializeField] MonoBehaviour Enemykinsetu;
 
     int State;
-    IEnemy Enemykoudou;
+    IEnemyAction Enemykoudou;
 
     void Start()
     {
         EnemyController = GetComponent<Animator>();
         //IEnemyのインターフェースを宣言したスクリプトを手に入れ、Enemykoudouへ代入。
-        Enemykoudou = GetComponent<IEnemy>();
+        Enemykoudou = GetComponent<IEnemyAction>();
     }
 
     void Update()
