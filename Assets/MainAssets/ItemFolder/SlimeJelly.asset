@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
   m_Name: SlimeJelly
   m_EditorClassIdentifier: 
-  Itemname: "\u30B9\u30E9\u30A4\u30E0\u30BC\u30EA\u30FC"
-  Itemtype: 5
-  Itemicon: {fileID: 0}
-  Itemexplanation: "\u30B9\u30E9\u30A4\u30E0\u304C\u5012\u308C\u305F\u3068\u304D\u306B\u7A00\u306B\u843D\u3068\u3059\u30BC\u30EA\u30FC\u72B6\u306E\u7D20\u6750"
-  Itemlimit: 999
+  ItemName: "\u30B9\u30E9\u30A4\u30E0\u30BC\u30EA\u30FC"
+  ItemType: 5
+  ItemIcon: {fileID: 0}
+  ItemExplanation: "\u30B9\u30E9\u30A4\u30E0\u306E\u843D\u3068\u3059\u30BC\u30EA\u30FC\u3002"
+  ItemLimit: 999
+  ItemBuyingPrice: 0
+  ItemSellingPrice: 500

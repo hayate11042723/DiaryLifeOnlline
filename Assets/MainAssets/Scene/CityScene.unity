@@ -12926,6 +12926,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0000005, y: 0.4000004, z: 4.0000005}
   m_Center: {x: 0, y: -0.14285716, z: 0}
+--- !u!1 &452429944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4011545722721681763, guid: 57fbc3fc13479534bbdeb56494c09618, type: 3}
+  m_PrefabInstance: {fileID: 4691621702598621275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &452429947
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452429944}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 10
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &453349976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 164872, guid: dea3549621b21ab479cb6de35b35ce4f, type: 3}
@@ -61406,6 +61432,10 @@ PrefabInstance:
       propertyPath: z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6981832907772818806, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
+      propertyPath: m_TagString
+      value: GeneralStore
+      objectReference: {fileID: 0}
     - target: {fileID: 7444562818848402750, guid: 5a42a96697edd3a41877dcc669a2d561, type: 3}
       propertyPath: x
       value: 90
@@ -61736,6 +61766,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 728984173}
     m_Modifications:
+    - target: {fileID: 4011545722721681763, guid: 57fbc3fc13479534bbdeb56494c09618, type: 3}
+      propertyPath: m_TagString
+      value: Field
+      objectReference: {fileID: 0}
     - target: {fileID: 5554149362289067438, guid: 57fbc3fc13479534bbdeb56494c09618, type: 3}
       propertyPath: m_Name
       value: FieldPointer
@@ -61783,7 +61817,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4011545722721681763, guid: 57fbc3fc13479534bbdeb56494c09618, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 452429947}
   m_SourcePrefab: {fileID: 100100000, guid: 57fbc3fc13479534bbdeb56494c09618, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

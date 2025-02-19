@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
   m_Name: HPPortion
   m_EditorClassIdentifier: 
-  Itemname: "HP\u30DD\u30FC\u30B7\u30E7\u30F3"
-  Itemtype: 4
-  Itemicon: {fileID: 0}
-  Itemexplanation: "HP\u306E\u56DE\u5FA9\u3067\u304D\u308B\u98F2\u307F\u7269\u3002"
-  Itemlimit: 99
+  ItemName: "HP\u30DD\u30FC\u30B7\u30E7\u30F3"
+  ItemType: 4
+  ItemIcon: {fileID: 0}
+  ItemExplanation: "HP\u3092\u56DE\u5FA9\u3067\u304D\u308B\u98F2\u6599\u3002"
+  ItemLimit: 99
+  ItemBuyingPrice: 500
+  ItemSellingPrice: 50

@@ -5,37 +5,27 @@ using static ItemData;
 
 public class ItemSyoki : MonoBehaviour
 {
-    [SerializeField] private ItemDataBase ItemDataBase;
-    //　アイテム数管理
+    [SerializeField] private ItemDataBase ItemDataBase; // アイテムデータベース
+    [SerializeField] private List<ItemData> initialItems; // 初期アイテムのリスト
+    // アイテム数管理
     private Dictionary<ItemData, int> itemkazu = new Dictionary<ItemData, int>();
-
 
     // Start is called before the first frame update
     void Start()
     {
+        // アイテムデータベースからアイテムリストを取得し、全てのアイテム数を0に初期化
         for (int i = 0; i < ItemDataBase.GetItemList().Count; i++)
         {
-            //　アイテム数を全て0に
             itemkazu.Add(ItemDataBase.GetItemList()[i], 0);
         }
 
-        //ポーションのみ数を2にする。
-        itemkazu[ItemDataBase.GetItemList()[2]] = 2;
-
-        var a = itemkazu[ItemDataBase.GetItemList()[0]];
-        var b = itemkazu[ItemDataBase.GetItemList()[1]];
-        var c = itemkazu[ItemDataBase.GetItemList()[2]];
-
-        Debug.Log(a);
-        Debug.Log(b);
-        Debug.Log(c);
-
-
-
-        var d = ItemDataBase.GetItemList()[1].GetItemtype();
-        Debug.Log(d);
-
-
+        // 初期アイテムを所持
+        foreach (var item in initialItems)
+        {
+            if (itemkazu.ContainsKey(item))
+            {
+                itemkazu[item] = 1; // 初期アイテムの数を1に設定
+            }
+        }
     }
-
 }

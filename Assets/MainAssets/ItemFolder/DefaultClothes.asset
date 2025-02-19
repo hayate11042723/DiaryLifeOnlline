@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
   m_Name: DefaultClothes
   m_EditorClassIdentifier: 
-  Itemname: "\u65C5\u4EBA\u306E\u670D"
-  Itemtype: 3
-  Itemicon: {fileID: 0}
-  Itemexplanation: "\u5E03\u3067\u3067\u304D\u305F\u670D\u3002\u6700\u4F4E\u9650\u306E\u9632\u5FA1\u529B\u3057\u304B\u306A\u3044\u3002"
-  Itemlimit: 1
+  ItemName: "\u5E03\u306E\u670D"
+  ItemType: 3
+  ItemIcon: {fileID: 21300000, guid: 92706680a410c284b8be417e4ad48c38, type: 3}
+  ItemExplanation: "\u624B\u4F5C\u308A\u306E\u670D\u3002\u9632\u5FA1\u529B\u306F\u7121\u3044\u306B\u7B49\u3057\u3044\u3002"
+  ItemLimit: 1
+  ItemBuyingPrice: 0
+  ItemSellingPrice: 0

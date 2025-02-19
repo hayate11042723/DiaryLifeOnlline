@@ -10,7 +10,9 @@ public class StatusWindowSelector : MonoBehaviour, IPointerClickHandler
     // ボタンのリスト
     public List<Button> buttons;
     // Canvasオブジェクト
-    public Canvas canvas;
+    [SerializeField] Canvas canvas;
+    // 時間
+    [SerializeField] float time;
     // 現在選択中のボタンのインデックス
     private int currentIndex = 0;
     // ボタンが明滅中かどうかのフラグ
@@ -112,9 +114,9 @@ public class StatusWindowSelector : MonoBehaviour, IPointerClickHandler
             if (fadingOut)
             {
                 alpha -= Time.deltaTime * blinkSpeed;
-                if (alpha <= 0.5f)
+                if (alpha <= time)
                 {
-                    alpha = 0.5f;
+                    alpha = time;
                     fadingOut = false;
                 }
             }

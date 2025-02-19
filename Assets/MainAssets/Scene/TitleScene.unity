@@ -26715,6 +26715,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9255fb8d4746c439db9a5e1caded8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitForSeconds: 0.05
+  iSeconds: 0.3
+  enterKeyCooldown: 0.5
+  mouseClickCooldown: 1
   buttons:
   - {fileID: 938992476}
 --- !u!1 &6914911777782509575

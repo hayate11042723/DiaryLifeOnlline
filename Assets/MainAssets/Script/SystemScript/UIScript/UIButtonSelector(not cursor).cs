@@ -6,9 +6,17 @@ using System.Collections;
 
 public class UIButtonSelector2 : MonoBehaviour
 {
+    [SerializeField] float waitForSeconds;
+    [SerializeField] float iSeconds;
+    [SerializeField] float enterKeyCooldown = 0.5f; // Enterキーのクールダウン時間（秒）
+    [SerializeField] float mouseClickCooldown = 0.5f; // マウス左クリックのクールダウン時間（秒）
+
     public Button[] buttons; // ボタンの配列
     private int currentIndex = 0; // 現在選択中のボタンのインデックス
     private Coroutine blinkingCoroutine; // 点滅コルーチン
+
+    private float lastEnterKeyPressTime = -1f; // 最後にEnterキーが押された時間
+    private float lastMouseClickTime = -1f; // 最後にマウス左クリックが押された時間
 
     private void Start()
     {
@@ -33,18 +41,19 @@ public class UIButtonSelector2 : MonoBehaviour
         }
 
         // EnterキーまたはAボタン
-        if (Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.current?.aButton.wasPressedThisFrame == true)
+        if ((Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.current?.aButton.wasPressedThisFrame == true) && Time.time - lastEnterKeyPressTime > enterKeyCooldown)
         {
             buttons[currentIndex].onClick.Invoke();
+            lastEnterKeyPressTime = Time.time; // 最後にEnterキーが押された時間を更新
         }
 
         // マウス左クリック
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame && Time.time - lastMouseClickTime > mouseClickCooldown)
         {
             buttons[currentIndex].onClick.Invoke();
+            lastMouseClickTime = Time.time; // 最後にマウス左クリックが押された時間を更新
         }
     }
-
 
     private void MoveSelection(int direction)
     {
@@ -103,20 +112,19 @@ public class UIButtonSelector2 : MonoBehaviour
         while (true)
         {
             // 明るくする
-            for (float i = 0.3f; i <= 1f; i += 0.05f)
+            for (float i = iSeconds; i <= 1f; i += waitForSeconds)
             {
                 SetTextBrightness(text, i);
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(waitForSeconds);
             }
 
             // 暗くする
-            for (float i = 1f; i >= 0.3f; i -= 0.05f)
+            for (float i = 1f; i >= iSeconds; i -= waitForSeconds)
             {
                 SetTextBrightness(text, i);
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(waitForSeconds);
             }
         }
-
     }
 
     private void SetTextBrightness(Text text, float brightness)
@@ -126,3 +134,4 @@ public class UIButtonSelector2 : MonoBehaviour
         text.color = color;
     }
 }
+

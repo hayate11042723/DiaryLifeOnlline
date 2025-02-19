@@ -7,43 +7,56 @@ public class ItemData : ScriptableObject
 {
     public enum itemtype
     {
-        Sword,Rod,Armor,Clothes,Portion,Material
+        Sword, Rod, Armor, Clothes, Portion, Material
     }
 
     [SerializeField]
-    private string Itemname; //アイテムの名前
+    private string ItemName; //アイテムの名前
     [SerializeField]
-    private itemtype Itemtype; //アイテムのタイプ
+    private itemtype ItemType; //アイテムのタイプ
     [SerializeField]
-    private Sprite Itemicon; //アイテムのアイコン
+    private Sprite ItemIcon; //アイテムのアイコン
     [SerializeField]
-    private string Itemexplanation; //アイテムの説明
+    private string ItemExplanation; //アイテムの説明
     [SerializeField]
-    private int Itemlimit; //アイテムの持てる最大個数
+    private int ItemLimit; //アイテムの持てる最大個数
+    [SerializeField]
+    private int ItemBuyingPrice; //アイテムの購入価格
+    [SerializeField]
+    private int ItemSellingPrice; //アイテムの販売価格
 
-    public string GetItemname()
+    public string GetItemName()
     {
-        return Itemname;
+        return ItemName;
     }
 
-    public itemtype GetItemtype()
+    public itemtype GetItemType()
     {
-        return Itemtype;
+        return ItemType;
     }
 
-    public Sprite GetItemicon()
+    public Sprite GetItemIcon()
     {
-        return Itemicon;
+        return ItemIcon;
     }
 
-    public string GetItemexplanation()
+    public string GetItemExplanation()
     {
-        return Itemexplanation;
+        return ItemExplanation;
     }
 
-    public int GetItemlimit()
+    public int GetItemLimit()
     {
-        return Itemlimit;
+        return ItemLimit;
     }
 
+    public int GetItemBuyingPrice()
+    {
+        return ItemBuyingPrice;
+    }
+
+    public int GetItemSellingPrice()
+    {
+        return ItemSellingPrice;
+    }
 }

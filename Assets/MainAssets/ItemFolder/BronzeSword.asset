@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9dee7337fd39840b94ec6b4b91ec6a, type: 3}
   m_Name: BronzeSword
   m_EditorClassIdentifier: 
-  Itemname: "\u30D6\u30ED\u30F3\u30BA\u30BD\u30FC\u30C9"
-  Itemtype: 0
-  Itemicon: {fileID: 0}
-  Itemexplanation: "\u9285\u3067\u3067\u304D\u305F\u5263\u3002\u653B\u6483\u529B\u304C\u5C11\u3057\u4E0A\u304C\u308B\u3002"
-  Itemlimit: 99
+  ItemName: "\u30D6\u30ED\u30F3\u30BA\u30BD\u30FC\u30C9"
+  ItemType: 0
+  ItemIcon: {fileID: 21300000, guid: d74e303a7c9d971469601c26ba68b25d, type: 3}
+  ItemExplanation: "\u9285\u3067\u3067\u304D\u305F\u5263\u3002\u6728\u306E\u5263\u3088\u308A\u306F\u5F37\u3044"
+  ItemLimit: 99
+  ItemBuyingPrice: 10000
+  ItemSellingPrice: 1000
