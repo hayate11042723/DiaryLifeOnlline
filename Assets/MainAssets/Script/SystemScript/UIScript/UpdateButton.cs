@@ -20,6 +20,7 @@ public class UpdateButton : MonoBehaviour
             playerStatus.EXP,
             playerStatus.MAXEXP,
             playerStatus.HAVEGOLD,
-            playerStatus.StatusPoint);
+            playerStatus.StatusPoint
+            );
     }
 }

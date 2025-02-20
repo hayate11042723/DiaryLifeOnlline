@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody rb;
     public float movementSpeed;
     public float d_movementSpeed;
+    private Rigidbody rb;
     private bool moving;
     private bool d_moving;
     private float horizontal;

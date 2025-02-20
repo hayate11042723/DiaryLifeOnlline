@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemykinsetu : MonoBehaviour, ICharaAttack
 {
     [SerializeField] Animator EnemyController;
-    public Collider AttackCollider;
+    [SerializeField] Collider AttackCollider;
     int Hcount;   //UŒ‚ƒqƒbƒg‰ñ”
     bool Attacktime;   //UŒ‚’†
 

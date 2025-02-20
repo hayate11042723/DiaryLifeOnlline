@@ -5106,15 +5106,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5409842
+      value: 3.4876242
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.9898396
+      value: 6.895666
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.088829
+      value: -22.389194
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5170,15 +5170,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5409842
+      value: 3.491941
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.9898396
+      value: 6.8954077
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.088829
+      value: -24.286255
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5190,7 +5190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518735706760281167, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_CameraDistance
-      value: 1
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4048928733923505296, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: Slider
@@ -5206,11 +5206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_VerticalAxis.m_MaxSpeed
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_HorizontalAxis.m_MaxSpeed
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7159513276274996722, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_Name

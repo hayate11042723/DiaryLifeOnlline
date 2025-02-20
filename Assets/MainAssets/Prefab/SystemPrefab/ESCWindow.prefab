@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1323339086207206680}
+      - m_Target: {fileID: 4413826696851427907}
         m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
         m_MethodName: SwitchCanvas
         m_Mode: 1
@@ -2531,10 +2531,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8230535232473522678}
-  - component: {fileID: 4029200426494223850}
   - component: {fileID: 1323339086207206680}
   - component: {fileID: 3363821823281343471}
-  - component: {fileID: 542624940334109852}
   m_Layer: 0
   m_Name: StatusButton
   m_TagString: Untagged
@@ -2557,20 +2555,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7929877474049313851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4029200426494223850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857322051541075851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51505eeec07a638468999b7acdaf91d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCanvas: {fileID: 8685909543784034445}
-  targetCanvas: {fileID: 3596617448055410654}
 --- !u!114 &1323339086207206680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2599,18 +2583,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCanvas: {fileID: 3596617448055410654}
   targetCanvas: {fileID: 7626751966452176104}
---- !u!114 &542624940334109852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857322051541075851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fc9db79e518ca449b63db68e08968f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1900265175589290958
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,6 +4758,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &3038701110782831284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3094776117210762634}
+  - component: {fileID: 4413826696851427907}
+  - component: {fileID: 3530099564423994539}
+  m_Layer: 0
+  m_Name: ItemWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3094776117210762634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038701110782831284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1765.0048, y: 542.4989, z: -0.0008377284}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7929877474049313851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4413826696851427907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038701110782831284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51505eeec07a638468999b7acdaf91d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCanvas: {fileID: 8367162478458618535}
+  targetCanvas: {fileID: 8685909543784034445}
+--- !u!114 &3530099564423994539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038701110782831284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51505eeec07a638468999b7acdaf91d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCanvas: {fileID: 8367162478458618535}
+  targetCanvas: {fileID: 7626751966452176104}
 --- !u!1 &3041240499877984415
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,7 +5283,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3363821823281343471}
+      - m_Target: {fileID: 3530099564423994539}
         m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
         m_MethodName: SwitchCanvas
         m_Mode: 1
@@ -6590,6 +6623,67 @@ MonoBehaviour:
   m_EffectColor: {r: 0.9568628, g: 0.85098046, b: 0.7019608, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &3981012168445838926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6630157789648505277}
+  - component: {fileID: 6363859475004817494}
+  - component: {fileID: 8437120162762270231}
+  m_Layer: 0
+  m_Name: MenuWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6630157789648505277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981012168445838926}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1765.0048, y: 542.4989, z: -0.0008377284}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7929877474049313851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6363859475004817494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981012168445838926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51505eeec07a638468999b7acdaf91d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCanvas: {fileID: 8685909543784034445}
+  targetCanvas: {fileID: 3596617448055410654}
+--- !u!114 &8437120162762270231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981012168445838926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51505eeec07a638468999b7acdaf91d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCanvas: {fileID: 8685909543784034445}
+  targetCanvas: {fileID: 8367162478458618535}
 --- !u!1 &4146045031677550052
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,7 +7337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2921082342346865113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8437120162762270231}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: SwitchCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4341329034708516302
 GameObject:
   m_ObjectHideFlags: 0
@@ -10919,7 +11025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4029200426494223850}
+      - m_Target: {fileID: 6363859475004817494}
         m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
         m_MethodName: SwitchCanvas
         m_Mode: 1
@@ -12296,6 +12402,8 @@ Transform:
   - {fileID: 4642348149926098159}
   - {fileID: 5116878104246217700}
   - {fileID: 8230535232473522678}
+  - {fileID: 6630157789648505277}
+  - {fileID: 3094776117210762634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7573808064916622892
@@ -13950,7 +14058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &549794839716479420
 RectTransform:
   m_ObjectHideFlags: 0
