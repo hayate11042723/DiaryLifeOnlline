@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb479ba0c7d3ed4693cee9903204781, type: 3}
   m_Name: GreenDragon
   m_EditorClassIdentifier: 
-  NAME: 
-  MAXHP: 0
-  MAXMP: 0
-  ATK: 0
-  DEF: 0
-  INT: 0
-  RES: 0
-  AGI: 0
-  LV: 0
-  GETEXP: 0
-  GETGOLD: 0
+  NAME: GreenDragon
+  MAXHP: 3000
+  MAXMP: 10000
+  ATK: 2500
+  DEF: 1000
+  INT: 1000
+  RES: 1000
+  AGI: 100
+  LV: 99
+  GETEXP: 100000
+  GETGOLD: 100000
   ShortAttackRange: 0
-  EnemyTime: 0
+  EnemyTime: 5

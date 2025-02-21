@@ -10,7 +10,8 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] private float StopDistance; // プレイヤーに近づく停止距離
 
-    GameObject Target;
+    [SerializeField] private string TargetTag = "Player"; // ターゲットのタグ
+    private GameObject targetObject; // ターゲットのGameObject
 
     [SerializeField] private Animator EnemyAnimator;
 
@@ -20,11 +21,11 @@ public class EnemyAI : MonoBehaviour
         var speed = Vector3.zero;
         var rot = transform.eulerAngles;
 
-        if (Target) // プレイヤーを追いかける
+        if (targetObject) // プレイヤーを追いかける
         {
-            float distanceToPlayer = Vector3.Distance(transform.position, Target.transform.position);
+            float distanceToPlayer = Vector3.Distance(transform.position, targetObject.transform.position);
 
-            transform.LookAt(Target.transform); // 常にプレイヤーの方向を向く
+            transform.LookAt(targetObject.transform); // 常にプレイヤーの方向を向く
             rot = transform.eulerAngles;
 
             if (distanceToPlayer > StopDistance) // 停止距離より遠い場合のみ移動
@@ -59,9 +60,9 @@ public class EnemyAI : MonoBehaviour
     // コライダーにプレイヤーが入ったとき
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(TargetTag))
         {
-            Target = other.gameObject;
+            targetObject = other.gameObject;
             EnemyAnimator.SetBool("run", true); // アニメーションを再生
         }
     }
@@ -69,10 +70,11 @@ public class EnemyAI : MonoBehaviour
     // コライダーからプレイヤーが出たとき
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(TargetTag))
         {
-            Target = null;
+            targetObject = null;
             EnemyAnimator.SetBool("run", false); // アニメーションを停止
         }
     }
 }
+
