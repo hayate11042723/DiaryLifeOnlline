@@ -26,7 +26,6 @@ public class PlayerAttack : MonoBehaviour
     void AttackFlagON()
     {
         WeaponCollider.enabled = true;
-        Debug.Log("WeaponON");
 
         // SowrdEffectのAttackFlagONメソッドを呼び出す
         if (swordEffect != null)
@@ -39,7 +38,6 @@ public class PlayerAttack : MonoBehaviour
     void AttackFlagOFF()
     {
         WeaponCollider.enabled = false;
-        Debug.Log("WeaponOFF");
 
         // SowrdEffectのAttackFlagOFFメソッドを呼び出す
         if (swordEffect != null)

@@ -15,13 +15,13 @@ MonoBehaviour:
   NAME: "\u3042\u3042\u3042\u3042\u3042"
   MAXHP: 20
   MAXMP: 20
-  ATK: 10
+  ATK: 10000
   DEF: 10
   INT: 10
   MDEF: 10
   AGI: 10
-  LV: 1
-  EXP: 0
-  MAXEXP: 250
-  HAVEGOLD: 0
-  StatusPoint: 20
+  LV: 10
+  EXP: 14900000
+  MAXEXP: 128000
+  HAVEGOLD: 900000
+  StatusPoint: 200

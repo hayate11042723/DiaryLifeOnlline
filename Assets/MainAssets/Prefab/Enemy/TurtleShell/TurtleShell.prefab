@@ -927,6 +927,7 @@ MonoBehaviour:
   ChangeTime: 3
   EnemySpeed: 1
   StopDistance: 2
+  TargetTag: Player
   EnemyAnimator: {fileID: 6472419439249135899}
 --- !u!114 &-5434938498896131075
 MonoBehaviour:
@@ -1394,6 +1395,18 @@ PrefabInstance:
       propertyPath: AttackChara
       value: 
       objectReference: {fileID: 6378162535679133017}
+    - target: {fileID: 8204227692819963347, guid: 6ef5dcef34827ab409d068b14abda177, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204227692819963347, guid: 6ef5dcef34827ab409d068b14abda177, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204227692819963347, guid: 6ef5dcef34827ab409d068b14abda177, type: 3}
+      propertyPath: m_Center.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -16,17 +16,22 @@ public class EnemyBossAI : MonoBehaviour
     private Transform playerTransform;
     // ターゲットのタグ
     [SerializeField] private string TargetTag = "Player";
-
+    // 無視するレイヤー
+    [SerializeField] private string ignoreLayerName = "markar";
+    // スライダーCanvas
+    [SerializeField] private Canvas SliderCanvas;
     [SerializeField] private Animator EnemyAnimator;
     private bool isPlayerInArea = false;
     private bool nearPlayer = false;
     private float timeSincePlayerLeft = 0f;
     private bool isReturningToInitialPosition = false;
 
-    // GreenDragonAreaの初期位置を保存
+    // GreenDragonAreaの初期位置と回転を保存
     private Vector3 initialPosition;
+    private Quaternion initialRotation;
     // 敵の初期位置を保存
     private Vector3 enemyInitialPosition;
+    private Quaternion enemyInitialRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -41,26 +46,35 @@ public class EnemyBossAI : MonoBehaviour
         // GreenDragonAreaの設定を確認
         if (GreenDragonArea != null && GreenDragonArea.isTrigger)
         {
-            // GreenDragonAreaの初期位置を保存
+            // GreenDragonAreaの初期位置と回転を保存
             initialPosition = GreenDragonArea.transform.position;
+            initialRotation = GreenDragonArea.transform.rotation;
         }
 
-        // 敵の初期位置を保存
+        // 敵の初期位置と回転を保存
         enemyInitialPosition = transform.position;
+        enemyInitialRotation = transform.rotation;
+
+        // スライダーを非表示にする
+        SliderCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // GreenDragonAreaの位置を固定
+        // GreenDragonAreaの位置と回転を固定
         if (GreenDragonArea != null)
         {
             GreenDragonArea.transform.position = initialPosition;
+            GreenDragonArea.transform.rotation = initialRotation;
         }
 
         // プレイヤーがエリア内にいる場合
         if (isPlayerInArea && playerTransform != null)
         {
+            // プレイヤーがエリア内にいるときにスライダーを表示
+            SliderCanvas.gameObject.SetActive(true);
+
             // プレイヤーとの距離を計算
             float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
@@ -94,6 +108,10 @@ public class EnemyBossAI : MonoBehaviour
             // プレイヤーがエリア外にいる場合
             timeSincePlayerLeft += Time.deltaTime;
 
+            // プレイヤーがエリア外にいたらスライダーを非表示
+            SliderCanvas.gameObject.SetActive(false);
+
+            // プレイヤーがエリア外に出てから一定時間経過したらwalkアニメーションを再生
             if (timeSincePlayerLeft >= timeToStartWalking && !isReturningToInitialPosition)
             {
                 // walkアニメーションを再生し、元の位置に戻り始める
@@ -119,9 +137,11 @@ public class EnemyBossAI : MonoBehaviour
                 else
                 {
                     // 元の位置に到着したらSleepアニメーションを再生
+                    transform.rotation = enemyInitialRotation; // 初期回転に戻す
                     EnemyAnimator.SetBool("walk", false); // walkアニメーションを停止
                     EnemyAnimator.SetBool("getUp", false); // getUpアニメーションを停止
                     EnemyAnimator.SetBool("sleep", true); // Sleepアニメーションを再生
+                    EnemyAnimator.SetBool("isSleep", true); // isSleepフラグをセット
                     isReturningToInitialPosition = false; // リセット
                 }
             }
@@ -131,7 +151,7 @@ public class EnemyBossAI : MonoBehaviour
     // プレイヤーがエリアに入ったとき
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(TargetTag))
+        if (other.CompareTag(TargetTag) && other.gameObject.layer != LayerMask.NameToLayer(ignoreLayerName))
         {
             isPlayerInArea = true;
             EnemyAnimator.SetBool("getUp", true); // アニメーションを再生
@@ -142,13 +162,13 @@ public class EnemyBossAI : MonoBehaviour
     // プレイヤーがエリアから出たとき
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(TargetTag))
+        if (other.CompareTag(TargetTag) && other.gameObject.layer != LayerMask.NameToLayer(ignoreLayerName))
         {
             isPlayerInArea = false;
             nearPlayer = false;
             EnemyAnimator.SetBool("run", false); // アニメーションを停止
+            timeSincePlayerLeft = 0f; // タイマーをリセット
+            isReturningToInitialPosition = false; // フラグをリセット
         }
     }
 }
-
-
