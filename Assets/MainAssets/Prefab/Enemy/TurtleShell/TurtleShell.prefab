@@ -948,6 +948,7 @@ MonoBehaviour:
   HP: 0
   EnemyAnimator: {fileID: 6472419439249135899}
   Effect: {fileID: 7133517941893716131, guid: 7e733a5eed3737949994258d03d30e53, type: 3}
+  Enemy: {fileID: 6378162535679133017}
   statusPoint: 20
   maxexp: 2
 --- !u!65 &-3799167743135432430

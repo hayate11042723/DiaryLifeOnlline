@@ -151,6 +151,7 @@ MonoBehaviour:
   ChangeTime: 3
   EnemySpeed: 1.5
   StopDistance: 2
+  TargetTag: Player
   EnemyAnimator: {fileID: 278257233040781674}
 --- !u!114 &-8237854741258181642
 MonoBehaviour:
@@ -171,6 +172,7 @@ MonoBehaviour:
   HP: 0
   EnemyAnimator: {fileID: 278257233040781674}
   Effect: {fileID: 7133517941893716131, guid: 7e733a5eed3737949994258d03d30e53, type: 3}
+  Enemy: {fileID: 182800290479742326}
   statusPoint: 20
   maxexp: 2
 --- !u!114 &7121020273153148969

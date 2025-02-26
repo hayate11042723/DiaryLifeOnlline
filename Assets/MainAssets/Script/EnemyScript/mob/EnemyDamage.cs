@@ -15,14 +15,18 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     //シリアル化。SliderのHPゲージ指定
     [SerializeField] Slider Slider;
     public int HP;
+    [SerializeField] Animator EnemyAnimator;
+    [SerializeField] GameObject Effect;
+    [SerializeField] GameObject Enemy;
+
     int enemyDamage;
-    public Animator EnemyAnimator;
-    public GameObject Effect;
 
     //シリアル化。ステータスポイントの指定
     [SerializeField] private int statusPoint;
     //シリアル化。経験値の増量値の指定
     [SerializeField] private int maxexp;
+
+    private bool isDead = false;
 
     void Start()
     {
@@ -38,13 +42,19 @@ public class EnemyDamage : MonoBehaviour, IDamageable
             // スライダーを非表示にする
             Slider.gameObject.SetActive(false);
         }
+
+        // DontDestroyOnLoadが呼び出されていないか確認
+        if (gameObject.scene.name == null)
+        {
+            Debug.LogError("DontDestroyOnLoad has been called on this object");
+        }
     }
 
     // ダメージ処理のメソッド　valueにはPlayer1のATKの値が入ってる
     public void Damage(int value)
     {
         // charadataがnullでないかをチェック
-        if (charadata != null)
+        if (charadata != null && !isDead)
         {
             // PlayerのATKからEnemyのDEFを引いた値からダメージを算出
             enemyDamage = value - charadata.DEF;
@@ -69,24 +79,27 @@ public class EnemyDamage : MonoBehaviour, IDamageable
 
             // アニメーションが再生し終わったらフラグをFALSEに戻す
             StartCoroutine(ResetHitFlag());
-        }
 
-        // HPが0以下ならDeathアニメーションを再生
-        if (HP <= 0)
-        {
-            // Deathフラグをセットしてアニメーションを再生
-            EnemyAnimator.SetBool("death", true);
+            // HPが0以下ならDeathアニメーションを再生
+            if (HP <= 0)
+            {
+                isDead = true;
+                // Deathフラグをセットしてアニメーションを再生
+                EnemyAnimator.SetBool("death", true);
 
-            // コルーチンを開始してアニメーション終了後にDeath()を実行
-            StartCoroutine(WaitForDeathAnimation());
+                // コルーチンを開始してアニメーション終了後にDeath()を実行
+                StartCoroutine(WaitForDeathAnimation());
+            }
         }
     }
 
     // アニメーション終了後に死亡処理を行うコルーチン
     private IEnumerator WaitForDeathAnimation()
     {
+        Debug.Log("WaitForDeathAnimation started");
         // アニメーションが終了するまで待つ
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+        Debug.Log("WaitForDeathAnimation ended");
 
         // 死亡処理
         Death();
@@ -105,36 +118,45 @@ public class EnemyDamage : MonoBehaviour, IDamageable
     // 死亡処理のメソッド
     public void Death()
     {
+        Debug.Log("Death method called");
+
         // 消滅エフェクト
         var effect = Instantiate(Effect);
-        effect.transform.position = gameObject.transform.position;
+        effect.transform.position = Enemy.transform.position;
 
-        //獲得経験値があるなら経験値処理
+        // 獲得経験値があるなら経験値処理
         if (charadata.GETEXP > 0)
         {
-
             playerdata.EXP = playerdata.EXP + charadata.GETEXP;
 
-            var a = lvdata.playerExpTable[playerdata.LV];
-
-            if (playerdata.EXP >= a.exp)
+            if (playerdata.LV < lvdata.playerExpTable.Count)
             {
-                playerdata.LV += 1;
-                playerdata.StatusPoint += statusPoint;
-                playerdata.EXP = 0;
-                playerdata.MAXEXP *= maxexp;
+                var a = lvdata.playerExpTable[playerdata.LV];
+
+                if (playerdata.EXP >= a.exp)
+                {
+                    playerdata.LV += 1;
+                    playerdata.StatusPoint += statusPoint;
+                    playerdata.EXP = 0;
+                    playerdata.MAXEXP *= maxexp;
+                }
+            }
+            else
+            {
+                Debug.LogError("Player level is out of range of the experience table.");
             }
         }
-        
-        //獲得ゴールドがあるならゴールド処理
+
+        // 獲得ゴールドがあるならゴールド処理
         if (charadata.GETGOLD > 0)
         {
             playerdata.HAVEGOLD = playerdata.HAVEGOLD + charadata.GETGOLD;
         }
 
         // ゲームオブジェクトを破壊
-        Destroy(gameObject);
+        Debug.Log("Destroying game object: " + Enemy.name);
+        Destroy(Enemy);
+        Debug.Log("Destroying effect: " + effect.name);
         Destroy(effect, 5);
     }
 }
-

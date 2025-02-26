@@ -89,7 +89,6 @@ public class EnemyDamageBoss : MonoBehaviour, IDamageable
     {
         // アニメーションが終了するまで待つ
         float animationLength = EnemyAnimator.GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log("Animation Length: " + animationLength);
         yield return new WaitForSeconds(animationLength);
 
         // hitフラグをFALSEに戻す
@@ -108,27 +107,24 @@ public class EnemyDamageBoss : MonoBehaviour, IDamageable
     {
         // アニメーションが終了するまで待つ
         float animationLength = EnemyAnimator.GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log("Death Animation Length: " + animationLength);
         yield return new WaitForSeconds(animationLength);
+
+        // さらに1秒待つ
+        yield return new WaitForSeconds(1f);
 
         // 死亡処理
         Death();
     }
 
-
     // 死亡処理のメソッド
     public void Death()
     {
-        Debug.Log("Death method called");
-
         // 消滅エフェクト
         var effect = Instantiate(Effect);
         effect.transform.position = gameObject.transform.position;
 
         // ゲームオブジェクトを破壊
-        Debug.Log("Destroying game object: " + gameObject.name);
         Destroy(gameObject);
-        Debug.Log("Destroying effect: " + effect.name);
         Destroy(effect, DestroyTime);
 
         // 獲得経験値があるなら経験値処理
@@ -136,13 +132,11 @@ public class EnemyDamageBoss : MonoBehaviour, IDamageable
         {
             playerdata.EXP = playerdata.EXP + charadata.GETEXP;
 
-            var a = lvdata.playerExpTable[playerdata.LV];
-
-            if (playerdata.EXP >= a.exp)
+            while (playerdata.LV < lvdata.playerExpTable.Count && playerdata.EXP >= lvdata.playerExpTable[playerdata.LV].exp)
             {
+                playerdata.EXP -= lvdata.playerExpTable[playerdata.LV].exp;
                 playerdata.LV += 1;
                 playerdata.StatusPoint += statusPoint;
-                playerdata.EXP = 0;
                 playerdata.MAXEXP *= maxexp;
             }
         }
@@ -153,5 +147,5 @@ public class EnemyDamageBoss : MonoBehaviour, IDamageable
             playerdata.HAVEGOLD = playerdata.HAVEGOLD + charadata.GETGOLD;
         }
     }
-
 }
+

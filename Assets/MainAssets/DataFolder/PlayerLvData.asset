@@ -33,3 +33,33 @@ MonoBehaviour:
     exp: 32000
   - level: 10
     exp: 64000
+  - level: 11
+    exp: 128000
+  - level: 12
+    exp: 256000
+  - level: 13
+    exp: 512000
+  - level: 14
+    exp: 1024000
+  - level: 15
+    exp: 2048000
+  - level: 16
+    exp: 4096000
+  - level: 17
+    exp: 8192000
+  - level: 18
+    exp: 16384000
+  - level: 19
+    exp: 32768000
+  - level: 20
+    exp: 65536000
+  - level: 21
+    exp: 131072000
+  - level: 22
+    exp: 262144000
+  - level: 23
+    exp: 524288000
+  - level: 24
+    exp: 1048576000
+  - level: 25
+    exp: 2097152000

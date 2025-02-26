@@ -17,8 +17,6 @@ public class StatusWindowSelector : MonoBehaviour, IPointerClickHandler
     private int currentIndex = 0;
     // ボタンが明滅中かどうかのフラグ
     private bool isBlinking = false;
-    // 明滅の間隔
-    private float blinkInterval = 0.5f;
     // 明滅の速度
     private float blinkSpeed = 1f;
     // Enterキーのクールダウン時間（秒）

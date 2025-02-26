@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class EnemyKoudou : MonoBehaviour, IEnemyAction
 {
     //シリアル化している。CharaStatusの敵を指定。
-    [SerializeField] CharaStatus charadata;  
+    [SerializeField] CharaStatus charadata;
     private GameObject Player;
     PlayerDamage script;
     Vector3 distance; //Playerとの距離
@@ -42,8 +42,21 @@ public class EnemyKoudou : MonoBehaviour, IEnemyAction
 
     public int EnemyAIkoudou()
     {
+        if (Player == null)
+        {
+            Debug.LogError("No player found.");
+            return 0;
+        }
+
         EnemyDamage enemyDamage = GetComponent<EnemyDamage>();
         script = Player.GetComponent<PlayerDamage>();
+
+        if (script == null)
+        {
+            Debug.LogError("PlayerDamage script not found on player.");
+            return 0;
+        }
+
         //キャラ距離計算の処理
         //敵の位置からPlayerの位置を引いた後にMathf.Absで絶対値を出すことで距離がわかる。
 
@@ -68,7 +81,7 @@ public class EnemyKoudou : MonoBehaviour, IEnemyAction
                     return State;
                 }
             }
-            else if(distanceX < distanceZ)
+            else if (distanceX < distanceZ)
             {
                 if (charadata.ShortAttackRange >= distanceZ)
                 {
