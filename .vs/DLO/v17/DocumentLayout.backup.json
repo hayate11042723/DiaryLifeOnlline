@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\dlo\\assets\\mainassets\\script\\enemyscript\\mob\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\dlo\\assets\\mainassets\\script\\enemyscript\\boss\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\boss\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\dlo\\assets\\mainassets\\script\\enemyscript\\boss\\enemydamageboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\boss\\enemydamageboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|c:\\users\\fko2347054\\desktop\\github\\dlo\\assets\\mainassets\\script\\enemyscript\\mob\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemykinsetu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\boss\\charaattackboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +19,44 @@
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\boss\\enemybossai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\charaattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\charaattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemykoudou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\enemystate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemystate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\boss\\enemybossatack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\boss\\enemybossatack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\mob\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\mob\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\enemyscript\\boss\\enemydamageboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\boss\\enemydamageboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\lvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\lvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\uiscript\\statuswindowselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\statuswindowselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\playerscript\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -123,10 +155,6 @@
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\interface\\idamageable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\uiscript\\statuswindowselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\uiscript\\statuswindowselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\assets\\mainassets\\script\\systemscript\\datascript\\itemsyoki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76A05F3D-1CDC-E5ED-854C-21CC673400A2}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\systemscript\\datascript\\itemsyoki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -191,15 +219,100 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Enemykinsetu.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\Enemykinsetu.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\Enemykinsetu.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\Enemykinsetu.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\Enemykinsetu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:37:38.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyManager.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyManager.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:04:25.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Enemystate1.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemystate1.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemystate1.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemystate1.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemystate1.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:04:21.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EnemyBossAtack.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAtack.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAtack.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAtack.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAtack.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T01:57:50.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemykinsetu.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemykinsetu.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemykinsetu.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemykinsetu.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\Enemykinsetu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T01:56:56.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CharaAttack.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\CharaAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\CharaAttack.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\CharaAttack.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\CharaAttack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T01:56:37.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyKoudou.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyKoudou.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyKoudou.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyKoudou.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyKoudou.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:39:56.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "EnemyDamage.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyDamage.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyDamage.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyDamage.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyDamage.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwvzEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T02:18:15.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T02:18:15.245Z"
             },
             {
               "$type": "Document",
@@ -209,10 +322,9 @@
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\CharaAttackBoss.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\CharaAttackBoss.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\CharaAttackBoss.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T02:57:15.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T02:57:15.114Z"
             },
             {
               "$type": "Document",
@@ -222,38 +334,13 @@
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAI.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAI.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyBossAI.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAIwKkAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAABAAAAAAAAAAAkwCMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T07:27:46.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T07:27:46.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerWeapon.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
-              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
-              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T06:44:30.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SowrdEffect.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
-              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
-              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T06:44:31.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "EnemyAI.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyAI.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\mob\\EnemyAI.cs",
@@ -265,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "UpdateButton.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UpdateButton.cs",
@@ -277,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "PlayerAttack.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerAttack.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerAttack.cs",
@@ -289,32 +376,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "EnemyDamageBoss.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyDamageBoss.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyDamageBoss.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyDamageBoss.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\Boss\\EnemyDamageBoss.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFwAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T02:58:23.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T02:58:23.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Lvdata.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
               "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\Lvdata.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T06:47:14.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
+              "Title": "StatusWindowSelector.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T08:03:03.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SowrdEffect.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\SowrdEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:44:31.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlayerWeapon.cs",
+              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
+              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerWeapon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:44:30.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ItemData.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemData.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemData.cs",
@@ -326,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "SceneScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SceneScript\\SceneScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\SceneScript.cs",
@@ -338,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "CinemachineDollyInputProvider.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\CameraScript\\CinemachineDollyInputProvider.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\CameraScript\\CinemachineDollyInputProvider.cs",
@@ -350,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "UIButtonSelector(not cursor).cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(not cursor).cs",
@@ -362,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "WindowChange.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\WindowChange.cs",
@@ -374,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "CharaStatus.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\CharaStatus.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\CharaStatus.cs",
@@ -386,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "TemporarySceneScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SceneScript\\TemporarySceneScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\TemporarySceneScript.cs",
@@ -398,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "ICharaAttack.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\Interface\\ICharaAttack.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\Interface\\ICharaAttack.cs",
@@ -410,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "TitleButtonScene.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SceneScript\\TitleButtonScene.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\TitleButtonScene.cs",
@@ -422,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "PlayerDamage.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerDamage.cs",
@@ -434,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "StatusWindow.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindow.cs",
@@ -446,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "ItemDataBase.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemDataBase.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemDataBase.cs",
@@ -458,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "ScenePointerScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\ObjectScript\\ScenePointerScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ObjectScript\\ScenePointerScript.cs",
@@ -470,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "PlayerStatus.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\PlayerStatus.cs",
@@ -482,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "ButtonScene.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SceneScript\\ButtonScene.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\ButtonScene.cs",
@@ -494,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "MissingDelete.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\MissingDelete.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\MissingDelete.cs",
@@ -506,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "CloseWindow.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\CloseWindow.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\CloseWindow.cs",
@@ -518,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 35,
               "Title": "ShopSetting.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\ShopScript\\ShopSetting.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ShopScript\\ShopSetting.cs",
@@ -530,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 36,
               "Title": "UIButtonSelector(basic).cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(basic).cs",
@@ -542,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 37,
               "Title": "IDamageable.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\Interface\\IDamageable.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\Interface\\IDamageable.cs",
@@ -554,19 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "StatusWindowSelector.cs",
-              "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
-              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
-              "ToolTip": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
-              "RelativeToolTip": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\StatusWindowSelector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T08:03:03.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "EnemyKoudou.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyKoudou.cs",
@@ -578,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "ItemSyoki.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemSyoki.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\DataScript\\ItemSyoki.cs",
@@ -590,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "UIButtonSelector(meimetu).cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\UIButtonSelector(meimetu).cs",
@@ -602,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "FocusOnEnemy.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\CameraScript\\FocusOnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\CameraScript\\FocusOnEnemy.cs",
@@ -614,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "ShopWindow.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\ShopScript\\ShopWindow.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ShopScript\\ShopWindow.cs",
@@ -626,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "TitlePlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\TitlePlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\TitlePlayerMove.cs",
@@ -638,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "ESCWindowPanel.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\ESCWindowPanel.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\ESCWindowPanel.cs",
@@ -650,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "TemporaryButtonScene.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SceneScript\\TemporaryButtonScene.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SceneScript\\TemporaryButtonScene.cs",
@@ -662,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "IEnemyAction.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\Interface\\IEnemyAction.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\Interface\\IEnemyAction.cs",
@@ -674,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": "LvUI.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\SystemScript\\UIScript\\LvUI.cs",
@@ -686,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "NextSceneColliderScript.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\ObjectScript\\NextSceneColliderScript.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\ObjectScript\\NextSceneColliderScript.cs",
@@ -698,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "PlayerAnimation.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerAnimation.cs",
@@ -710,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "HitImpactEffectsPreview.cs",
               "DocumentMoniker": "C:\\Users\\fko2347054\\Desktop\\GitHub\\DLO\\Assets\\MainAssets\\Prefab\\Object\\Effect\\Travis Game Assets\\Hit Impact Effects\\Demo Scene\\Scripts\\HitImpactEffectsPreview.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Prefab\\Object\\Effect\\Travis Game Assets\\Hit Impact Effects\\Demo Scene\\Scripts\\HitImpactEffectsPreview.cs",

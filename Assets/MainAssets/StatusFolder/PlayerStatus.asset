@@ -15,7 +15,7 @@ MonoBehaviour:
   NAME: "\u3042\u3042\u3042\u3042\u3042"
   MAXHP: 20
   MAXMP: 20
-  ATK: 10000
+  ATK: 10
   DEF: 10
   INT: 10
   MDEF: 10

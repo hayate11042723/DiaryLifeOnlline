@@ -44,7 +44,6 @@ public class EnemyKoudou : MonoBehaviour, IEnemyAction
     {
         if (Player == null)
         {
-            Debug.LogError("No player found.");
             return 0;
         }
 
@@ -53,7 +52,6 @@ public class EnemyKoudou : MonoBehaviour, IEnemyAction
 
         if (script == null)
         {
-            Debug.LogError("PlayerDamage script not found on player.");
             return 0;
         }
 

@@ -21,7 +21,7 @@ public class CharaAttack : MonoBehaviour
     {
         if (charadata != null)
         {
-            //charadata‚ÌÅ‘åHP‚ğ‘ã“üB
+            //charadata‚ÌATK‚ğ‘ã“üB
             ATK = charadata.ATK;
         }
 
