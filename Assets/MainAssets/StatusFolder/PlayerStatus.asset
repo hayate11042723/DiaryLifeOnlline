@@ -16,7 +16,7 @@ MonoBehaviour:
   MAXHP: 20
   MAXMP: 20
   ATK: 10
-  DEF: 10
+  DEF: 100000
   INT: 10
   MDEF: 10
   AGI: 10

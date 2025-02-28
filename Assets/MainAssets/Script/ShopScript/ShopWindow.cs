@@ -29,4 +29,17 @@ public class ShopWindow : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        // プレイヤーがコライダー内から出た時
+        if (other.CompareTag("Player"))
+        {
+            // Canvasを非アクティブに設定
+            if (shopCanvas != null)
+            {
+                shopCanvas.gameObject.SetActive(false);
+            }
+        }
+    }
 }

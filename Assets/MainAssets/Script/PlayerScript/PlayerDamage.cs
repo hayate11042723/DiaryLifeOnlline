@@ -9,9 +9,9 @@ public class PlayerDamage : MonoBehaviour, IDamageable
     [SerializeField] private PlayerStatus charadata; // プレイヤーのステータスデータ
     [SerializeField] Slider Slider; // HPを表示するスライダー
     [SerializeField] GameObject deathEffectPrefab; // 死亡時に表示するエフェクトのPrefab
+    [SerializeField] private Animator PlayerAnimator; // プレイヤーのアニメーター
     public int HP; // 現在のHP
     private int playerDamage; // 算出されたダメージ量
-    public Animator PlayerAnimator; // プレイヤーのアニメーター
 
     void Start()
     {

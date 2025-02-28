@@ -1364,11 +1364,12 @@ GameObject:
   - component: {fileID: 39857555}
   - component: {fileID: 49688037}
   - component: {fileID: 49688038}
-  - component: {fileID: 49688039}
   - component: {fileID: 49688040}
+  - component: {fileID: 49688039}
   - component: {fileID: 49688041}
   - component: {fileID: 49688042}
   - component: {fileID: 49688043}
+  - component: {fileID: 49688044}
   m_Layer: 0
   m_Name: GreenDragon
   m_TagString: Enemy
@@ -1627,6 +1628,27 @@ MonoBehaviour:
   EnemyController: {fileID: 39857555}
   BasicCollider: {fileID: 1066584269}
   TailCollider: {fileID: 1500721058}
+--- !u!65 &49688044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49541285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 1, z: -3}
 --- !u!4 &49688503
 Transform:
   m_ObjectHideFlags: 0
@@ -2287,8 +2309,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49333133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.58615, y: -0.000020235544, z: -0.000023841858}
+  m_LocalRotation: {x: 0.000000019881478, y: 0.00000000495275, z: 0.14184998, w: 0.9898882}
+  m_LocalPosition: {x: -99, y: -42, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2296,7 +2318,7 @@ Transform:
   - {fileID: 49698071}
   - {fileID: 49756573}
   m_Father: {fileID: 49786329}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.31}
 --- !u!4 &49777285
 Transform:
   m_ObjectHideFlags: 0
@@ -3856,11 +3878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_VerticalAxis.m_MaxSpeed
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6921020490508825311, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_HorizontalAxis.m_MaxSpeed
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7159513276274996722, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_Name
@@ -3956,7 +3978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 38f54968cd485f345a4fd63117ae5729, type: 2}
   AttackChara: {fileID: 49541285}
-  hitEffectPrefab: {fileID: 7133517941893716131, guid: 7e733a5eed3737949994258d03d30e53, type: 3}
+  hitEffectPrefab: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   hitEffectOffset: {x: 0, y: 0, z: 0}
   hitEffectScale: {x: 1, y: 1, z: 1}
 --- !u!1 &1331978316 stripped
@@ -4262,7 +4284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 38f54968cd485f345a4fd63117ae5729, type: 2}
   AttackChara: {fileID: 49541285}
-  hitEffectPrefab: {fileID: 7133517941893716131, guid: 7e733a5eed3737949994258d03d30e53, type: 3}
+  hitEffectPrefab: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   hitEffectOffset: {x: 0, y: 0, z: 0}
   hitEffectScale: {x: 1, y: 1, z: 1}
 --- !u!65 &1500721058
@@ -4282,7 +4304,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

@@ -1393,6 +1393,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8362379097e1ae2448332ed506394cd7, type: 2}
     - target: {fileID: 5878021820654049333, guid: 6ef5dcef34827ab409d068b14abda177, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878021820654049333, guid: 6ef5dcef34827ab409d068b14abda177, type: 3}
       propertyPath: AttackChara
       value: 
       objectReference: {fileID: 6378162535679133017}

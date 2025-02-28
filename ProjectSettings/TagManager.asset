@@ -15,6 +15,7 @@ TagManager:
   - Slime
   - TurtleShell
   - Golem
+  - NPC
   layers:
   - Default
   - TransparentFX
