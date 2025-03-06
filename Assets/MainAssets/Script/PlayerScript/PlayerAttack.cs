@@ -8,6 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public Animator PlayerAnimator;
     public Collider WeaponCollider;
     public SowrdEffect swordEffect; // SowrdEffectの参照を追加
+    public float detectionRadius = 5f; // 敵を検出する半径
+    public Transform lockedOnEnemy; // ロックオンされたエネミーを保持する変数
 
     // 攻撃中かどうかのフラグ
     public bool isAttacking = false; // フラグをpublicに変更
@@ -63,6 +65,7 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
+            FaceTarget(); // ターゲットに向く
             SetAnimation("attack_I");
         }
     }
@@ -73,6 +76,7 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
+            FaceTarget(); // ターゲットに向く
             SetAnimation("attack_K");
         }
     }
@@ -83,6 +87,7 @@ public class PlayerAttack : MonoBehaviour
         if (context.started && !isAttacking) // 攻撃中でなければ実行
         {
             isAttacking = true; // 攻撃中フラグを設定
+            FaceTarget(); // ターゲットに向く
             SetAnimation("attack_R");
         }
     }
@@ -114,5 +119,48 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return null; // 1フレーム待つ
         PlayerAnimator.SetBool(currentAnimation, true);
+    }
+
+    // ターゲットに向くメソッド
+    private void FaceTarget()
+    {
+        if (lockedOnEnemy != null)
+        {
+            Vector3 direction = (lockedOnEnemy.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = lookRotation; // 一気に向く
+        }
+        else
+        {
+            FaceNearestEnemy(); // ロックオンされていない場合は近くの敵に向く
+        }
+    }
+
+    // 近くの敵に向くメソッド
+    private void FaceNearestEnemy()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
+        Collider nearestEnemy = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.CompareTag("Enemy"))
+            {
+                float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestEnemy = hitCollider;
+                }
+            }
+        }
+
+        if (nearestEnemy != null)
+        {
+            Vector3 direction = (nearestEnemy.transform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = lookRotation; // 一気に向く
+        }
     }
 }

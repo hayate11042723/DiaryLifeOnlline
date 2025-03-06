@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: "\u5E03\u306E\u670D"
   ItemType: 3
-  ItemIcon: {fileID: 21300000, guid: 92706680a410c284b8be417e4ad48c38, type: 3}
-  ItemExplanation: "\u624B\u4F5C\u308A\u306E\u670D\u3002\u9632\u5FA1\u529B\u306F\u7121\u3044\u306B\u7B49\u3057\u3044\u3002"
+  ItemIcon: {fileID: 21300000, guid: 9303321f2863699459863251bc910c14, type: 3}
+  ItemExplanation: "\u5E02\u8CA9\u306E\u670D\u3002\u9632\u5FA1\u529B\u306F\u7121\u3044\u306B\u7B49\u3057\u3044\u3002"
   ItemLimit: 1
   ItemBuyingPrice: 0
   ItemSellingPrice: 0
