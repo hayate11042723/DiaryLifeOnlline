@@ -1,14 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
-using static ItemData;
-using static UnityEditor.Progress;
 
 public class itemkanri : MonoBehaviour
 {
@@ -128,5 +122,45 @@ public class itemkanri : MonoBehaviour
                 }
             }
         }
+    }
+
+    // アイテムリストを取得するメソッド
+    public List<ItemData> GetItemList()
+    {
+        return itemDataBase.GetItemList();
+    }
+
+    // アイテムを追加するメソッド
+    public void AddItem(ItemData item)
+    {
+        if (itemkazu.ContainsKey(item))
+        {
+            itemkazu[item]++;
+        }
+        else
+        {
+            itemkazu[item] = 1;
+        }
+        Motimonokoushin();
+    }
+
+    // アイテムを削除するメソッド
+    public void RemoveItem(ItemData item)
+    {
+        if (itemkazu.ContainsKey(item) && itemkazu[item] > 0)
+        {
+            itemkazu[item]--;
+            if (itemkazu[item] == 0)
+            {
+                itemkazu.Remove(item);
+            }
+            Motimonokoushin();
+        }
+    }
+
+    // アイテムを所持しているか確認するメソッド
+    public bool HasItem(ItemData item)
+    {
+        return itemkazu.ContainsKey(item) && itemkazu[item] > 0;
     }
 }

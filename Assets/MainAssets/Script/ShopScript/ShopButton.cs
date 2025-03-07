@@ -10,8 +10,10 @@ public class ShopButton : MonoBehaviour
     [SerializeField] private MonoBehaviour playerMove;
     // プレイヤーの攻撃スクリプト
     [SerializeField] private MonoBehaviour playerAttack;
-    // 他のUIキャンバス
-    [SerializeField] private List<Canvas> otherCanvases;
+    // 非アクティブにするUIキャンバス
+    [SerializeField] private List<Canvas> falseCanvases;
+    // アクティブにするUIキャンバス
+    [SerializeField] private List<Canvas> trueCanvases;
     // NPCのTransform
     [SerializeField] private Transform npcTransform;
     // プレイヤーのTransform
@@ -25,7 +27,7 @@ public class ShopButton : MonoBehaviour
         {
             shopCanvas.gameObject.SetActive(true);
             // 他のCanvasを非アクティブに設定
-            foreach (var canvas in otherCanvases)
+            foreach (var canvas in falseCanvases)
             {
                 if (canvas != shopCanvas)
                 {
@@ -61,7 +63,7 @@ public class ShopButton : MonoBehaviour
         {
             shopCanvas.gameObject.SetActive(false);
             // 他のCanvasを再アクティブに設定
-            foreach (var canvas in otherCanvases)
+            foreach (var canvas in trueCanvases)
             {
                 canvas.gameObject.SetActive(true);
             }
