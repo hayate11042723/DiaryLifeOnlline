@@ -10,14 +10,24 @@ public class ItemBuy : MonoBehaviour
     [SerializeField] private itemkanri itemManager;
     // プレイヤーステータス
     [SerializeField] private PlayerStatus playerStatus;
+    // クリックイベントのデバウンス用
+    private bool isBuying = false;
 
     // アイテムを購入するメソッド
     public void BuyItem(int itemIndex)
     {
+        // デバウンス処理
+        if (isBuying) return;
+        isBuying = true;
+
+        // デバッグログ
+        Debug.Log("BuyItem called");
+
         // アイテムインデックスが有効かどうかをチェック
         if (itemIndex < 0 || itemIndex >= itemDataBase.GetItemList().Count)
         {
             Debug.LogError("Invalid item index");
+            isBuying = false;
             return;
         }
 
@@ -40,6 +50,15 @@ public class ItemBuy : MonoBehaviour
             // 所持金が足りない場合のメッセージ
             Debug.Log("Not enough gold to buy this item");
         }
+
+        // デバウンス解除
+        StartCoroutine(ResetIsBuying());
+    }
+
+    // デバウンス解除用のコルーチン
+    private IEnumerator ResetIsBuying()
+    {
+        yield return new WaitForSeconds(0.1f); // 0.1秒待機
+        isBuying = false;
     }
 }
-

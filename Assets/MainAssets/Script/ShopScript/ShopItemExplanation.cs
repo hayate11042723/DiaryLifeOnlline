@@ -11,6 +11,8 @@ public class ShopItemExplanation : MonoBehaviour
     // アイテム説明表示欄
     [SerializeField] private Text itemname;
     [SerializeField] private Text itemsetumei;
+    [SerializeField] private Text itemBuyPrice;
+    [SerializeField] private Text itemSellPrice;
 
     // アイテムの説明を表示するメソッド
     public void DisplayItemExplanation(int itemIndex)
@@ -28,5 +30,7 @@ public class ShopItemExplanation : MonoBehaviour
         // アイテムの名称と説明をテキストに設定
         itemname.text = item.GetItemName();
         itemsetumei.text = item.GetItemExplanation();
+        itemBuyPrice.text = "購入価格: " + item.GetItemBuyingPrice().ToString();
+        itemSellPrice.text = "売却価格: " + item.GetItemSellingPrice().ToString();
     }
 }

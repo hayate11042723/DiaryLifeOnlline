@@ -215,7 +215,3 @@ public class ShopWindowSelector : MonoBehaviour
         return 4;
     }
 }
-
-
-
-
