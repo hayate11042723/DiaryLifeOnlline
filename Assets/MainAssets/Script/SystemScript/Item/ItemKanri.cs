@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class itemkanri : MonoBehaviour
+public class Itemkanri : MonoBehaviour
 {
     [SerializeField] private ItemDataBase itemDataBase;
 
@@ -162,5 +162,29 @@ public class itemkanri : MonoBehaviour
     public bool HasItem(ItemData item)
     {
         return itemkazu.ContainsKey(item) && itemkazu[item] > 0;
+    }
+
+    // インベントリの中身を取得するメソッド
+    public Dictionary<ItemData, int> GetInventoryContents()
+    {
+        return new Dictionary<ItemData, int>(itemkazu);
+    }
+
+    // 他のスクリプトからアイテムを減らすメソッド
+    public void DecreaseItem(ItemData item, int amount)
+    {
+        if (itemkazu.ContainsKey(item) && itemkazu[item] >= amount)
+        {
+            itemkazu[item] -= amount;
+            if (itemkazu[item] <= 0)
+            {
+                itemkazu.Remove(item);
+            }
+            Motimonokoushin();
+        }
+        else
+        {
+            Debug.LogWarning("Not enough items to decrease");
+        }
     }
 }

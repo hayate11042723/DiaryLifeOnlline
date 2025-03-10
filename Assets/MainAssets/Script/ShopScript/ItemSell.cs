@@ -5,9 +5,21 @@ using UnityEngine;
 public class ItemSell : MonoBehaviour
 {
     // アイテム管理スクリプト
-    [SerializeField] private itemkanri itemManager;
+    [SerializeField] private Itemkanri itemManager;
     // プレイヤーステータス
     [SerializeField] private PlayerStatus playerStatus;
+    // インベントリ
+    [SerializeField] private GameObject inventory;
+    // 特定のCanvas
+    [SerializeField] private Canvas targetCanvas;
+    // 元の親オブジェクト
+    private Transform originalParent;
+
+    private void Start()
+    {
+        // インベントリの元の親オブジェクトを保存
+        originalParent = inventory.transform.parent;
+    }
 
     // アイテムを売るメソッド
     public void SellItem(int itemIndex)
@@ -38,5 +50,17 @@ public class ItemSell : MonoBehaviour
             // アイテムを所持していない場合のメッセージ
             Debug.Log("You don't have this item to sell");
         }
+    }
+
+    // インベントリを特定のCanvasの子要素にするメソッド
+    public void MoveInventoryToCanvas()
+    {
+        inventory.transform.SetParent(targetCanvas.transform, false);
+    }
+
+    // インベントリを元の親オブジェクトに戻すメソッド
+    public void ResetInventoryParent()
+    {
+        inventory.transform.SetParent(originalParent, false);
     }
 }

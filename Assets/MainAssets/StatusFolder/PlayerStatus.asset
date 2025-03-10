@@ -23,5 +23,5 @@ MonoBehaviour:
   LV: 1
   EXP: 0
   MAXEXP: 250
-  HAVEGOLD: 0
+  HAVEGOLD: 99967500
   StatusPoint: 20

@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemName: "\u6728\u306E\u5263"
   ItemType: 0
   ItemIcon: {fileID: 21300000, guid: d74e303a7c9d971469601c26ba68b25d, type: 3}
-  ItemExplanation: "\u6728\u304B\u3089\u4F5C\u3089\u308C\u305F\u5263\u3002\u5207\u308C\u5473\u306F\u306A\u3044\u304C\u53E9\u304B\u308C\u308B\u3068\u75DB\u3044\u3002"
+  ItemExplanation: " \u6728\u304B\u3089\u4F5C\u3089\u308C\u305F\u5263\u3002\u5207\u308C\u5473\u306F\u306A\u3044\u304C\u53E9\u304B\u308C\u308B\u3068\u75DB\u3044\u3002"
   ItemLimit: 1
   ItemBuyingPrice: 0
   ItemSellingPrice: 0

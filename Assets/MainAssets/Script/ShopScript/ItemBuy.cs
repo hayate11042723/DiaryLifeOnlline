@@ -7,7 +7,7 @@ public class ItemBuy : MonoBehaviour
     // アイテムデータベース
     [SerializeField] private ItemDataBase itemDataBase;
     // アイテム管理スクリプト
-    [SerializeField] private itemkanri itemManager;
+    [SerializeField] private Itemkanri itemManager;
     // プレイヤーステータス
     [SerializeField] private PlayerStatus playerStatus;
     // クリックイベントのデバウンス用
