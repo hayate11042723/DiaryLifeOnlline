@@ -42,6 +42,12 @@ public class ItemSellExplanation : MonoBehaviour
         Motimonokoushin();
     }
 
+    // アイテム数を更新するメソッド
+    public void UpdateItemKazu(Dictionary<ItemData, int> newItemKazu)
+    {
+        itemkazu = newItemKazu;
+    }
+
     // どこからでもアクセス可能。返り値なし。
     public void Motimonokoushin()
     {

@@ -1,0 +1,16 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class EventSystemChecker : MonoBehaviour
+{
+    void Start()
+    {
+        // EventSystemÇ™ë∂ç›ÇµÇ»Ç¢èÍçáÇÕí«â¡Ç∑ÇÈ
+        if (FindObjectOfType<EventSystem>() == null)
+        {
+            GameObject eventSystem = new GameObject("EventSystem");
+            eventSystem.AddComponent<EventSystem>();
+            eventSystem.AddComponent<StandaloneInputModule>();
+        }
+    }
+}

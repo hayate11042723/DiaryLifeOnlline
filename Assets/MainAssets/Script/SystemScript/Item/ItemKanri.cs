@@ -6,37 +6,34 @@ using UnityEngine.UI;
 
 public class Itemkanri : MonoBehaviour
 {
+    // アイテムデータベース
     [SerializeField] private ItemDataBase itemDataBase;
-
-    // 作った各アイテムスロットのiconを指定(スロットの番号順に)
-    [SerializeField] private GameObject[] icons = new GameObject[24];
-
-    // トグルグループであるinventoryを指定。
+    // アイテムアイコンの配列
+    [SerializeField] private GameObject[] icons = new GameObject[IconArraySize];
+    // トグルグループ
     [SerializeField] private ToggleGroup togglegroup;
-
-    // アイテム説明表示欄
+    // アイテム名表示欄
     [SerializeField] private Text itemname;
+    // アイテム説明表示欄
     [SerializeField] private Text itemsetumei;
-
     // アイテム数管理
     private Dictionary<ItemData, int> itemkazu = new Dictionary<ItemData, int>();
-
-    // 持ち物管理
+    // 持ち物リスト
     private List<ItemData> MotimonoList = new List<ItemData>();
-
-    // アイコン管理の配列
-    private Image[] Icons = new Image[24];
-
-    // 空スロットのカラーをインスペクターで設定できるようにする
+    // 初期アイテムリスト
+    private List<ItemData> initialItems = new List<ItemData>();
+    // アイコンの配列
+    private Image[] Icons = new Image[IconArraySize];
+    // 空スロットの色
     [SerializeField] private Color emptySlotColor = new Color(0.2196f, 0.2196f, 0.2196f, 1f);
+    // 埋まっているスロットの色
     [SerializeField] private Color filledSlotColor = new Color(1, 1, 1, 1);
-
-    // 定数
+    // 初期アイテムのインデックス
     private const int InitialWoodenSwordIndex = 0;
     private const int InitialClothArmorIndex = 3;
+    // アイコン配列のサイズ
     private const int IconArraySize = 24;
 
-    // Start is called before the first frame update
     void Start()
     {
         // 初期化アイテム処理
@@ -47,17 +44,29 @@ public class Itemkanri : MonoBehaviour
         }
 
         // 持っている初期アイテム設定
-        itemkazu[itemDataBase.GetItemList()[InitialWoodenSwordIndex]] = 1; // 木の剣の数を1にする
-        itemkazu[itemDataBase.GetItemList()[InitialClothArmorIndex]] = 1; // 布の服の数を1にする
+        var initialWoodenSword = itemDataBase.GetItemList()[InitialWoodenSwordIndex];
+        var initialClothArmor = itemDataBase.GetItemList()[InitialClothArmorIndex];
+        itemkazu[initialWoodenSword] = 1; // 木の剣の数を1にする
+        itemkazu[initialClothArmor] = 1; // 布の服の数を1にする
+
+        // 初期アイテムリストに追加
+        initialItems.Add(initialWoodenSword);
+        initialItems.Add(initialClothArmor);
+
+        // アイコンのImageコンポーネントを取得
+        for (int i = 0; i < IconArraySize; i++)
+        {
+            Icons[i] = icons[i].GetComponent<Image>();
+        }
 
         // 持ち物更新処理を呼び出す
         Motimonokoushin();
     }
 
-    // どこからでもアクセス可能。返り値なし。
+    // 持ち物更新処理
     public void Motimonokoushin()
     {
-        // 持ち物更新処理
+        // 持ち物リストをクリア
         MotimonoList.Clear();
 
         // 持っている個数が1個以上のアイテムを持ち物リストに追加する
@@ -69,37 +78,32 @@ public class Itemkanri : MonoBehaviour
             }
         }
 
-        // アイテムスロットのアイコンimageをGetComponentしてアイコン配列に代入
+        // アイコンを更新
+        UpdateIcons();
+    }
+
+    // アイコンを更新するメソッド
+    private void UpdateIcons()
+    {
         for (int i = 0; i < IconArraySize; i++)
         {
-            if (icons[i] != null)
+            if (i < MotimonoList.Count)
             {
-                Icons[i] = icons[i].GetComponent<Image>();
-                if (Icons[i] != null)
-                {
-                    // アイコンのスプライトをnullに設定し、空スロットのカラーを設定
-                    Icons[i].sprite = null;
-                    Icons[i].color = emptySlotColor;
-                }
-            }
-        }
-
-        // 持ち物リストの要素数だけ繰り返す
-        for (int i = 0; i < MotimonoList.Count; i++)
-        {
-            var item = MotimonoList[i];
-            if (Icons[i] != null)
-            {
-                // アイコンのスプライトとカラーを設定
-                Icons[i].sprite = item.GetItemIcon();
+                Icons[i].sprite = MotimonoList[i].GetItemIcon();
                 Icons[i].color = filledSlotColor;
+            }
+            else
+            {
+                Icons[i].sprite = null;
+                Icons[i].color = emptySlotColor;
             }
         }
     }
 
+    // スロット更新処理
     public void slotkoushin()
     {
-        // スロット更新処理
+        // アクティブなトグルを取得
         Toggle tgl = togglegroup.ActiveToggles().FirstOrDefault();
         if (tgl != null)
         {
@@ -130,6 +134,46 @@ public class Itemkanri : MonoBehaviour
         return itemDataBase.GetItemList();
     }
 
+    // 持ち物リストのアクセサ
+    public List<ItemData> GetMotimonoList()
+    {
+        return MotimonoList;
+    }
+
+    // アイテムを減らすメソッド
+    public void DecreaseItem(ItemData item, int amount)
+    {
+        if (itemkazu.ContainsKey(item))
+        {
+            itemkazu[item] -= amount;
+            if (itemkazu[item] <= 0)
+            {
+                itemkazu[item] = 0;
+            }
+        }
+        Motimonokoushin();
+    }
+
+    // アイテムを所持しているかどうかをチェックするメソッド
+    public bool HasItem(ItemData item)
+    {
+        return itemkazu.ContainsKey(item) && itemkazu[item] > 0;
+    }
+
+    // アイテムを削除するメソッド
+    public void RemoveItem(ItemData item)
+    {
+        if (itemkazu.ContainsKey(item))
+        {
+            itemkazu[item]--;
+            if (itemkazu[item] <= 0)
+            {
+                itemkazu[item] = 0;
+            }
+        }
+        Motimonokoushin();
+    }
+
     // アイテムを追加するメソッド
     public void AddItem(ItemData item)
     {
@@ -142,49 +186,24 @@ public class Itemkanri : MonoBehaviour
             itemkazu[item] = 1;
         }
         Motimonokoushin();
+        // アイテム説明を更新
+        var itemSellExplanation = FindObjectOfType<ItemSellExplanation>();
+        itemSellExplanation.UpdateItemKazu(itemkazu);
+        itemSellExplanation.Motimonokoushin();
+        itemSellExplanation.slotkoushin();
     }
 
-    // アイテムを削除するメソッド
-    public void RemoveItem(ItemData item)
+    // 初期アイテムかどうかをチェックするメソッド
+    public bool IsInitialItem(ItemData item)
     {
-        if (itemkazu.ContainsKey(item) && itemkazu[item] > 0)
-        {
-            itemkazu[item]--;
-            if (itemkazu[item] == 0)
-            {
-                itemkazu.Remove(item);
-            }
-            Motimonokoushin();
-        }
+        return initialItems.Contains(item);
     }
 
-    // アイテムを所持しているか確認するメソッド
-    public bool HasItem(ItemData item)
+    // トグルグループを取得するメソッド
+    public ToggleGroup GetToggleGroup()
     {
-        return itemkazu.ContainsKey(item) && itemkazu[item] > 0;
-    }
-
-    // インベントリの中身を取得するメソッド
-    public Dictionary<ItemData, int> GetInventoryContents()
-    {
-        return new Dictionary<ItemData, int>(itemkazu);
-    }
-
-    // 他のスクリプトからアイテムを減らすメソッド
-    public void DecreaseItem(ItemData item, int amount)
-    {
-        if (itemkazu.ContainsKey(item) && itemkazu[item] >= amount)
-        {
-            itemkazu[item] -= amount;
-            if (itemkazu[item] <= 0)
-            {
-                itemkazu.Remove(item);
-            }
-            Motimonokoushin();
-        }
-        else
-        {
-            Debug.LogWarning("Not enough items to decrease");
-        }
+        return togglegroup;
     }
 }
+
+

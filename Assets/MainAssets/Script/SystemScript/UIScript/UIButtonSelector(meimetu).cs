@@ -141,14 +141,27 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("Pointer entered: " + eventData.pointerEnter.name);
+
         for (int i = 0; i < buttons.Length; i++)
         {
+            Debug.Log("Checking button: " + buttons[i].name);
             if (eventData.pointerEnter == buttons[i].gameObject)
             {
+                Debug.Log("Button matched: " + buttons[i].name);
                 currentIndex = i;
                 SelectButton(currentIndex); // マウスがホバーしたボタンを選択
+
+                // カーソルを選択中のボタンの横に移動
+                if (cursor != null)
+                {
+                    Debug.Log("Moving cursor to button: " + buttons[i].name);
+                    cursor.rectTransform.position = buttons[i].transform.position + cursorOffset;
+                }
+
                 break;
             }
         }
     }
+
 }

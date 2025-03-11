@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ShopWindowSelector : MonoBehaviour
+public class ShopWindowSelector : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] float waitForSeconds; // 点滅の間隔
     [SerializeField] float iSeconds; // 点滅の明るさの変化量
@@ -14,6 +14,8 @@ public class ShopWindowSelector : MonoBehaviour
     [SerializeField] float clickBrightnessDuration = 0.1f; // クリック時の彩度変更の持続時間（秒）
 
     public Button[] buttons; // ボタンの配列
+    public RawImage cursor; // カーソルオブジェクト
+    public Vector3 cursorOffset; // カーソルのオフセット
     private int currentIndex = 0; // 現在選択中のボタンのインデックス
     private Coroutine blinkingCoroutine; // 点滅コルーチン
 
@@ -102,6 +104,12 @@ public class ShopWindowSelector : MonoBehaviour
 
         // EventSystemでボタンを選択
         EventSystem.current.SetSelectedGameObject(buttons[index].gameObject);
+
+        // カーソルを選択中のボタンの横に移動
+        if (cursor != null)
+        {
+            cursor.rectTransform.position = buttons[index].transform.position + cursorOffset;
+        }
 
         // 点滅を開始
         StartBlinkingEffect(buttons[index]);
@@ -214,4 +222,28 @@ public class ShopWindowSelector : MonoBehaviour
         // ここでは仮に4としていますが、実際のボタン配置に合わせて変更してください
         return 4;
     }
+
+    // マウスがボタンに重なったときに呼び出されるメソッド
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("Pointer entered: " + eventData.pointerEnter.name);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (eventData.pointerEnter == buttons[i].gameObject)
+            {
+                currentIndex = i;
+                SelectButton(currentIndex); // マウスがホバーしたボタンを選択
+
+                // カーソルを選択中のボタンの横に移動
+                if (cursor != null)
+                {
+                    cursor.rectTransform.position = buttons[i].transform.position + cursorOffset;
+                }
+
+                break;
+            }
+        }
+    }
+
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerStatus
   m_EditorClassIdentifier: 
   NAME: "\u3042\u3042\u3042\u3042\u3042"
-  MAXHP: 20
+  MAXHP: 40
   MAXMP: 20
   ATK: 10
   DEF: 10
@@ -21,7 +21,7 @@ MonoBehaviour:
   MDEF: 10
   AGI: 10
   LV: 1
-  EXP: 0
+  EXP: 20
   MAXEXP: 250
-  HAVEGOLD: 99967500
-  StatusPoint: 20
+  HAVEGOLD: 15999
+  StatusPoint: 0

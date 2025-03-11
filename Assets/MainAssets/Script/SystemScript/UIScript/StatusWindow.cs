@@ -60,7 +60,7 @@ public class StatusWindow : MonoBehaviour
     }
 
     // UIを更新するメソッド
-    void UpdateUI()
+    public void UpdateUI()
     {
         // 各ステータスをUIに反映
         nameText.text = "名前: " + playerStatus.NAME;
