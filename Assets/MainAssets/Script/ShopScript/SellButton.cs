@@ -44,6 +44,7 @@ public class SellButton : MonoBehaviour
                         itemSellExplanationScript.Motimonokoushin();
                         itemSellExplanationScript.slotkoushin();
                         UpdatePlayerMoneyText(); // 所持金の表示を更新
+                        itemSellExplanationScript.DisplayItemExplanation(index - 1); // アイテムの説明を更新
                         messageText.text = ""; // メッセージをクリア
                     }
                     else
@@ -77,4 +78,11 @@ public class SellButton : MonoBehaviour
         messageText.color = originalColor; // 元の色に戻す
         sellButton.interactable = true; // 売却ボタンを再度有効にする
     }
+
+    // 売却画面に移ったときにインベントリを更新するメソッド
+    public void OnEnterSellScreen()
+    {
+        itemSellExplanationScript.UpdateInventory();
+    }
 }
+

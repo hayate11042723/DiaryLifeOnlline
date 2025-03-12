@@ -64,7 +64,7 @@ public class EnemyKoudou : MonoBehaviour, IEnemyAction
         float distanceZ = Mathf.Abs(distance.z);
 
         //X座標とZ座標の距離のどちらが大きいか調べ、大きいほうの距離が敵のShortAttackRange以下であればStateを1として返す。攻撃を行う。
-        if (charadata.MAXHP > enemyDamage.HP && script.HP > 0)
+        if (charadata.MAXHP > enemyDamage.HP && script.charadata.HP > 0)
         {
             if (distanceX > distanceZ)
             {

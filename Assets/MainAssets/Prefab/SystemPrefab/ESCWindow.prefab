@@ -1151,10 +1151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemKanriObject: {fileID: 7290324890289710143}
+  playerStatus: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   playerDamage: {fileID: 3873788191336135542, guid: df48da25f8187c541844865f1175782a, type: 3}
-  playerStatus: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
   usePotionButton: {fileID: 2240234313332993331}
-  statusWindow: {fileID: 8643818695645872493}
 --- !u!1 &688353530745438660
 GameObject:
   m_ObjectHideFlags: 0
@@ -9681,9 +9680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce6333bf7719c34b9b12da73959e20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  playerStatus: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   LvUp: {fileID: 0}
   nameText: {fileID: 7062582537079876467}
+  hpText: {fileID: 0}
   maxHpText: {fileID: 1273200723285760438}
   maxMpText: {fileID: 2791083364135036332}
   atkText: {fileID: 4852436998681772559}
@@ -11683,7 +11683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataBase: {fileID: 11400000, guid: 13f209031b78df64e9332dcdb0c7170c, type: 2}
   itemManager: {fileID: 7747747052279008886}
-  playerStatus: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  playerStatus: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   playerMoneyText: {fileID: 8721378656782749425}
   messageText: {fileID: 7998806589581679939}
 --- !u!114 &4898596762845620584
@@ -11699,7 +11699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemManager: {fileID: 7747747052279008886}
-  playerStatus: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  playerStatus: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   inventory: {fileID: 8630321569286163778}
   targetCanvas: {fileID: 6444363209959584377}
 --- !u!114 &6405987303463037878
@@ -11751,7 +11751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemKanriObject: {fileID: 7290324890289710143}
   itemSellObject: {fileID: 4421325953688443008}
-  playerStatus: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  playerStatus: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   playerMoneyText: {fileID: 899865178671987020}
   messageText: {fileID: 6709589581760178627}
   sellButton: {fileID: 4884497303678439177}
@@ -22797,7 +22797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &549794839716479420
 RectTransform:
   m_ObjectHideFlags: 0

@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 157d95c8a42e1a947801416a0f1d2d1f, type: 2}
-  playerdata: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  playerdata: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   lvdata: {fileID: 11400000, guid: 791a2ec2d5c276e4386852a7ce969bc8, type: 2}
   Slider: {fileID: 4607854103242517397}
   HP: 0

@@ -40,6 +40,7 @@ public class ItemSellExplanation : MonoBehaviour
 
         // 持ち物更新処理を呼び出す
         Motimonokoushin();
+        slotkoushin(); // スロット更新処理を呼び出す
     }
 
     // アイテム数を更新するメソッド
@@ -95,6 +96,26 @@ public class ItemSellExplanation : MonoBehaviour
         }
     }
 
+    // アイテムの説明を表示するメソッド
+    public void DisplayItemExplanation(int itemIndex)
+    {
+        // アイテムインデックスが有効かどうかをチェック
+        if (itemIndex < 0 || itemIndex >= itemDataBase.GetItemList().Count)
+        {
+            Debug.LogError("Invalid item index");
+            return;
+        }
+
+        // アイテムデータを取得
+        ItemData item = itemDataBase.GetItemList()[itemIndex];
+
+        // アイテムの名称と説明をテキストに設定
+        itemname.text = item.GetItemName();
+        itemsetumei.text = item.GetItemExplanation();
+        itemBuyingPrice.text = $"購入価格: {item.GetItemBuyingPrice()}";
+        itemSellingPrice.text = $"販売価格: {item.GetItemSellingPrice()}";
+    }
+
     // アイテムリストを取得するメソッド
     public List<ItemData> GetItemList()
     {
@@ -106,4 +127,12 @@ public class ItemSellExplanation : MonoBehaviour
     {
         return togglegroup;
     }
+
+    // 売却画面に移ったときにインベントリを更新するメソッド
+    public void UpdateInventory()
+    {
+        Motimonokoushin();
+        slotkoushin();
+    }
 }
+

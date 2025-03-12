@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour, IDamageable
 {
-    [SerializeField] private PlayerStatus charadata; // プレイヤーのステータスデータ
+    [SerializeField] public PlayerStatus charadata; // プレイヤーのステータスデータ
     [SerializeField] public Slider Slider; // HPを表示するスライダー
     [SerializeField] GameObject deathEffectPrefab; // 死亡時に表示するエフェクトのPrefab
     [SerializeField] private Animator PlayerAnimator; // プレイヤーのアニメーター
-    public int HP; // 現在のHP
     private int playerDamage; // 算出されたダメージ量
 
     void Start()
@@ -19,7 +18,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
         if (charadata != null)
         {
             Slider.value = 1; // HPスライダーの初期値
-            HP = charadata.MAXHP; // 最大HPを現在のHPに設定
+            charadata.HP = charadata.MAXHP; // 最大HPを現在のHPに設定
         }
     }
 
@@ -33,11 +32,11 @@ public class PlayerDamage : MonoBehaviour, IDamageable
             {
                 playerDamage = 1; // ダメージが0以下の場合は1に設定
             }
-            HP -= playerDamage; // 現在のHPからダメージを引く
-            Slider.value = (float)HP / (float)charadata.MAXHP; // HPスライダーを更新
+            charadata.HP -= playerDamage; // 現在のHPからダメージを引く
+            Slider.value = (float)charadata.HP / (float)charadata.MAXHP; // HPスライダーを更新
         }
 
-        if (HP <= 0) // HPが0以下になった場合
+        if (charadata.HP <= 0) // HPが0以下になった場合
         {
             Debug.Log("死"); // デバッグログを出力
             PlayerAnimator.SetBool("death", true); // Deathアニメーションを再生
@@ -80,15 +79,13 @@ public class PlayerDamage : MonoBehaviour, IDamageable
     {
         // プレイヤーを指定位置に移動
         transform.position = position;
-        HP = charadata.MAXHP; // HPを最大値にリセット
+        charadata.HP = charadata.MAXHP; // HPを最大値にリセット
         Slider.value = 1; // HPスライダーを最大値にリセット
         PlayerAnimator.SetBool("death", false); // Deathアニメーションのフラグを解除
-        Debug.Log("プレイヤーが蘇生しました。"); // デバッグログを出力
     }
 
     public void Death()
     {
-        Debug.Log("Player has died."); // デバッグログを出力
         Destroy(gameObject); // ゲームオブジェクトを破壊
     }
 }

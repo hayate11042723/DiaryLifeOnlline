@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class Itemkanri : MonoBehaviour
 {
@@ -36,11 +37,16 @@ public class Itemkanri : MonoBehaviour
 
     void Start()
     {
+        LoadItemData();
+
         // 初期化アイテム処理
         foreach (var item in itemDataBase.GetItemList())
         {
             // アイテム数を全て0に
-            itemkazu[item] = 0;
+            if (!itemkazu.ContainsKey(item))
+            {
+                itemkazu[item] = 0;
+            }
         }
 
         // 持っている初期アイテム設定
@@ -56,11 +62,24 @@ public class Itemkanri : MonoBehaviour
         // アイコンのImageコンポーネントを取得
         for (int i = 0; i < IconArraySize; i++)
         {
-            Icons[i] = icons[i].GetComponent<Image>();
+            if (icons[i] != null)
+            {
+                Icons[i] = icons[i].GetComponent<Image>();
+            }
+            else
+            {
+                Debug.LogError($"Icon at index {i} is not assigned.");
+            }
         }
 
         // 持ち物更新処理を呼び出す
         Motimonokoushin();
+        slotkoushin(); // スロット更新処理を呼び出す
+    }
+
+    void OnDestroy()
+    {
+        SaveItemData();
     }
 
     // 持ち物更新処理
@@ -87,15 +106,18 @@ public class Itemkanri : MonoBehaviour
     {
         for (int i = 0; i < IconArraySize; i++)
         {
-            if (i < MotimonoList.Count)
+            if (Icons[i] != null)
             {
-                Icons[i].sprite = MotimonoList[i].GetItemIcon();
-                Icons[i].color = filledSlotColor;
-            }
-            else
-            {
-                Icons[i].sprite = null;
-                Icons[i].color = emptySlotColor;
+                if (i < MotimonoList.Count)
+                {
+                    Icons[i].sprite = MotimonoList[i].GetItemIcon();
+                    Icons[i].color = filledSlotColor;
+                }
+                else
+                {
+                    Icons[i].sprite = null;
+                    Icons[i].color = emptySlotColor;
+                }
             }
         }
     }
@@ -108,6 +130,7 @@ public class Itemkanri : MonoBehaviour
         if (tgl != null)
         {
             string x = tgl.name;
+            Debug.Log($"Active toggle name: {x}");
             if (int.TryParse(x, out int y))
             {
                 if (MotimonoList.Count >= y)
@@ -117,14 +140,20 @@ public class Itemkanri : MonoBehaviour
                     int k = itemkazu[MotimonoList[y - 1]];
                     itemname.text = $"{z}×{k}";
                     itemsetumei.text = MotimonoList[y - 1].GetItemExplanation();
+                    Debug.Log($"Item selected: {z}×{k}");
                 }
                 else
                 {
                     // アイテムスロットが空の場合
                     itemname.text = null;
                     itemsetumei.text = null;
+                    Debug.Log("Item slot is empty.");
                 }
             }
+        }
+        else
+        {
+            Debug.Log("No active toggle found.");
         }
     }
 
@@ -204,6 +233,75 @@ public class Itemkanri : MonoBehaviour
     {
         return togglegroup;
     }
+
+    // アイテムデータを保存するメソッド
+    private void SaveItemData()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "itemData.json");
+        string json = JsonUtility.ToJson(new SerializableDictionary<string, int>(itemkazu.ToDictionary(k => k.Key.name, v => v.Value)));
+        File.WriteAllText(path, json);
+    }
+
+    // アイテムデータを復元するメソッド
+    private void LoadItemData()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "itemData.json");
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            var loadedData = JsonUtility.FromJson<SerializableDictionary<string, int>>(json).ToDictionary();
+
+            // アイテムデータベースからアイテムを検索して復元
+            foreach (var item in itemDataBase.GetItemList())
+            {
+                if (loadedData.ContainsKey(item.name))
+                {
+                    itemkazu[item] = loadedData[item.name];
+                }
+            }
+        }
+
+        // アイテムデータをロードした後にアイテムの説明を更新
+        Motimonokoushin();
+        slotkoushin();
+    }
 }
 
+// シリアライズ可能な辞書クラス
+[System.Serializable]
+public class SerializableDictionary<TKey, TValue> : ISerializationCallbackReceiver
+{
+    [SerializeField] private List<TKey> keys = new List<TKey>();
+    [SerializeField] private List<TValue> values = new List<TValue>();
+    private Dictionary<TKey, TValue> dictionary = new Dictionary<TKey, TValue>();
 
+    public SerializableDictionary(Dictionary<TKey, TValue> dictionary)
+    {
+        this.dictionary = dictionary;
+    }
+
+    public Dictionary<TKey, TValue> ToDictionary()
+    {
+        return dictionary;
+    }
+
+    public void OnBeforeSerialize()
+    {
+        keys.Clear();
+        values.Clear();
+        foreach (var kvp in dictionary)
+        {
+            keys.Add(kvp.Key);
+            values.Add(kvp.Value);
+        }
+    }
+
+    public void OnAfterDeserialize()
+    {
+        dictionary = new Dictionary<TKey, TValue>();
+        for (int i = 0; i < keys.Count; i++)
+        {
+            dictionary[keys[i]] = values[i];
+        }
+    }
+}

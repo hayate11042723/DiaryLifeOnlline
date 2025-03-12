@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NAME: "\u3042\u3042\u3042\u3042\u3042"
   MAXHP: 40
+  HP: 40
   MAXMP: 20
   ATK: 10
   DEF: 10
@@ -21,7 +22,7 @@ MonoBehaviour:
   MDEF: 10
   AGI: 10
   LV: 1
-  EXP: 20
+  EXP: 0
   MAXEXP: 250
-  HAVEGOLD: 15999
+  HAVEGOLD: 99999999
   StatusPoint: 0

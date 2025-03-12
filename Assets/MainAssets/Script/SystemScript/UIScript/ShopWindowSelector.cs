@@ -226,8 +226,6 @@ public class ShopWindowSelector : MonoBehaviour, IPointerEnterHandler
     // マウスがボタンに重なったときに呼び出されるメソッド
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Pointer entered: " + eventData.pointerEnter.name);
-
         for (int i = 0; i < buttons.Length; i++)
         {
             if (eventData.pointerEnter == buttons[i].gameObject)
@@ -245,5 +243,4 @@ public class ShopWindowSelector : MonoBehaviour, IPointerEnterHandler
             }
         }
     }
-
 }

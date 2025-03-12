@@ -8028,6 +8028,8 @@ MonoBehaviour:
   PlayerAnimator: {fileID: 7094791766015698176}
   WeaponCollider: {fileID: 8233068872891641330}
   swordEffect: {fileID: 5715380831515128564}
+  detectionRadius: 5
+  lockedOnEnemy: {fileID: 0}
   isAttacking: 0
 --- !u!114 &3873788191336135542
 MonoBehaviour:
@@ -8041,10 +8043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611a685d9c0c11045951738c53550ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charadata: {fileID: 11400000, guid: 24cb4290012625645a14282363185da8, type: 2}
+  charadata: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   Slider: {fileID: 0}
   deathEffectPrefab: {fileID: 7133517941893716131, guid: c0651258badabd947bc4850090f29da7, type: 3}
-  HP: 0
   PlayerAnimator: {fileID: 7094791766015698176}
 --- !u!114 &5130940897273300231
 MonoBehaviour:
@@ -17405,7 +17406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92161841b276d2b4390f7792ba6078bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerdata: {fileID: 0}
+  playerdata: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   hitEffectPrefab: {fileID: 0}
   hitEffectScale: {x: 1, y: 1, z: 1}
 --- !u!1 &5216008943993431639

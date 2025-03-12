@@ -11,6 +11,7 @@ public class StatusWindow : MonoBehaviour
 
     // UIテキスト要素
     public Text nameText;
+    public Text hpText; // 現在のHPを表示するテキスト
     public Text maxHpText;
     public Text maxMpText;
     public Text atkText;
@@ -64,7 +65,8 @@ public class StatusWindow : MonoBehaviour
     {
         // 各ステータスをUIに反映
         nameText.text = "名前: " + playerStatus.NAME;
-        maxHpText.text = "HP: " + playerStatus.MAXHP.ToString();
+        hpText.text = "HP: " + playerStatus.HP.ToString() + "/" + playerStatus.MAXHP.ToString(); // 現在のHPを表示
+        maxHpText.text = "最大HP: " + playerStatus.MAXHP.ToString();
         maxMpText.text = "MP: " + playerStatus.MAXMP.ToString();
         atkText.text = "ATK: " + playerStatus.ATK.ToString();
         defText.text = "DEF: " + playerStatus.DEF.ToString();

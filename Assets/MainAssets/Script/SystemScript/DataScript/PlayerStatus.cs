@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Data/Create PlayerStatusData")]
@@ -7,6 +5,7 @@ public class PlayerStatus : ScriptableObject
 {
     public string NAME;     //ƒLƒƒƒ‰–¼
     public int MAXHP;       //Å‘åHP
+    public int HP;          //Œ»İ‚ÌHP
     public int MAXMP;       //Å‘åMP
     public int ATK;         //UŒ‚—Í
     public int DEF;         //–hŒä—Í

@@ -7,10 +7,9 @@ using UnityEngine.UI;
 public class UseItem : MonoBehaviour
 {
     [SerializeField] private GameObject itemKanriObject;
-    [SerializeField] private PlayerDamage playerDamage; // PlayerDamageを参照
     [SerializeField] private PlayerStatus playerStatus;
+    [SerializeField] private PlayerDamage playerDamage; // PlayerDamageを参照
     [SerializeField] private Button usePotionButton;
-    [SerializeField] private StatusWindow statusWindow; // ステータスウィンドウを参照
 
     private Itemkanri itemKanriScript;
 
@@ -41,12 +40,12 @@ public class UseItem : MonoBehaviour
 
                         // プレイヤーのHPを6割回復
                         int healAmount = Mathf.FloorToInt(playerStatus.MAXHP * 0.6f);
-                        playerDamage.HP = Mathf.Min(playerDamage.HP + healAmount, playerStatus.MAXHP);
+                        playerStatus.HP = Mathf.Min(playerStatus.HP + healAmount, playerStatus.MAXHP);
 
-                        // ステータスウィンドウのHP表示を更新
-                        statusWindow.UpdateUI();
+                        // HPスライダーを更新
+                        playerDamage.Slider.value = (float)playerStatus.HP / playerStatus.MAXHP;
 
-                        Debug.Log($"Used {selectedItem.GetItemName()}. Player HP: {playerDamage.HP}/{playerStatus.MAXHP}");
+                        Debug.Log($"Used {selectedItem.GetItemName()}. Player HP: {playerStatus.HP}/{playerStatus.MAXHP}");
                     }
                 }
             }
