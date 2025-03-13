@@ -5030,11 +5030,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774840140}
   m_Mesh: {fileID: 4300000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
---- !u!1 &775273070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7290324890289710143, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-  m_PrefabInstance: {fileID: 1205518450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &776576875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5045,15 +5040,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4876242
+      value: 3.4433985
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.895666
+      value: 6.8184423
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.389194
+      value: -22.389296
       objectReference: {fileID: 0}
     - target: {fileID: 324960758629467687, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5109,15 +5104,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.491941
+      value: 3.4518142
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.8954077
+      value: 6.8181458
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.286255
+      value: -26.084148
       objectReference: {fileID: 0}
     - target: {fileID: 905352933263535812, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5129,7 +5124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518735706760281167, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: m_CameraDistance
-      value: 3.2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4048928733923505296, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
       propertyPath: Slider
@@ -8319,202 +8314,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 268257556201551562, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 268257556201551562, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 670439850331254330, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 670439850331254330, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 841242939381051185, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 841242939381051185, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 962629056674174465, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 962629056674174465, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 986156817569427276, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 986156817569427276, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 1220069132417552688, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 1220069132417552688, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 1348182524349170867, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_OverrideSorting
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1348182524349170867, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_VertexColorAlwaysGammaSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1416417687003528312, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 1416417687003528312, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 1432116834920746964, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 1432116834920746964, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 1669730431318025532, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1919350474468598462, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 1919350474468598462, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 4298698985144065011, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 4298698985144065011, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 4316707441285700194, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849112798847576395, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 4849112798847576395, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 4898596762845620584, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: playerStatus
-      value: 
-      objectReference: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
-    - target: {fileID: 4963125074236412697, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 4963125074236412697, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 4975207260290827028, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_IsOn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021383609127511622, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 5021383609127511622, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 5116878104246217700, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5116878104246217700, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 18.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5116878104246217700, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 26.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5338247651598500706, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5436066793154380147, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_BlockingObjects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587119916682471130, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 5587119916682471130, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 6411796115194706519, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 6411796115194706519, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 6576261486994815056, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 6576261486994815056, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 7052157899922463773, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: playerStatus
-      value: 
-      objectReference: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
-    - target: {fileID: 7080538648465498099, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7226925268393360745, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 7226925268393360745, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 7336102327720778324, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 7336102327720778324, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
     - target: {fileID: 7536459881518093357, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
       propertyPath: m_Name
       value: ESCWindow
@@ -8563,30 +8362,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8063050741120981616, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 8063050741120981616, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 8108626078338022345, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: playerStatus
-      value: 
-      objectReference: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
-    - target: {fileID: 8367162478458618535, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8396992873340838855, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 8396992873340838855, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
     - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
       propertyPath: playerMove
       value: 
@@ -8611,41 +8386,8 @@ PrefabInstance:
       propertyPath: falseCanvases.Array.data[1]
       value: 
       objectReference: {fileID: 238835068}
-    - target: {fileID: 8651457897758423732, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 8651457897758423732, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 8782124932972352968, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 8782124932972352968, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 8896985181026486168, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 8896985181026486168, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
-    - target: {fileID: 9129715869261441468, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemSellObject
-      value: 
-      objectReference: {fileID: 2142162709}
-    - target: {fileID: 9129715869261441468, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: itemKanriObject
-      value: 
-      objectReference: {fileID: 775273070}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5852843043757393135, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
@@ -16319,11 +16061,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140403539}
   m_Mesh: {fileID: 4300000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
---- !u!1 &2142162709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4421325953688443008, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-  m_PrefabInstance: {fileID: 1205518450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2146978326
 GameObject:
   m_ObjectHideFlags: 0

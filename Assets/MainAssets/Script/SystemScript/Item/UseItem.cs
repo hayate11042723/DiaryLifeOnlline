@@ -10,27 +10,98 @@ public class UseItem : MonoBehaviour
     [SerializeField] private PlayerStatus playerStatus;
     [SerializeField] private PlayerDamage playerDamage; // PlayerDamageを参照
     [SerializeField] private Button usePotionButton;
+    [SerializeField] private Text messageText; // メッセージ表示用のText
 
     private Itemkanri itemKanriScript;
+    private Slider hpSlider; // HPスライダー
+    private Coroutine messageCoroutine; // メッセージ表示用のコルーチン
+
+    private const float ButtonReenableDelay = 1f; // ボタンを再度有効にするまでの遅延時間
 
     void Start()
     {
         itemKanriScript = itemKanriObject.GetComponent<Itemkanri>();
+        if (itemKanriScript == null)
+        {
+            return;
+        }
+
+        // タグを使用してHPスライダーを取得
+        GameObject hpSliderObject = GameObject.FindWithTag("PlayerSlider");
+        if (hpSliderObject == null)
+        {
+            return;
+        }
+
+        hpSlider = hpSliderObject.GetComponent<Slider>();
+        if (hpSlider == null)
+        {
+            return;
+        }
+
+        // 既存のリスナーをクリアしてから新しいリスナーを追加
+        usePotionButton.onClick.RemoveAllListeners();
         usePotionButton.onClick.AddListener(OnUsePotionButtonClick);
+
+        // Toggleの状態が変わるたびにボタンの表示を更新
+        var toggleGroup = itemKanriScript.GetToggleGroup();
+        if (toggleGroup == null)
+        {
+            return;
+        }
+
+        foreach (var toggle in toggleGroup.GetComponentsInChildren<Toggle>())
+        {
+            toggle.onValueChanged.AddListener(delegate { UpdateUsePotionButtonVisibility(); });
+        }
+
+        // 初期状態のボタン表示を更新
+        UpdateUsePotionButtonVisibility();
+        // メッセージを非表示にする
+        messageText.gameObject.SetActive(false);
     }
 
     void OnUsePotionButtonClick()
     {
+        // ボタンを一時的に無効にする
+        usePotionButton.interactable = false;
+
+        // HPがMAXの場合はポーションを使用できない
+        if (playerStatus.HP >= playerStatus.MAXHP)
+        {
+            if (messageCoroutine != null)
+            {
+                StopCoroutine(messageCoroutine);
+            }
+            messageCoroutine = StartCoroutine(ShowMessage("これ以上回復しません"));
+            StartCoroutine(ReenableButtonAfterDelay(ButtonReenableDelay));
+            return;
+        }
+
         // インベントリ内でポーションを選択しているか確認
-        Toggle activeToggle = itemKanriScript.GetToggleGroup().ActiveToggles().FirstOrDefault();
+        var toggleGroup = itemKanriScript.GetToggleGroup();
+        if (toggleGroup == null)
+        {
+            StartCoroutine(ReenableButtonAfterDelay(ButtonReenableDelay));
+            return;
+        }
+
+        Toggle activeToggle = toggleGroup.ActiveToggles().FirstOrDefault();
         if (activeToggle != null)
         {
             string toggleName = activeToggle.name;
             if (int.TryParse(toggleName, out int index))
             {
-                if (itemKanriScript.GetMotimonoList().Count >= index)
+                var motimonoList = itemKanriScript.GetMotimonoList();
+                if (motimonoList == null)
                 {
-                    ItemData selectedItem = itemKanriScript.GetMotimonoList()[index - 1];
+                    StartCoroutine(ReenableButtonAfterDelay(ButtonReenableDelay));
+                    return;
+                }
+
+                if (motimonoList.Count >= index)
+                {
+                    ItemData selectedItem = motimonoList[index - 1];
                     if (selectedItem.GetItemType() == ItemData.itemtype.Portion)
                     {
                         // ポーションを1個消費
@@ -43,12 +114,75 @@ public class UseItem : MonoBehaviour
                         playerStatus.HP = Mathf.Min(playerStatus.HP + healAmount, playerStatus.MAXHP);
 
                         // HPスライダーを更新
-                        playerDamage.Slider.value = (float)playerStatus.HP / playerStatus.MAXHP;
+                        if (hpSlider != null)
+                        {
+                            hpSlider.value = (float)playerStatus.HP / playerStatus.MAXHP;
+                        }
 
-                        Debug.Log($"Used {selectedItem.GetItemName()}. Player HP: {playerStatus.HP}/{playerStatus.MAXHP}");
+                        // HPテキストを更新
+                        playerDamage.UpdateHPText();
                     }
                 }
             }
         }
+
+        // 一定時間後にボタンを再度有効にする
+        StartCoroutine(ReenableButtonAfterDelay(ButtonReenableDelay));
+    }
+
+    void UpdateUsePotionButtonVisibility()
+    {
+        // インベントリ内でポーションを選択しているか確認
+        var toggleGroup = itemKanriScript.GetToggleGroup();
+        if (toggleGroup == null)
+        {
+            return;
+        }
+
+        Toggle activeToggle = toggleGroup.ActiveToggles().FirstOrDefault();
+        if (activeToggle != null)
+        {
+            string toggleName = activeToggle.name;
+            if (int.TryParse(toggleName, out int index))
+            {
+                var motimonoList = itemKanriScript.GetMotimonoList();
+                if (motimonoList == null)
+                {
+                    return;
+                }
+
+                if (motimonoList.Count >= index)
+                {
+                    ItemData selectedItem = motimonoList[index - 1];
+                    usePotionButton.gameObject.SetActive(selectedItem.GetItemType() == ItemData.itemtype.Portion);
+                    return;
+                }
+            }
+        }
+        usePotionButton.gameObject.SetActive(false);
+    }
+
+    IEnumerator ShowMessage(string message)
+    {
+        messageText.text = message;
+        messageText.gameObject.SetActive(true);
+        Color originalColor = messageText.color;
+        messageText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1);
+
+        yield return new WaitForSeconds(2);
+
+        for (float t = 1; t > 0; t -= Time.deltaTime)
+        {
+            messageText.color = new Color(originalColor.r, originalColor.g, originalColor.b, t);
+            yield return null;
+        }
+
+        messageText.gameObject.SetActive(false);
+    }
+
+    IEnumerator ReenableButtonAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        usePotionButton.interactable = true;
     }
 }

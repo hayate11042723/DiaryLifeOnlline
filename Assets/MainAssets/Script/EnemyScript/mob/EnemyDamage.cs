@@ -139,6 +139,15 @@ public class EnemyDamage : MonoBehaviour, IDamageable
                     playerdata.StatusPoint += statusPoint;
                     playerdata.EXP = 0;
                     playerdata.MAXEXP *= maxexp;
+                    playerdata.HP = playerdata.MAXHP; // レベルアップ時にHPを全回復
+
+                    // HPテキストとスライダーを更新
+                    var playerDamage = FindObjectOfType<PlayerDamage>();
+                    if (playerDamage != null)
+                    {
+                        playerDamage.UpdateHPText();
+                        playerDamage.Slider.value = (float)playerdata.HP / playerdata.MAXHP; // HPスライダーを最大値に設定
+                    }
                 }
             }
             else
@@ -160,3 +169,4 @@ public class EnemyDamage : MonoBehaviour, IDamageable
         Destroy(effect, 5);
     }
 }
+

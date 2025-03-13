@@ -19,3 +19,5 @@ MonoBehaviour:
   ItemLimit: 1
   ItemBuyingPrice: 0
   ItemSellingPrice: 0
+  ATK: 1
+  DFE: 1

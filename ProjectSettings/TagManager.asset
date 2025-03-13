@@ -16,6 +16,8 @@ TagManager:
   - TurtleShell
   - Golem
   - NPC
+  - PlayerSlider
+  - HPText
   layers:
   - Default
   - TransparentFX

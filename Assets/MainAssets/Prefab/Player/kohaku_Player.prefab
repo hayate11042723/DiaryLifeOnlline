@@ -7709,7 +7709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2534893575186269733}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -54, y: 3, z: -54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7848,19 +7848,7 @@ MonoBehaviour:
     m_ActionId: 99ad42b3-a9a9-45a4-9faf-11d0b69a48d0
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ffcdf52b-37e6-4f84-b2b2-80826ace6c6b
     m_ActionName: Player/Look[/Mouse/rightButton,/Mouse/delta]
   - m_PersistentCalls:
@@ -7980,19 +7968,7 @@ MonoBehaviour:
     m_ActionId: 23e66c9c-6c98-45a3-947c-d0b223c8ba82
     m_ActionName: ResetPlayer/ResetPlayer[/Keyboard/backspace]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MouseLockOn, Assembly-CSharp
-        m_MethodName: OnClickPerformed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: dbf8ecdd-27f7-497c-8eb5-fdb92334ff13
     m_ActionName: Player/LockOn[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
@@ -8045,6 +8021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charadata: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
   Slider: {fileID: 0}
+  hpText: {fileID: 0}
   deathEffectPrefab: {fileID: 7133517941893716131, guid: c0651258badabd947bc4850090f29da7, type: 3}
   PlayerAnimator: {fileID: 7094791766015698176}
 --- !u!114 &5130940897273300231
@@ -8061,8 +8038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: Field
   sceneName: FieldScene
-  targetObjectName: 
-  newPosition: {x: 0, y: 0, z: 0}
+  targetObjectName: PlayerSet
+  newPosition: {x: -54, y: 0, z: -55}
   newRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &7140793040577539302
 MonoBehaviour:
@@ -8078,9 +8055,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: Field_City
   sceneName: CityScene
-  targetObjectName: 
-  newPosition: {x: 0, y: 0, z: 0}
-  newRotation: {x: 0, y: 0, z: 0}
+  targetObjectName: PlayerSet
+  newPosition: {x: 0, y: 0.2, z: 46}
+  newRotation: {x: 0, y: 180, z: 0}
 --- !u!114 &3998392815770769665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8095,9 +8072,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: Store_City
   sceneName: CityScene
-  targetObjectName: 
-  newPosition: {x: 0, y: 0, z: 0}
-  newRotation: {x: 0, y: 0, z: 0}
+  targetObjectName: PlayerSet
+  newPosition: {x: 1.2, y: 0.2, z: -10.2}
+  newRotation: {x: 0, y: -90, z: 0}
 --- !u!114 &5387816058229196810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8112,9 +8089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: GeneralStore
   sceneName: GeneralStoreScene
-  targetObjectName: 
-  newPosition: {x: 0, y: 0, z: 0}
-  newRotation: {x: 0, y: 0, z: 0}
+  targetObjectName: PlayerSet
+  newPosition: {x: 3, y: 0.1, z: 26.4}
+  newRotation: {x: 0, y: 90, z: 0}
 --- !u!1 &2539589657969282009
 GameObject:
   m_ObjectHideFlags: 0
@@ -17392,8 +17369,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.2, z: 1.3}
-  m_Center: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 0.2, y: 0.2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0.6}
 --- !u!114 &1068054202717571386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17407,8 +17384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerdata: {fileID: 11400000, guid: 4410e9d7b39940c44abea17591f0301b, type: 2}
-  hitEffectPrefab: {fileID: 0}
-  hitEffectScale: {x: 1, y: 1, z: 1}
+  hitEffectPrefab: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
+  hitEffectScale: {x: 5, y: 5, z: 5}
 --- !u!1 &5216008943993431639
 GameObject:
   m_ObjectHideFlags: 0

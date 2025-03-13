@@ -8,17 +8,27 @@ public class PlayerDamage : MonoBehaviour, IDamageable
 {
     [SerializeField] public PlayerStatus charadata; // プレイヤーのステータスデータ
     [SerializeField] public Slider Slider; // HPを表示するスライダー
+    [SerializeField] private string hpTextTag = "HPText"; // HPを表示するテキストのタグ
     [SerializeField] GameObject deathEffectPrefab; // 死亡時に表示するエフェクトのPrefab
     [SerializeField] private Animator PlayerAnimator; // プレイヤーのアニメーター
     private int playerDamage; // 算出されたダメージ量
+    private Text hpText; // HPを表示するテキスト
 
     void Start()
     {
+        // タグを使用してHPテキストを取得
+        GameObject hpTextObject = GameObject.FindWithTag(hpTextTag);
+        if (hpTextObject != null)
+        {
+            hpText = hpTextObject.GetComponent<Text>();
+        }
+
         // プレイヤーのステータスが設定されている場合、HPを初期化
         if (charadata != null)
         {
             Slider.value = 1; // HPスライダーの初期値
             charadata.HP = charadata.MAXHP; // 最大HPを現在のHPに設定
+            UpdateHPText(); // HPテキストを更新
         }
     }
 
@@ -34,11 +44,11 @@ public class PlayerDamage : MonoBehaviour, IDamageable
             }
             charadata.HP -= playerDamage; // 現在のHPからダメージを引く
             Slider.value = (float)charadata.HP / (float)charadata.MAXHP; // HPスライダーを更新
+            UpdateHPText(); // HPテキストを更新
         }
 
         if (charadata.HP <= 0) // HPが0以下になった場合
         {
-            Debug.Log("死"); // デバッグログを出力
             PlayerAnimator.SetBool("death", true); // Deathアニメーションを再生
             StartCoroutine(WaitForDeathAnimation()); // アニメーション終了後の処理をコルーチンで実行
         }
@@ -81,6 +91,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
         transform.position = position;
         charadata.HP = charadata.MAXHP; // HPを最大値にリセット
         Slider.value = 1; // HPスライダーを最大値にリセット
+        UpdateHPText(); // HPテキストを更新
         PlayerAnimator.SetBool("death", false); // Deathアニメーションのフラグを解除
     }
 
@@ -88,4 +99,13 @@ public class PlayerDamage : MonoBehaviour, IDamageable
     {
         Destroy(gameObject); // ゲームオブジェクトを破壊
     }
+
+    public void UpdateHPText()
+    {
+        if (hpText != null && charadata != null)
+        {
+            hpText.text = $"{charadata.HP}/{charadata.MAXHP}"; // HPテキストを更新
+        }
+    }
 }
+
