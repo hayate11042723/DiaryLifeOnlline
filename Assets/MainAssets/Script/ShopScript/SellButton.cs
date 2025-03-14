@@ -13,12 +13,12 @@ public class SellButton : MonoBehaviour
     [SerializeField] private Text messageText; // メッセージを表示するテキスト
     [SerializeField] private Button sellButton; // 売却ボタン
 
-    private Itemkanri itemKanriScript;
+    private ItemKanri itemKanriScript;
     private ItemSellExplanation itemSellExplanationScript;
 
     void Start()
     {
-        itemKanriScript = itemKanriObject.GetComponent<Itemkanri>();
+        itemKanriScript = itemKanriObject.GetComponent<ItemKanri>();
         itemSellExplanationScript = itemSellObject.GetComponent<ItemSellExplanation>();
         UpdatePlayerMoneyText();
         messageText.gameObject.SetActive(false); // メッセージを非表示にする

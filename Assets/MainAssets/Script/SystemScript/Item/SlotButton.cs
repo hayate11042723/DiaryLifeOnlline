@@ -11,12 +11,12 @@ public class SlotButton : MonoBehaviour,
     [SerializeField] GameObject itemKanriObject;
     [SerializeField] GameObject itemSellObject;
 
-    Itemkanri itemscript;
+    ItemKanri itemscript;
     ItemSellExplanation itemSellExplanation;
 
     void Start()
     {
-        itemscript = itemKanriObject.GetComponent<Itemkanri>();
+        itemscript = itemKanriObject.GetComponent<ItemKanri>();
         itemSellExplanation = itemSellObject.GetComponent<ItemSellExplanation>();
     }
 

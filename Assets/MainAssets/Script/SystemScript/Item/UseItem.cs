@@ -12,7 +12,7 @@ public class UseItem : MonoBehaviour
     [SerializeField] private Button usePotionButton;
     [SerializeField] private Text messageText; // メッセージ表示用のText
 
-    private Itemkanri itemKanriScript;
+    private ItemKanri itemKanriScript;
     private Slider hpSlider; // HPスライダー
     private Coroutine messageCoroutine; // メッセージ表示用のコルーチン
 
@@ -20,7 +20,7 @@ public class UseItem : MonoBehaviour
 
     void Start()
     {
-        itemKanriScript = itemKanriObject.GetComponent<Itemkanri>();
+        itemKanriScript = itemKanriObject.GetComponent<ItemKanri>();
         if (itemKanriScript == null)
         {
             return;

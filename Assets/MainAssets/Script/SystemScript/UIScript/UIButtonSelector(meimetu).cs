@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
+public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
     public Button[] buttons; // ボタンの配列
     public RawImage cursor; // カーソルオブジェクト
@@ -158,4 +158,17 @@ public class UIButtonSelector : MonoBehaviour, IPointerEnterHandler
             }
         }
     }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (eventData.pointerPress == buttons[i].gameObject)
+            {
+                buttons[i].onClick.Invoke(); // マウスがクリックしたボタンをクリック
+                break;
+            }
+        }
+    }
 }
+

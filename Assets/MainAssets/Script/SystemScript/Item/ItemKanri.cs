@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class Itemkanri : MonoBehaviour
+public class ItemKanri : MonoBehaviour
 {
     // アイテムデータベース
     [SerializeField] private ItemDataBase itemDataBase;
@@ -31,7 +31,7 @@ public class Itemkanri : MonoBehaviour
     [SerializeField] private Color filledSlotColor = new Color(1, 1, 1, 1);
     // 初期アイテムのインデックス
     private const int InitialWoodenSwordIndex = 0;
-    private const int InitialClothArmorIndex = 3;
+    private const int InitialDefaultClothesIndex = 4; // DefaultClothesのインデックス
     // アイコン配列のサイズ
     private const int IconArraySize = 24;
 
@@ -51,13 +51,13 @@ public class Itemkanri : MonoBehaviour
 
         // 持っている初期アイテム設定
         var initialWoodenSword = itemDataBase.GetItemList()[InitialWoodenSwordIndex];
-        var initialClothArmor = itemDataBase.GetItemList()[InitialClothArmorIndex];
+        var initialDefaultClothes = itemDataBase.GetItemList()[InitialDefaultClothesIndex];
         itemkazu[initialWoodenSword] = 1; // 木の剣の数を1にする
-        itemkazu[initialClothArmor] = 1; // 布の服の数を1にする
+        itemkazu[initialDefaultClothes] = 1; // DefaultClothesの数を1にする
 
         // 初期アイテムリストに追加
         initialItems.Add(initialWoodenSword);
-        initialItems.Add(initialClothArmor);
+        initialItems.Add(initialDefaultClothes);
 
         // アイコンのImageコンポーネントを取得
         for (int i = 0; i < IconArraySize; i++)
@@ -264,6 +264,12 @@ public class Itemkanri : MonoBehaviour
         // アイテムデータをロードした後にアイテムの説明を更新
         Motimonokoushin();
         slotkoushin();
+    }
+
+    // アイテム名からアイテムデータを取得するメソッド
+    public ItemData GetItemByName(string itemName)
+    {
+        return itemDataBase.GetItemList().Find(item => item.GetItemName() == itemName);
     }
 }
 

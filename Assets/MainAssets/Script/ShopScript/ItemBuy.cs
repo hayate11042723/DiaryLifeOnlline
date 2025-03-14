@@ -8,7 +8,7 @@ public class ItemBuy : MonoBehaviour
     // アイテムデータベース
     [SerializeField] private ItemDataBase itemDataBase;
     // アイテム管理スクリプト
-    [SerializeField] private Itemkanri itemManager;
+    [SerializeField] private ItemKanri itemManager;
     // プレイヤーステータス
     [SerializeField] private PlayerStatus playerStatus;
     // 所持金を表示するテキスト

@@ -5,7 +5,8 @@ using UnityEngine;
 public class EquipmentChange : MonoBehaviour
 {
     [SerializeField] private PlayerStatus playerStatus; // プレイヤーのステータスデータ
-    [SerializeField] private ItemDataBase itemDataBase; // アイテムデータベース
+    [SerializeField] private GameObject itemKanriUI; // アイテム管理UI
+    [SerializeField] private Canvas parentCanvas; // 親要素のCanvas
 
     // 現在の装備
     private ItemData currentWeapon;
@@ -14,21 +15,47 @@ public class EquipmentChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // itemKanriUIが設定されているか確認
+        if (itemKanriUI == null)
+        {
+            Debug.LogError("itemKanriUI is not assigned.");
+            return;
+        }
+
+        // ItemKanriコンポーネントを取得
+        ItemKanri itemKanri = itemKanriUI.GetComponent<ItemKanri>();
+        if (itemKanri == null)
+        {
+            Debug.LogError("ItemKanri component is not found on itemKanriUI.");
+            return;
+        }
+
         // 初期装備を設定
-        currentWeapon = itemDataBase.GetItemByName("Wooden Sword");
-        currentArmor = itemDataBase.GetItemByName("Cloth Armor");
+        currentWeapon = itemKanri.GetItemByName("Wooden Sword");
+        currentArmor = itemKanri.GetItemByName("DefaultClothes");
 
         // プレイヤーのステータスを更新
         UpdatePlayerStatus();
+
+        // 親要素のCanvasの状態を監視
+        StartCoroutine(MonitorCanvasState());
     }
 
     // 装備を変更するメソッド
     public void ChangeEquipment(string equipmentName, EquipmentType type)
     {
-        // 新しい装備をデータベースから取得
-        ItemData newEquipment = itemDataBase.GetItemByName(equipmentName);
+        // ItemKanriコンポーネントを取得
+        ItemKanri itemKanri = itemKanriUI.GetComponent<ItemKanri>();
+        if (itemKanri == null)
+        {
+            Debug.LogError("ItemKanri component is not found on itemKanriUI.");
+            return;
+        }
 
-        if (newEquipment != null)
+        // 新しい装備をインベントリから取得
+        ItemData newEquipment = itemKanri.GetItemByName(equipmentName);
+
+        if (newEquipment != null && itemKanri.HasItem(newEquipment))
         {
             // 装備の種類に応じて現在の装備を更新
             if (type == EquipmentType.Weapon)
@@ -45,7 +72,7 @@ public class EquipmentChange : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"Equipment {equipmentName} not found in the database.");
+            Debug.LogError($"Equipment {equipmentName} not found in the inventory.");
         }
     }
 
@@ -53,9 +80,28 @@ public class EquipmentChange : MonoBehaviour
     private void UpdatePlayerStatus()
     {
         // 現在の装備に基づいてステータスを更新
-        playerStatus.ATK = currentWeapon != null ? currentWeapon.GetATK() : 0;
-        playerStatus.DEF = currentArmor != null ? currentArmor.GetDFE() : 0;
+        playerStatus.ATK = currentWeapon != null ? playerStatus.ATK * currentWeapon.GetATK() : playerStatus.ATK;
+        playerStatus.DEF = currentArmor != null ? playerStatus.DEF * currentArmor.GetDFE() : playerStatus.DEF;
         // 他のステータスも必要に応じて更新
+    }
+
+    // 親要素のCanvasの状態を監視するコルーチン
+    private IEnumerator MonitorCanvasState()
+    {
+        while (true)
+        {
+            if (parentCanvas.gameObject.activeSelf)
+            {
+                // Canvasがアクティブな間、インベントリUIを子要素にする
+                itemKanriUI.transform.SetParent(parentCanvas.transform, false);
+            }
+            else
+            {
+                // Canvasが非アクティブになったら、インベントリUIを元の親要素に戻す
+                itemKanriUI.transform.SetParent(null);
+            }
+            yield return new WaitForSeconds(0.1f); // 0.1秒ごとにチェック
+        }
     }
 }
 
