@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\assets\\mainassets\\script\\playerscript\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|c:\\users\\pc\\desktop\\diarylifeonlline\\assets\\mainassets\\script\\enemyscript\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\enemyscript\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|c:\\users\\pc\\desktop\\diarylifeonlline\\assets\\mainassets\\script\\playerscript\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\playerscript\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|c:\\users\\pc\\desktop\\diarylifeonlline\\assets\\mainassets\\script\\playerscript\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\assets\\mainassets\\script\\playerscript\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40DA921A-FC69-FF40-0BC3-E84FCC1563FF}|Assembly-CSharp.csproj|solutionrelative:assets\\mainassets\\script\\playerscript\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "EnemyDamage.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "RelativeToolTip": "Assets\\MainAssets\\Script\\EnemyScript\\EnemyDamage.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T06:39:02.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerAnimation.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerAnimation.cs",
@@ -34,12 +51,11 @@
               "RelativeToolTip": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerAnimation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T05:33:10.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T05:33:10.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerMove.cs",
@@ -51,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerAttack.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\DiaryLifeOnlline\\Assets\\MainAssets\\Script\\PlayerScript\\PlayerAttack.cs",
               "RelativeDocumentMoniker": "Assets\\MainAssets\\Script\\PlayerScript\\PlayerAttack.cs",
