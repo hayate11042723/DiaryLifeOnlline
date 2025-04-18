@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8318,10 +8317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ESCWindow
       objectReference: {fileID: 0}
-    - target: {fileID: 7754806153829817307, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7929877474049313851, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8379,13 +8374,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1724856662}
     - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
+      propertyPath: trueCanvases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
+      propertyPath: falseCanvases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
       propertyPath: trueCanvases.Array.data[1]
       value: 
       objectReference: {fileID: 238835068}
     - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
+      propertyPath: trueCanvases.Array.data[3]
+      value: 
+      objectReference: {fileID: 1676179432}
+    - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
       propertyPath: falseCanvases.Array.data[1]
       value: 
       objectReference: {fileID: 238835068}
+    - target: {fileID: 8628988709270486438, guid: ff70c4e81b678cb4886e04a59ad6b0b5, type: 3}
+      propertyPath: falseCanvases.Array.data[2]
+      value: 
+      objectReference: {fileID: 1676179432}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11047,6 +11058,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657408121}
   m_Mesh: {fileID: 4300000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
+--- !u!223 &1676179432 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3424442118825912685, guid: 79d5746509fa7c7408c76c59425c5db6, type: 3}
+  m_PrefabInstance: {fileID: 776576875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704480297
 GameObject:
   m_ObjectHideFlags: 0

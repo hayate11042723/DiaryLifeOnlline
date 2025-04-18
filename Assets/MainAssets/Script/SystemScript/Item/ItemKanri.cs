@@ -11,12 +11,12 @@ public class ItemKanri : MonoBehaviour
     [SerializeField] private ItemDataBase itemDataBase;
     // アイテムアイコンの配列
     [SerializeField] private GameObject[] icons = new GameObject[IconArraySize];
-    // トグルグループ
-    [SerializeField] private ToggleGroup togglegroup;
+    // トグルグループのリスト
+    [SerializeField] private List<ToggleGroup> toggleGroups;
     // アイテム名表示欄
-    [SerializeField] private Text itemname;
+    [SerializeField] private List<Text> itemname;
     // アイテム説明表示欄
-    [SerializeField] private Text itemsetumei;
+    [SerializeField] private List<Text> itemsetumei;
     // アイテム数管理
     private Dictionary<ItemData, int> itemkazu = new Dictionary<ItemData, int>();
     // 持ち物リスト
@@ -125,35 +125,47 @@ public class ItemKanri : MonoBehaviour
     // スロット更新処理
     public void slotkoushin()
     {
-        // アクティブなトグルを取得
-        Toggle tgl = togglegroup.ActiveToggles().FirstOrDefault();
-        if (tgl != null)
+        int displayIndex = 0;
+
+        // 各トグルグループを処理
+        foreach (var toggleGroup in toggleGroups)
         {
-            string x = tgl.name;
-            Debug.Log($"Active toggle name: {x}");
-            if (int.TryParse(x, out int y))
+            // 選択されたトグルを取得
+            List<Toggle> selectedToggles = toggleGroup.ActiveToggles().ToList();
+
+            foreach (var toggle in selectedToggles)
             {
-                if (MotimonoList.Count >= y)
+                if (displayIndex < itemname.Count)
                 {
-                    // 選択されたアイテムスロットのアイテム名と個数を表示
-                    string z = MotimonoList[y - 1].GetItemName();
-                    int k = itemkazu[MotimonoList[y - 1]];
-                    itemname.text = $"{z}×{k}";
-                    itemsetumei.text = MotimonoList[y - 1].GetItemExplanation();
-                    Debug.Log($"Item selected: {z}×{k}");
-                }
-                else
-                {
-                    // アイテムスロットが空の場合
-                    itemname.text = null;
-                    itemsetumei.text = null;
-                    Debug.Log("Item slot is empty.");
+                    // トグルの名前からインデックスを取得
+                    if (int.TryParse(toggle.name, out int index) && index < MotimonoList.Count)
+                    {
+                        // 選択されたアイテムの情報を取得
+                        string itemName = MotimonoList[index].GetItemName();
+                        string itemDescription = MotimonoList[index].GetItemExplanation();
+                        int itemCount = itemkazu[MotimonoList[index]];
+
+                        // アイテム名と説明を設定
+                        itemname[displayIndex].text = $"{itemName} × {itemCount}";
+                        itemsetumei[displayIndex].text = itemDescription;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Invalid index or out of range: {toggle.name}");
+                        itemname[displayIndex].text = "";
+                        itemsetumei[displayIndex].text = "";
+                    }
+
+                    displayIndex++;
                 }
             }
         }
-        else
+
+        // 残りの表示欄を空にする
+        for (int i = displayIndex; i < itemname.Count; i++)
         {
-            Debug.Log("No active toggle found.");
+            itemname[i].text = "";
+            itemsetumei[i].text = "";
         }
     }
 
@@ -228,10 +240,17 @@ public class ItemKanri : MonoBehaviour
         return initialItems.Contains(item);
     }
 
-    // トグルグループを取得するメソッド
+    // 修正箇所: 'toggles' フィールドを追加  
+    [SerializeField] private List<Toggle> toggles;
+
+    // 修正箇所: 'GetToggleGroup' メソッド内のコードはそのまま維持  
     public ToggleGroup GetToggleGroup()
     {
-        return togglegroup;
+        if (toggles != null && toggles.Count > 0)
+        {
+            return toggles[0].group; // 最初のトグルのグループを返す  
+        }
+        return null; // トグルが存在しない場合は null を返す  
     }
 
     // アイテムデータを保存するメソッド
