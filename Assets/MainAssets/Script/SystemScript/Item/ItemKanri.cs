@@ -13,6 +13,8 @@ public class ItemKanri : MonoBehaviour
     [SerializeField] private GameObject[] icons = new GameObject[IconArraySize];
     // トグルグループのリスト
     [SerializeField] private List<ToggleGroup> toggleGroups;
+    // トグルのリスト
+    [SerializeField] private List<Toggle> toggles;
     // アイテム名表示欄
     [SerializeField] private List<Text> itemname;
     // アイテム説明表示欄
@@ -26,12 +28,12 @@ public class ItemKanri : MonoBehaviour
     // アイコンの配列
     private Image[] Icons = new Image[IconArraySize];
     // 空スロットの色
-    [SerializeField] private Color emptySlotColor = new Color(0.2196f, 0.2196f, 0.2196f, 1f);
+    [SerializeField] private Color emptySlotColor;
     // 埋まっているスロットの色
-    [SerializeField] private Color filledSlotColor = new Color(1, 1, 1, 1);
+    [SerializeField] private Color filledSlotColor;
     // 初期アイテムのインデックス
     private const int InitialWoodenSwordIndex = 0;
-    private const int InitialDefaultClothesIndex = 4; // DefaultClothesのインデックス
+    private const int InitialDefaultClothesIndex = 3; // DefaultClothesのインデックス
     // アイコン配列のサイズ
     private const int IconArraySize = 24;
 
@@ -97,6 +99,13 @@ public class ItemKanri : MonoBehaviour
             }
         }
 
+        // 持ち物リストの内容をログに出力
+        Debug.Log("Updated MotimonoList:");
+        foreach (var item in MotimonoList)
+        {
+            Debug.Log($"Item: {item.GetItemName()}, Count: {itemkazu[item]}");
+        }
+
         // アイコンを更新
         UpdateIcons();
     }
@@ -138,20 +147,32 @@ public class ItemKanri : MonoBehaviour
                 if (displayIndex < itemname.Count)
                 {
                     // トグルの名前からインデックスを取得
-                    if (int.TryParse(toggle.name, out int index) && index < MotimonoList.Count)
+                    if (int.TryParse(toggle.name, out int index))
                     {
-                        // 選択されたアイテムの情報を取得
-                        string itemName = MotimonoList[index].GetItemName();
-                        string itemDescription = MotimonoList[index].GetItemExplanation();
-                        int itemCount = itemkazu[MotimonoList[index]];
+                        // インデックスが範囲内か確認
+                        if (index >= 0 && index < MotimonoList.Count)
+                        {
+                            // 選択されたアイテムの情報を取得
+                            string itemName = MotimonoList[index].GetItemName();
+                            string itemDescription = MotimonoList[index].GetItemExplanation();
+                            int itemCount = itemkazu[MotimonoList[index]];
 
-                        // アイテム名と説明を設定
-                        itemname[displayIndex].text = $"{itemName} × {itemCount}";
-                        itemsetumei[displayIndex].text = itemDescription;
+                            // アイテム名と説明を設定
+                            itemname[displayIndex].text = $"{itemName} × {itemCount}";
+                            itemsetumei[displayIndex].text = itemDescription;
+
+                            Debug.Log($"Set item at index {index}: {itemName} × {itemCount}");
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Index out of range: {index}. MotimonoList size: {MotimonoList.Count}");
+                            itemname[displayIndex].text = "";
+                            itemsetumei[displayIndex].text = "";
+                        }
                     }
                     else
                     {
-                        Debug.LogWarning($"Invalid index or out of range: {toggle.name}");
+                        Debug.LogWarning($"Invalid toggle name: {toggle.name}");
                         itemname[displayIndex].text = "";
                         itemsetumei[displayIndex].text = "";
                     }
@@ -168,7 +189,6 @@ public class ItemKanri : MonoBehaviour
             itemsetumei[i].text = "";
         }
     }
-
     // アイテムリストを取得するメソッド
     public List<ItemData> GetItemList()
     {
@@ -240,10 +260,6 @@ public class ItemKanri : MonoBehaviour
         return initialItems.Contains(item);
     }
 
-    // 修正箇所: 'toggles' フィールドを追加  
-    [SerializeField] private List<Toggle> toggles;
-
-    // 修正箇所: 'GetToggleGroup' メソッド内のコードはそのまま維持  
     public ToggleGroup GetToggleGroup()
     {
         if (toggles != null && toggles.Count > 0)
@@ -251,6 +267,7 @@ public class ItemKanri : MonoBehaviour
             return toggles[0].group; // 最初のトグルのグループを返す  
         }
         return null; // トグルが存在しない場合は null を返す  
+
     }
 
     // アイテムデータを保存するメソッド

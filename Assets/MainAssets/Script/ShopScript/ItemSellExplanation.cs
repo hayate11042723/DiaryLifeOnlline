@@ -25,11 +25,28 @@ public class ItemSellExplanation : MonoBehaviour
     {
         itemkazu = newItemKazu;
     }
-
     public void Motimonokoushin()
     {
-        // 持ち物更新処理
+        // 持ち物リストをクリア
+        MotimonoList.Clear();
+
+        // 持っている個数が1個以上のアイテムを持ち物リストに追加する
+        foreach (var item in itemkazu)
+        {
+            if (item.Value > 0)
+            {
+                MotimonoList.Add(item.Key);
+            }
+        }
+
+        // 持ち物リストの内容をログに出力
+        Debug.Log("Updated MotimonoList:");
+        foreach (var item in MotimonoList)
+        {
+            Debug.Log($"Item: {item.GetItemName()}, Count: {itemkazu[item]}");
+        }
     }
+
 
     public void slotkoushin()
     {

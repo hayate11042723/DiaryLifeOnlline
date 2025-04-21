@@ -99,7 +99,8 @@ public class UseItem : MonoBehaviour
                     return;
                 }
 
-                if (motimonoList.Count >= index)
+                // インデックスが1から始まる場合の調整
+                if (index > 0 && index <= motimonoList.Count)
                 {
                     ItemData selectedItem = motimonoList[index - 1];
                     if (selectedItem.GetItemType() == ItemData.itemtype.Portion)
@@ -123,6 +124,14 @@ public class UseItem : MonoBehaviour
                         playerDamage.UpdateHPText();
                     }
                 }
+                else
+                {
+                    Debug.LogWarning($"Invalid index: {index}. MotimonoList size: {motimonoList.Count}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Invalid toggle name: {toggleName}");
             }
         }
 

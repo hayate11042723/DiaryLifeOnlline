@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SellButton : MonoBehaviour
 {
     [SerializeField] private GameObject itemKanriObject;
-    [SerializeField] private GameObject itemSellObject;
+    [SerializeField] private GameObject ShopManager;
     [SerializeField] private PlayerStatus playerStatus; // プレイヤーステータスを参照
     [SerializeField] private Text playerMoneyText; // 所持金を表示するテキスト
     [SerializeField] private Text messageText; // メッセージを表示するテキスト
@@ -19,7 +19,7 @@ public class SellButton : MonoBehaviour
     void Start()
     {
         itemKanriScript = itemKanriObject.GetComponent<ItemKanri>();
-        itemSellExplanationScript = itemSellObject.GetComponent<ItemSellExplanation>();
+        itemSellExplanationScript = ShopManager.GetComponent<ItemSellExplanation>();
         UpdatePlayerMoneyText();
         messageText.gameObject.SetActive(false); // メッセージを非表示にする
     }
@@ -32,9 +32,11 @@ public class SellButton : MonoBehaviour
             string toggleName = activeToggle.name;
             if (int.TryParse(toggleName, out int index))
             {
-                if (itemKanriScript.GetMotimonoList().Count >= index)
+                // インデックスが範囲内か確認
+                var motimonoList = itemKanriScript.GetMotimonoList();
+                if (index >= 0 && index < motimonoList.Count)
                 {
-                    ItemData selectedItem = itemKanriScript.GetMotimonoList()[index - 1];
+                    ItemData selectedItem = motimonoList[index];
                     if (!itemKanriScript.IsInitialItem(selectedItem))
                     {
                         int sellingPrice = selectedItem.GetItemSellingPrice();
@@ -44,7 +46,18 @@ public class SellButton : MonoBehaviour
                         itemSellExplanationScript.Motimonokoushin();
                         itemSellExplanationScript.slotkoushin();
                         UpdatePlayerMoneyText(); // 所持金の表示を更新
-                        itemSellExplanationScript.DisplayItemExplanation(index - 1); // アイテムの説明を更新
+
+                        // アイテムの説明を更新
+                        if (index < motimonoList.Count)
+                        {
+                            itemSellExplanationScript.DisplayItemExplanation(index);
+                        }
+                        else
+                        {
+                            // 売却後にアイテムがなくなった場合、説明をクリア
+                            itemSellExplanationScript.DisplayItemExplanation(-1);
+                        }
+
                         messageText.text = ""; // メッセージをクリア
                     }
                     else
@@ -53,9 +66,18 @@ public class SellButton : MonoBehaviour
                         StartCoroutine(FadeOutMessage());
                     }
                 }
+                else
+                {
+                    Debug.LogWarning($"Index out of range: {index}. MotimonoList size: {motimonoList.Count}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Invalid toggle name: {toggleName}");
             }
         }
     }
+
 
     private void UpdatePlayerMoneyText()
     {
