@@ -141,35 +141,69 @@ public class UseItem : MonoBehaviour
 
     void UpdateUsePotionButtonVisibility()
     {
-        // インベントリ内でポーションを選択しているか確認
+        Debug.Log("Updating button visibility...");
         var toggleGroup = itemKanriScript.GetToggleGroup();
         if (toggleGroup == null)
         {
+            Debug.LogWarning("ToggleGroup is null.");
+            usePotionButton.gameObject.SetActive(false);
             return;
         }
 
+        // アクティブなトグルを取得
         Toggle activeToggle = toggleGroup.ActiveToggles().FirstOrDefault();
         if (activeToggle != null)
         {
             string toggleName = activeToggle.name;
+            Debug.Log($"Active toggle: {toggleName}");
+
+            // トグル名をインデックスとして解釈
             if (int.TryParse(toggleName, out int index))
             {
                 var motimonoList = itemKanriScript.GetMotimonoList();
                 if (motimonoList == null)
                 {
+                    Debug.LogWarning("MotimonoList is null.");
+                    usePotionButton.gameObject.SetActive(false);
                     return;
                 }
 
-                if (motimonoList.Count >= index)
+                // インデックスが範囲内か確認
+                if (index > 0 && index <= motimonoList.Count)
                 {
                     ItemData selectedItem = motimonoList[index - 1];
-                    usePotionButton.gameObject.SetActive(selectedItem.GetItemType() == ItemData.itemtype.Portion);
-                    return;
+                    if (selectedItem != null)
+                    {
+                        // 選択されたアイテムがポーションかどうかを確認
+                        bool isPotion = selectedItem.GetItemType() == ItemData.itemtype.Portion;
+                        Debug.Log($"Selected item: {selectedItem.GetItemName()}, IsPotion: {isPotion}");
+                        usePotionButton.gameObject.SetActive(isPotion);
+                        return;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Selected item is null. Index: {index}");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Index out of range: {index}. MotimonoList size: {motimonoList.Count}");
                 }
             }
+            else
+            {
+                Debug.LogWarning($"Invalid toggle name: {toggleName}");
+            }
         }
+        else
+        {
+            Debug.LogWarning("No active toggle found.");
+        }
+
+        // ポーションが選択されていない場合はボタンを非表示にする
         usePotionButton.gameObject.SetActive(false);
     }
+
 
     IEnumerator ShowMessage(string message)
     {
