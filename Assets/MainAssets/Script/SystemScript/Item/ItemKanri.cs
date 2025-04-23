@@ -37,6 +37,21 @@ public class ItemKanri : MonoBehaviour
     // アイコン配列のサイズ
     private const int IconArraySize = 24;
 
+    // アイテムデータベースの取得
+    public Image[] GetIcons()
+    {
+        // アイコンのImageコンポーネントを取得して返す
+        Image[] iconImages = new Image[icons.Length];
+        for (int i = 0; i < icons.Length; i++)
+        {
+            if (icons[i] != null)
+            {
+                iconImages[i] = icons[i].GetComponent<Image>();
+            }
+        }
+        return iconImages;
+    }
+
     void Start()
     {
         LoadItemData();
@@ -99,13 +114,6 @@ public class ItemKanri : MonoBehaviour
             }
         }
 
-        // 持ち物リストの内容をログに出力
-        Debug.Log("Updated MotimonoList:");
-        foreach (var item in MotimonoList)
-        {
-            Debug.Log($"Item: {item.GetItemName()}, Count: {itemkazu[item]}");
-        }
-
         // アイコンを更新
         UpdateIcons();
     }
@@ -160,19 +168,15 @@ public class ItemKanri : MonoBehaviour
                             // アイテム名と説明を設定
                             itemname[displayIndex].text = $"{itemName} × {itemCount}";
                             itemsetumei[displayIndex].text = itemDescription;
-
-                            Debug.Log($"Set item at index {index}: {itemName} × {itemCount}");
                         }
                         else
                         {
-                            Debug.LogWarning($"Index out of range: {index}. MotimonoList size: {MotimonoList.Count}");
                             itemname[displayIndex].text = "";
                             itemsetumei[displayIndex].text = "";
                         }
                     }
                     else
                     {
-                        Debug.LogWarning($"Invalid toggle name: {toggle.name}");
                         itemname[displayIndex].text = "";
                         itemsetumei[displayIndex].text = "";
                     }

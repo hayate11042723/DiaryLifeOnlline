@@ -19,5 +19,5 @@ MonoBehaviour:
   ItemLimit: 99
   ItemBuyingPrice: 150000
   ItemSellingPrice: 15000
-  ATK: 5
-  DFE: 2
+  ATK: 1000
+  DFE: 200

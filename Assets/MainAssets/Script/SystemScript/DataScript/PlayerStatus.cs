@@ -1,22 +1,37 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "Data/Create PlayerStatusData")]
 public class PlayerStatus : ScriptableObject
 {
-    public string NAME;     //キャラ名
-    public int MAXHP;       //最大HP
-    public int HP;          //現在のHP
-    public int MAXMP;       //最大MP
-    public int ATK;         //攻撃力
-    public int DEF;         //防御力
-    public int INT;         //魔力
-    public int MDEF;        //魔法抵抗力
-    public int AGI;         //移動速度
-    public int LV;          //レベル
-    public int EXP;         //経験値
-    public int MAXEXP;      //次のレベルまでの経験値
-    public int HAVEGOLD;    //所持金
-    public int StatusPoint; //ステータスポイント
+    public string NAME;
+    public int MAXHP;
+    public int HP;
+    public int MAXMP;
+    public int ATK;
+    public int DEF;
+    public int INT;
+    public int MDEF;
+    public int AGI;
+    public int LV;
+    public int EXP;
+    public int MAXEXP;
+    public int HAVEGOLD;
+    public int StatusPoint;
+
+    // 基本値を保持するプロパティ
+    public int BaseATK { get; set; }
+    public int BaseDEF { get; set; }
+    public int BaseINT { get; set; }
+    public int BaseMDEF { get; set; }
+    public int BaseAGI { get; set; }
+
+    // 初期化メソッド
+    public void InitializeBaseStats()
+    {
+        BaseATK = ATK;
+        BaseDEF = DEF;
+        BaseINT = INT;
+        BaseMDEF = MDEF;
+        BaseAGI = AGI;
+    }
 }
