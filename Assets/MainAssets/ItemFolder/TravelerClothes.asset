@@ -20,4 +20,4 @@ MonoBehaviour:
   ItemBuyingPrice: 8000
   ItemSellingPrice: 800
   ATK: 0
-  DFE: 500
+  DFE: 1000

@@ -33,7 +33,7 @@ public class ItemKanri : MonoBehaviour
     [SerializeField] private Color filledSlotColor;
     // 初期アイテムのインデックス
     private const int InitialWoodenSwordIndex = 0;
-    private const int InitialDefaultClothesIndex = 3; // DefaultClothesのインデックス
+    private const int InitialDefaultClothesIndex = 3;
     // アイコン配列のサイズ
     private const int IconArraySize = 24;
 
